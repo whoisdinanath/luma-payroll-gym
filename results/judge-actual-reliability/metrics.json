@@ -1,0 +1,9 @@
+{
+  "examples": 15,
+  "repeats": 3,
+  "disagreement_rate": 0.0,
+  "complete_valid_examples": 15,
+  "malformed_or_failed_examples": 0,
+  "recorded_cost_usd": 0.036935543900000006,
+  "selection": "First five valid correct-decision trap explanations per model, not a random or human-labelled sample"
+}
