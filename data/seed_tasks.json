@@ -1,0 +1,82 @@
+[
+  {
+    "id": "seed-01", "slice": "monthly_payroll", "difficulty": 1,
+    "prompt": "Retrieve contribution_rate from the supplied rulebook. Return the R8 JSON answer.",
+    "record": {},
+    "ground_truth": {"decision": "retrieve", "field": "contribution_rate", "value": "0.05", "clauses": ["R3"]},
+    "verifier": "luma_payroll_v1", "tags": ["retrieval"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null, "retrieval_field": "contribution_rate"
+  },
+  {
+    "id": "seed-02", "slice": "monthly_payroll", "difficulty": 1,
+    "prompt": "Retrieve contribution_cap from the supplied rulebook. Return the R8 JSON answer.",
+    "record": {},
+    "ground_truth": {"decision": "retrieve", "field": "contribution_cap", "value": "4000.00", "clauses": ["R3"]},
+    "verifier": "luma_payroll_v1", "tags": ["retrieval"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null, "retrieval_field": "contribution_cap"
+  },
+  {
+    "id": "seed-03", "slice": "monthly_payroll", "difficulty": 1,
+    "prompt": "Retrieve deduction_cap from the supplied rulebook. Return the R8 JSON answer.",
+    "record": {},
+    "ground_truth": {"decision": "retrieve", "field": "deduction_cap", "value": "300.00", "clauses": ["R4"]},
+    "verifier": "luma_payroll_v1", "tags": ["retrieval"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null, "retrieval_field": "deduction_cap"
+  },
+  {
+    "id": "seed-04", "slice": "monthly_payroll", "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {"gross_pay": "0.00", "payroll_month": "2026-01"},
+    "ground_truth": {"decision": "calculate", "currency": "LCR", "gross_pay": "0.00", "employee_contribution": "0.00", "allowed_deduction": "0.00", "taxable_pay": "0.00", "income_tax": "0.00", "net_pay": "0.00", "clauses": ["R2", "R3", "R4", "R5", "R6"]},
+    "verifier": "luma_payroll_v1", "tags": ["zero-pay"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null
+  },
+  {
+    "id": "seed-05", "slice": "monthly_payroll", "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {"gross_pay": "1000.00", "payroll_month": "2026-01"},
+    "ground_truth": {"decision": "calculate", "currency": "LCR", "gross_pay": "1000.00", "employee_contribution": "50.00", "allowed_deduction": "0.00", "taxable_pay": "950.00", "income_tax": "0.00", "net_pay": "950.00", "clauses": ["R2", "R3", "R4", "R5", "R6"]},
+    "verifier": "luma_payroll_v1", "tags": ["tax-free"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null
+  },
+  {
+    "id": "seed-06", "slice": "monthly_payroll", "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {"gross_pay": "3500.00", "allowed_deduction": "100.00", "payroll_month": "2026-01"},
+    "ground_truth": {"decision": "calculate", "currency": "LCR", "gross_pay": "3500.00", "employee_contribution": "175.00", "allowed_deduction": "100.00", "taxable_pay": "3225.00", "income_tax": "245.00", "net_pay": "2980.00", "clauses": ["R2", "R3", "R4", "R5", "R6"]},
+    "verifier": "luma_payroll_v1", "tags": ["progressive-tax", "deduction"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null
+  },
+  {
+    "id": "seed-07", "slice": "monthly_payroll", "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {"gross_pay": "5000.00", "allowed_deduction": "300.00", "payroll_month": "2026-01"},
+    "ground_truth": {"decision": "calculate", "currency": "LCR", "gross_pay": "5000.00", "employee_contribution": "200.00", "allowed_deduction": "300.00", "taxable_pay": "4500.00", "income_tax": "500.00", "net_pay": "4000.00", "clauses": ["R2", "R3", "R4", "R5", "R6"]},
+    "verifier": "luma_payroll_v1", "tags": ["contribution-cap", "deduction-cap"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null
+  },
+  {
+    "id": "seed-08", "slice": "monthly_payroll", "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {"payroll_month": "2026-01"},
+    "ground_truth": {"decision": "clarify", "reason_code": "MISSING_GROSS_PAY", "clauses": ["R1", "R7"]},
+    "verifier": "luma_payroll_v1", "tags": ["required-input-absent"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null
+  },
+  {
+    "id": "seed-09", "slice": "monthly_payroll", "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {"gross_pay": "3500.00"},
+    "ground_truth": {"decision": "clarify", "reason_code": "MISSING_PAYROLL_MONTH", "clauses": ["R1", "R7"]},
+    "verifier": "luma_payroll_v1", "tags": ["required-input-absent"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null
+  },
+  {
+    "id": "seed-10", "slice": "monthly_payroll", "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {"gross_pay": "3500.00", "contract_gross_pay": "3600.00", "payroll_month": "2026-01"},
+    "ground_truth": {"decision": "clarify", "reason_code": "CONFLICTING_GROSS_PAY", "clauses": ["R7"]},
+    "verifier": "luma_payroll_v1", "tags": ["conflicting-inputs"], "schema_version": "1.0",
+    "ruleset_version": "luma-payroll-v1", "seed": null
+  }
+]

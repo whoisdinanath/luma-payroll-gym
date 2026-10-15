@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "luma-payroll-gym"
+version = "0.1.0"
+description = "A verifiable fictional payroll gym for evaluating and training agents"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+environment = ["verifiers==0.1.11"]
+server = ["fastapi>=0.115,<1", "uvicorn>=0.35,<1", "openai>=1.108", "httpx>=0.28", "jinja2>=3.1,<4", "markdown-it-py>=3,<5"]
+local = ["torch==2.14.0", "transformers==5.19.0", "accelerate>=1.10,<2", "bitsandbytes>=0.49,<1", "peft==0.21.0"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[project.scripts]
+luma-gym = "luma_gym.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/luma_gym"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"rules/payroll.md" = "luma_gym/payroll.md"
+"rules/judge.md" = "luma_gym/judge.md"
+"templates" = "luma_gym/templates"
