@@ -1,0 +1,5668 @@
+[
+  {
+    "id": "generated-1001-00001",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "0.01",
+      "payroll_month": "2026-01",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "0.01",
+      "employee_contribution": "0.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "0.01",
+      "income_tax": "0.00",
+      "net_pay": "0.01",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00002",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1170.19",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "66.18",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "uncovered_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00004",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "936.04",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "108.88",
+      "contract_gross_pay": "946.04",
+      "amendment": {
+        "gross_pay": "936.04",
+        "effective_month": "2026-07",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "936.04",
+      "employee_contribution": "65.52",
+      "allowed_deduction": "108.88",
+      "taxable_pay": "761.64",
+      "income_tax": "0.00",
+      "net_pay": "761.64",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00005",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "0.01",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00007",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "7214.87",
+      "payroll_month": "2026-02",
+      "allowed_deduction": "282.85",
+      "contract_gross_pay": "7214.87",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "7214.87",
+      "employee_contribution": "350.00",
+      "allowed_deduction": "282.85",
+      "taxable_pay": "6582.02",
+      "income_tax": "1003.68",
+      "net_pay": "5578.34",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00008",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-10",
+      "allowed_deduction": "296.24",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00010",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3999.99",
+      "payroll_month": "2026-02",
+      "contract_gross_pay": "4009.99",
+      "amendment": {
+        "gross_pay": "3999.99",
+        "effective_month": "2026-02",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3999.99",
+      "employee_contribution": "160.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3839.99",
+      "income_tax": "372.80",
+      "net_pay": "3467.19",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00011",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3999.98",
+      "payroll_month": "2026-06",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "4000.98",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "conflict",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00013",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3157.91",
+      "payroll_month": "2026-04",
+      "contract_gross_pay": "3167.91",
+      "amendment": {
+        "gross_pay": "3157.91",
+        "effective_month": "2026-04",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3157.91",
+      "employee_contribution": "221.05",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "2936.86",
+      "income_tax": "243.16",
+      "net_pay": "2693.70",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00014",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-02",
+      "allowed_deduction": "153.01",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00016",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1170.20",
+      "payroll_month": "2026-08",
+      "contract_gross_pay": "1180.20",
+      "amendment": {
+        "gross_pay": "1170.20",
+        "effective_month": "2026-08",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1170.20",
+      "employee_contribution": "81.91",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "1088.29",
+      "income_tax": "12.36",
+      "net_pay": "1075.93",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00017",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-05",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00018",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4499.98",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "4500.98",
+      "amendment": {
+        "gross_pay": "4499.98",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00019",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "9221.00",
+      "payroll_month": "2026-02",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "9221.00",
+      "employee_contribution": "350.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "8871.00",
+      "income_tax": "1553.04",
+      "net_pay": "7317.96",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00020",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8090.81",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "307.23",
+      "contract_gross_pay": "8091.81",
+      "amendment": {
+        "gross_pay": "8090.81",
+        "effective_month": "2026-09",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00021",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3999.98",
+      "payroll_month": "2026-05",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3999.98",
+      "employee_contribution": "175.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3824.98",
+      "income_tax": "336.00",
+      "net_pay": "3488.98",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00022",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3510.63",
+      "payroll_month": "2026-10",
+      "allowed_deduction": "5.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3510.63",
+      "employee_contribution": "245.74",
+      "allowed_deduction": "5.00",
+      "taxable_pay": "3259.89",
+      "income_tax": "164.79",
+      "net_pay": "3095.10",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00023",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-12",
+      "allowed_deduction": "261.67",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00024",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4120.84",
+      "payroll_month": "2026-12",
+      "allowed_deduction": "81.31",
+      "contract_gross_pay": "4121.84",
+      "amendment": {
+        "gross_pay": "4120.84",
+        "effective_month": "2026-12",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00025",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3999.99",
+      "payroll_month": "2026-04",
+      "allowed_deduction": "149.48",
+      "contract_gross_pay": "3999.99",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3999.99",
+      "employee_contribution": "320.00",
+      "allowed_deduction": "149.48",
+      "taxable_pay": "3530.51",
+      "income_tax": "396.71",
+      "net_pay": "3133.80",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00026",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-12",
+      "allowed_deduction": "66.63",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00027",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1170.21",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1170.21",
+      "employee_contribution": "46.81",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "1123.40",
+      "income_tax": "17.87",
+      "net_pay": "1105.53",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00028",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6216.27",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "206.66",
+      "contract_gross_pay": "6216.27",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "6216.27",
+      "employee_contribution": "200.00",
+      "allowed_deduction": "206.66",
+      "taxable_pay": "5809.61",
+      "income_tax": "741.92",
+      "net_pay": "5067.69",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00029",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3641.54",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "214.58",
+      "contract_gross_pay": "3651.54",
+      "amendment": {
+        "gross_pay": "3641.54",
+        "effective_month": "2026-12",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "uncovered_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00030",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4031.97",
+      "allowed_deduction": "132.03",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00031",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "0.00",
+      "payroll_month": "2026-09",
+      "contract_gross_pay": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "0.00",
+      "employee_contribution": "0.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "0.00",
+      "income_tax": "0.00",
+      "net_pay": "0.00",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00032",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5337.37",
+      "payroll_month": "2026-08",
+      "allowed_deduction": "50.23",
+      "contract_gross_pay": "5338.37",
+      "amendment": {
+        "gross_pay": "5337.37",
+        "effective_month": "2026-08",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00033",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1052.65",
+      "payroll_month": "2026-02",
+      "allowed_deduction": "190.09",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1052.65",
+      "employee_contribution": "84.21",
+      "allowed_deduction": "190.09",
+      "taxable_pay": "778.35",
+      "income_tax": "0.00",
+      "net_pay": "778.35",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00034",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3510.64",
+      "payroll_month": "2026-10",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3510.64",
+      "employee_contribution": "175.53",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3335.11",
+      "income_tax": "243.02",
+      "net_pay": "3092.09",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00035",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "9836.37",
+      "payroll_month": "2026-04",
+      "allowed_deduction": "188.61",
+      "contract_gross_pay": "9837.37",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "conflict",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00036",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "9190.68",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "69.61",
+      "contract_gross_pay": "9191.68",
+      "amendment": {
+        "gross_pay": "9190.68",
+        "effective_month": "2026-09",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00037",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3157.89",
+      "payroll_month": "2026-03",
+      "allowed_deduction": "272.06",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3157.89",
+      "employee_contribution": "157.89",
+      "allowed_deduction": "272.06",
+      "taxable_pay": "2727.94",
+      "income_tax": "162.79",
+      "net_pay": "2565.15",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00038",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4000.02",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "229.56",
+      "contract_gross_pay": "4001.02",
+      "amendment": {
+        "gross_pay": "4000.02",
+        "effective_month": "2026-05",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00039",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "9859.27",
+      "payroll_month": "2026-02",
+      "allowed_deduction": "43.66",
+      "contract_gross_pay": "9860.27",
+      "amendment": {
+        "gross_pay": "9859.27",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00040",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6173.69",
+      "payroll_month": "2026-11",
+      "contract_gross_pay": "6173.69",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "6173.69",
+      "employee_contribution": "270.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "5903.69",
+      "income_tax": "888.89",
+      "net_pay": "5014.80",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00041",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8017.58",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "29.28",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "uncovered_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00042",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5893.86",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "149.71",
+      "contract_gross_pay": "5894.86",
+      "amendment": {
+        "gross_pay": "5893.86",
+        "effective_month": "2026-07",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00043",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4681.59",
+      "payroll_month": "2026-08",
+      "allowed_deduction": "168.38",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4681.59",
+      "employee_contribution": "140.00",
+      "allowed_deduction": "168.38",
+      "taxable_pay": "4373.21",
+      "income_tax": "529.57",
+      "net_pay": "3843.64",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00044",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "2022.44",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "46.29",
+      "contract_gross_pay": "2032.44",
+      "amendment": {
+        "gross_pay": "2022.44",
+        "effective_month": "2026-03",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "uncovered_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00045",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5408.29",
+      "payroll_month": "2026-08",
+      "allowed_deduction": "119.28",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "5408.29",
+      "employee_contribution": "200.00",
+      "allowed_deduction": "119.28",
+      "taxable_pay": "5089.01",
+      "income_tax": "633.80",
+      "net_pay": "4455.21",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00046",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6537.16",
+      "payroll_month": "2026-01",
+      "allowed_deduction": "222.80",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "6537.16",
+      "employee_contribution": "270.00",
+      "allowed_deduction": "222.80",
+      "taxable_pay": "6044.36",
+      "income_tax": "842.87",
+      "net_pay": "5201.49",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00047",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4500.02",
+      "allowed_deduction": "93.12",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00048",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3999.98",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "50.67",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3999.98",
+      "employee_contribution": "160.00",
+      "allowed_deduction": "50.67",
+      "taxable_pay": "3789.31",
+      "income_tax": "342.08",
+      "net_pay": "3447.23",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00049",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "2195.63",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "178.50",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "2195.63",
+      "employee_contribution": "175.65",
+      "allowed_deduction": "178.50",
+      "taxable_pay": "1841.48",
+      "income_tax": "117.81",
+      "net_pay": "1723.67",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00050",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6695.79",
+      "payroll_month": "2026-12",
+      "contract_gross_pay": "6696.79",
+      "amendment": {
+        "gross_pay": "6695.79",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00051",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5426.77",
+      "allowed_deduction": "325.51",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00052",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6615.59",
+      "payroll_month": "2026-01",
+      "allowed_deduction": "154.00",
+      "contract_gross_pay": "6625.59",
+      "amendment": {
+        "gross_pay": "6615.59",
+        "effective_month": "2026-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "6615.59",
+      "employee_contribution": "225.00",
+      "allowed_deduction": "154.00",
+      "taxable_pay": "6236.59",
+      "income_tax": "734.59",
+      "net_pay": "5502.00",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00053",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-09",
+      "allowed_deduction": "109.58",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00054",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6750.61",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "6750.61",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "6750.61",
+      "employee_contribution": "350.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "6400.61",
+      "income_tax": "872.12",
+      "net_pay": "5528.49",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00055",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "2891.48",
+      "payroll_month": "2026-11",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "2891.48",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "2891.48",
+      "employee_contribution": "144.57",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "2746.91",
+      "income_tax": "244.57",
+      "net_pay": "2502.34",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00056",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-04",
+      "allowed_deduction": "147.46",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00057",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1396.12",
+      "payroll_month": "2026-01",
+      "allowed_deduction": "292.41",
+      "contract_gross_pay": "1406.12",
+      "amendment": {
+        "gross_pay": "1396.12",
+        "effective_month": "2026-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1396.12",
+      "employee_contribution": "97.73",
+      "allowed_deduction": "292.41",
+      "taxable_pay": "1005.98",
+      "income_tax": "0.00",
+      "net_pay": "1005.98",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00058",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "0.00",
+      "payroll_month": "2026-01",
+      "contract_gross_pay": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "0.00",
+      "employee_contribution": "0.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "0.00",
+      "income_tax": "0.00",
+      "net_pay": "0.00",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00059",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3510.61",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "3511.61",
+      "amendment": {
+        "gross_pay": "3510.61",
+        "effective_month": "2026-09",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00060",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4500.02",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4500.02",
+      "employee_contribution": "245.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "4255.02",
+      "income_tax": "493.20",
+      "net_pay": "3761.82",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00061",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1052.65",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "76.95",
+      "contract_gross_pay": "1062.65",
+      "amendment": {
+        "gross_pay": "1052.65",
+        "effective_month": "2026-05",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1052.65",
+      "employee_contribution": "52.63",
+      "allowed_deduction": "76.95",
+      "taxable_pay": "923.07",
+      "income_tax": "0.00",
+      "net_pay": "923.07",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00062",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4477.60",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "299.18",
+      "contract_gross_pay": "4478.60",
+      "amendment": {
+        "gross_pay": "4477.60",
+        "effective_month": "2026-05",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00063",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1052.64",
+      "payroll_month": "2026-06",
+      "contract_gross_pay": "1053.64",
+      "amendment": {
+        "gross_pay": "1052.64",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00064",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6717.67",
+      "payroll_month": "2026-11",
+      "allowed_deduction": "326.05",
+      "contract_gross_pay": "6717.67",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "6717.67",
+      "employee_contribution": "360.00",
+      "allowed_deduction": "326.05",
+      "taxable_pay": "6031.62",
+      "income_tax": "880.96",
+      "net_pay": "5150.66",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00065",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5602.95",
+      "payroll_month": "2026-03",
+      "allowed_deduction": "217.50",
+      "contract_gross_pay": "5603.95",
+      "amendment": {
+        "gross_pay": "5602.95",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00066",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5884.69",
+      "payroll_month": "2026-08",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "5884.69",
+      "employee_contribution": "400.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "5484.69",
+      "income_tax": "690.63",
+      "net_pay": "4794.06",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00067",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3930.77",
+      "payroll_month": "2026-12",
+      "contract_gross_pay": "3940.77",
+      "amendment": {
+        "gross_pay": "3930.77",
+        "effective_month": "2026-12",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3930.77",
+      "employee_contribution": "275.15",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3655.62",
+      "income_tax": "349.35",
+      "net_pay": "3306.27",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00068",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4000.02",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "240.26",
+      "contract_gross_pay": "4010.02",
+      "amendment": {
+        "gross_pay": "4000.02",
+        "effective_month": "2026-03",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "uncovered_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00069",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3510.62",
+      "payroll_month": "2026-10",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3510.62",
+      "employee_contribution": "140.42",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3370.20",
+      "income_tax": "184.85",
+      "net_pay": "3185.35",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00070",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "7022.36",
+      "payroll_month": "2026-01",
+      "allowed_deduction": "31.67",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "7022.36",
+      "employee_contribution": "320.00",
+      "allowed_deduction": "31.67",
+      "taxable_pay": "6670.69",
+      "income_tax": "1005.55",
+      "net_pay": "5665.14",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00071",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3713.85",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "164.48",
+      "contract_gross_pay": "3714.85",
+      "amendment": {
+        "gross_pay": "3713.85",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00072",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1052.62",
+      "payroll_month": "2026-06",
+      "allowed_deduction": "59.71",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1052.62",
+      "employee_contribution": "63.16",
+      "allowed_deduction": "59.71",
+      "taxable_pay": "929.75",
+      "income_tax": "0.00",
+      "net_pay": "929.75",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00073",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3510.64",
+      "payroll_month": "2026-08",
+      "allowed_deduction": "218.68",
+      "contract_gross_pay": "3510.64",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3510.64",
+      "employee_contribution": "245.74",
+      "allowed_deduction": "218.68",
+      "taxable_pay": "3046.22",
+      "income_tax": "245.55",
+      "net_pay": "2800.67",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00074",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1052.64",
+      "payroll_month": "2026-06",
+      "allowed_deduction": "287.13",
+      "contract_gross_pay": "1053.64",
+      "amendment": {
+        "gross_pay": "1052.64",
+        "effective_month": "2026-06",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00075",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "976.76",
+      "payroll_month": "2026-02",
+      "allowed_deduction": "83.49",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "976.76",
+      "employee_contribution": "48.84",
+      "allowed_deduction": "83.49",
+      "taxable_pay": "844.43",
+      "income_tax": "0.00",
+      "net_pay": "844.43",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00076",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1170.23",
+      "payroll_month": "2026-11",
+      "allowed_deduction": "116.50",
+      "contract_gross_pay": "1170.23",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1170.23",
+      "employee_contribution": "93.62",
+      "allowed_deduction": "116.50",
+      "taxable_pay": "960.11",
+      "income_tax": "0.00",
+      "net_pay": "960.11",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00077",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3770.09",
+      "payroll_month": "2026-08",
+      "allowed_deduction": "138.88",
+      "contract_gross_pay": "3771.09",
+      "amendment": {
+        "gross_pay": "3770.09",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3000.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00078",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4179.27",
+      "payroll_month": "2026-10",
+      "allowed_deduction": "17.18",
+      "contract_gross_pay": "4189.27",
+      "amendment": {
+        "gross_pay": "4179.27",
+        "effective_month": "2026-10",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4179.27",
+      "employee_contribution": "334.34",
+      "allowed_deduction": "17.18",
+      "taxable_pay": "3827.75",
+      "income_tax": "333.55",
+      "net_pay": "3494.20",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00079",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4499.98",
+      "payroll_month": "2026-12",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4499.98",
+      "employee_contribution": "240.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "4259.98",
+      "income_tax": "480.80",
+      "net_pay": "3779.18",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00080",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4695.18",
+      "payroll_month": "2026-02",
+      "allowed_deduction": "224.36",
+      "contract_gross_pay": "4696.18",
+      "amendment": {
+        "gross_pay": "4695.18",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.06",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00081",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "0.02",
+      "payroll_month": "2026-12",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "1.02",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "conflict",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00082",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3510.63",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "241.65",
+      "contract_gross_pay": "3510.63",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3510.63",
+      "employee_contribution": "175.00",
+      "allowed_deduction": "241.65",
+      "taxable_pay": "3093.98",
+      "income_tax": "189.40",
+      "net_pay": "2904.58",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00083",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8795.68",
+      "payroll_month": "2026-02",
+      "allowed_deduction": "97.92",
+      "contract_gross_pay": "8796.68",
+      "amendment": {
+        "gross_pay": "8795.68",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00084",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "2952.69",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "167.46",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "uncovered_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00085",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "9993.09",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "127.12",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "9993.09",
+      "employee_contribution": "320.00",
+      "allowed_deduction": "127.12",
+      "taxable_pay": "9545.97",
+      "income_tax": "1777.03",
+      "net_pay": "7768.94",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00086",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5823.01",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "38.34",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "uncovered_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00087",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "235.18",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00088",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8340.45",
+      "payroll_month": "2026-10",
+      "allowed_deduction": "284.60",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "8340.45",
+      "employee_contribution": "360.00",
+      "allowed_deduction": "284.60",
+      "taxable_pay": "7695.85",
+      "income_tax": "1283.00",
+      "net_pay": "6412.85",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00089",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5771.58",
+      "payroll_month": "2026-05",
+      "allowed_deduction": "112.33",
+      "contract_gross_pay": "5772.58",
+      "amendment": {
+        "gross_pay": "5771.58",
+        "effective_month": "2026-05",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00090",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "704.36",
+      "payroll_month": "2026-05",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "704.36",
+      "employee_contribution": "28.17",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "676.19",
+      "income_tax": "0.00",
+      "net_pay": "676.19",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00091",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8967.86",
+      "payroll_month": "2026-12",
+      "allowed_deduction": "125.60",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "8967.86",
+      "employee_contribution": "250.00",
+      "allowed_deduction": "125.60",
+      "taxable_pay": "8592.26",
+      "income_tax": "1490.14",
+      "net_pay": "7102.12",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00092",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6265.40",
+      "payroll_month": "2026-08",
+      "allowed_deduction": "217.79",
+      "contract_gross_pay": "6266.40",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "conflict",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00093",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "952.85",
+      "allowed_deduction": "67.94",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00094",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1170.19",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "343.92",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3000.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1170.19",
+      "employee_contribution": "46.81",
+      "allowed_deduction": "343.92",
+      "taxable_pay": "779.46",
+      "income_tax": "0.00",
+      "net_pay": "779.46",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00095",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "0.00",
+      "allowed_deduction": "0.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00096",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-06",
+      "allowed_deduction": "102.33",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_gross",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00097",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "9000.07",
+      "payroll_month": "2026-11",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "9000.07",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "9000.07",
+      "employee_contribution": "160.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "8840.07",
+      "income_tax": "1569.62",
+      "net_pay": "7270.45",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00098",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4500.00",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "4501.00",
+      "amendment": {
+        "gross_pay": "4500.00",
+        "effective_month": "2026-09",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00099",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "623.94",
+      "payroll_month": "2026-06",
+      "allowed_deduction": "79.28",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3300.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "623.94",
+      "employee_contribution": "43.68",
+      "allowed_deduction": "79.28",
+      "taxable_pay": "500.98",
+      "income_tax": "0.00",
+      "net_pay": "500.98",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00100",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "1052.62",
+      "payroll_month": "2026-04",
+      "allowed_deduction": "206.71",
+      "contract_gross_pay": "1062.62",
+      "amendment": {
+        "gross_pay": "1052.62",
+        "effective_month": "2026-04",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "2800.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.07",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.18"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "1052.62",
+      "employee_contribution": "42.10",
+      "allowed_deduction": "206.71",
+      "taxable_pay": "803.81",
+      "income_tax": "0.00",
+      "net_pay": "803.81",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "boundary",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00101",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8215.02",
+      "contract_gross_pay": "8215.02",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.07",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "2800.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "missing_month",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00102",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "9963.24",
+      "payroll_month": "2026-04",
+      "allowed_deduction": "217.48",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "5000.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3300.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "9963.24",
+      "employee_contribution": "180.00",
+      "allowed_deduction": "217.48",
+      "taxable_pay": "9565.76",
+      "income_tax": "1672.47",
+      "net_pay": "7893.29",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00103",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "485.56",
+      "payroll_month": "2026-11",
+      "allowed_deduction": "33.52",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "900.00",
+          "upper": "3600.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.04",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3300.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.20"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "485.56",
+      "employee_contribution": "19.42",
+      "allowed_deduction": "33.52",
+      "taxable_pay": "432.62",
+      "income_tax": "0.00",
+      "net_pay": "432.62",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00104",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8596.51",
+      "payroll_month": "2026-12",
+      "allowed_deduction": "188.63",
+      "contract_gross_pay": "8597.51",
+      "amendment": {
+        "gross_pay": "8596.51",
+        "effective_month": "2027-01",
+        "approved": true
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.08",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.24"
+        },
+        "second-half": {
+          "rate": "0.05",
+          "cap": "4500.00",
+          "deduction": "400.00",
+          "free": "1000.00",
+          "upper": "2800.00",
+          "middle_rate": "0.14",
+          "upper_rate": "0.24"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "future_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  },
+  {
+    "id": "generated-1001-00105",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "8619.38",
+      "payroll_month": "2026-06",
+      "allowed_deduction": "74.69",
+      "contract_gross_pay": "8620.38",
+      "amendment": {
+        "gross_pay": "8619.38",
+        "effective_month": "2026-06",
+        "approved": false
+      },
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.04",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1200.00",
+          "upper": "3000.00",
+          "middle_rate": "0.08",
+          "upper_rate": "0.22"
+        },
+        "second-half": {
+          "rate": "0.08",
+          "cap": "3500.00",
+          "deduction": "400.00",
+          "free": "1100.00",
+          "upper": "3600.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "3",
+      "general",
+      "draft_amendment",
+      "case-reference-schedule"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": 1001,
+    "retrieval_field": null
+  }
+]
