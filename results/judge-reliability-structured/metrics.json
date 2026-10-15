@@ -1,0 +1,7 @@
+{
+  "examples": 15,
+  "repeats": 3,
+  "disagreement_rate": 0.0,
+  "recorded_cost_usd": 0.034559827550000005,
+  "limitation": "Controlled synthetic explanation fixtures; no human agreement measurement or proof of judge validity"
+}
