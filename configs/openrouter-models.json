@@ -1,0 +1,6 @@
+{
+  "key_env": "OPENROUTER_API_KEY",
+  "base_url": "https://openrouter.ai/api/v1",
+  "catalog_url": "https://openrouter.ai/api/v1/models",
+  "requests_per_minute": 60
+}
