@@ -1,0 +1,9 @@
+{
+  "name": "luma-payroll-sandbox",
+  "main": "main.py",
+  "compatibility_date": "2026-10-15",
+  "compatibility_flags": ["python_workers"],
+  "observability": {"enabled": true},
+  "assets": {"directory": "../public", "html_handling": "auto-trailing-slash"},
+  "d1_databases": [{"binding": "DB", "database_name": "luma-payroll-runs", "database_id": "56dae2bb-fb34-4c66-b499-12ae82810f14"}]
+}
