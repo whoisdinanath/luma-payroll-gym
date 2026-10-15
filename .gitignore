@@ -1,0 +1,80 @@
+# Private notes, local agent files, and archived work
+/docs/
+/.github/
+/archive/
+/human/
+AGENTS.md
+CLAUDE.md
+.opencode/
+
+# Markdown: only the README, the rules, and the report are committed
+*.md
+!/README.md
+!/rules/*.md
+!/reports/writeup.md
+
+# Secrets (keep the setup template)
+.env
+.env.*
+.ENV
+.ENV.*
+!.env.example
+
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Model weights and checkpoints
+*.safetensors
+*.pt
+*.bin
+/results/**/checkpoints/
+/results/**/merged/
+/results/**/*.pid
+
+# Run logs, job scripts, and runs that were discarded or only smoke tests
+/results/**/*.log
+/results/**/*.sh
+/results/**/*.py
+/results/v4/discarded/
+/results/v4/rl-smoke/
+/results/optimizer-check/
+
+# Local caches and runtime state
+/checkpoints/
+/model_cache/
+/wandb/
+/runtime/
+/.local-deps/
+/.hf-cache/
+node_modules/
+
+# Generated site and Worker build files
+/public/
+/site/
+/deploy/.venv/
+/deploy/.venv-workers/
+/deploy/.wrangler/
+/deploy/.pywrangler/
+/deploy/.python-packages/
+/deploy/python_modules/
+/deploy/luma_gym/
+/deploy/*.txt
+/deploy/rule_text.py
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+*~
