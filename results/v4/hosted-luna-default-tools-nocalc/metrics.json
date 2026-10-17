@@ -1,0 +1,25 @@
+{
+  "completed_rollouts": 324,
+  "scored_rollouts": 324,
+  "infrastructure_failures": 0,
+  "recorded_cost_usd": 0.17761389244,
+  "unknown_cost_rollouts": 0,
+  "mean_reward": 0.9864197561728395,
+  "sd_reward": 0.137577225230745,
+  "pass_rate": 0.9814814814814815,
+  "tiers": {
+    "1": {
+      "mean": 1.0,
+      "sd": 0.0
+    },
+    "2": {
+      "mean": 0.9805555555555555,
+      "sd": 0.16441367653530845
+    },
+    "3": {
+      "mean": 0.9888888958333333,
+      "sd": 0.12503301692935992
+    }
+  },
+  "mean_latency_seconds": 8.991983146293528
+}

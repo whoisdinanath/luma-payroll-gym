@@ -1,0 +1,784 @@
+{% extends "layout.html" %}
+
+{% macro model_tag(model) %}
+<span class="nowrap"><i class="dot" style="background:{{ model.color }}"></i><b>{{ model.short }}{% if model.default_sampling %}*{% endif %}</b></span>
+{% endmacro %}
+
+{% macro curve_svg(item) %}
+<div class="curve-box">
+  <h4>{{ item.title }}</h4>
+  <svg viewBox="0 0 {{ item.width }} {{ item.height }}" role="img" aria-label="{{ item.title }}" style="width:100%">
+    {% for mark in item.y_marks %}
+      <line class="{{ 'zero' if mark.zero else 'grid' }}" x1="{{ item.left }}" x2="{{ item.right }}" y1="{{ mark.y }}" y2="{{ mark.y }}"/>
+      <text x="{{ item.left - 6 }}" y="{{ mark.y + 4 }}" text-anchor="end">{{ mark.label }}</text>
+    {% endfor %}
+    {% for mark in item.x_marks %}
+      <text x="{{ mark.x }}" y="{{ item.bottom + 17 }}" text-anchor="{{ mark.anchor }}">Step {{ mark.label }}</text>
+    {% endfor %}
+    {% for path in item.paths %}
+      {% if item.paths|length == 1 %}<polygon points="{{ path.area }}" fill="{{ path.color }}" fill-opacity="0.07"/>{% endif %}
+      <polyline points="{{ path.raw }}" fill="none" stroke="{{ path.color }}" stroke-opacity="0.16" stroke-width="1.1"/>
+      <polyline points="{{ path.smooth }}" fill="none" stroke="{{ path.color }}" stroke-width="2.2" stroke-linejoin="round"/>
+      {% for dot in path.dots %}<circle cx="{{ dot.x }}" cy="{{ dot.y }}" r="3.2" fill="{{ path.color }}"/>{% endfor %}
+      <circle cx="{{ path.end_x }}" cy="{{ path.end_y }}" r="3.2" fill="{{ path.color }}"/>
+    {% endfor %}
+  </svg>
+</div>
+{% endmacro %}
+
+{% macro heat_svg(map, label) %}
+<svg viewBox="0 0 {{ map.width }} {{ map.height }}" role="img" aria-label="{{ label }}" style="width:100%">
+  {% for band in map.bands %}
+    <text class="strong" x="{{ band.x }}" y="16" data-band-tier="{{ band.tier }}">{{ band.label }} <tspan class="muted">({{ band.count }})</tspan></text>
+  {% endfor %}
+  {% for item in map.labels %}
+    <text x="84" y="{{ item.y + 4 }}" text-anchor="end" style="font-weight:600;fill:#374151;font-size:12px">{{ item.text }}</text>
+  {% endfor %}
+  {% for cell in map.cells %}
+    <a href="{{ cell.url }}" data-cell-tier="{{ cell.tier }}" data-tip="{{ cell.title }}">
+      <rect x="{{ cell.x }}" y="{{ cell.y }}" width="{{ cell.w }}" height="{{ cell.h }}" rx="3.5" fill="{{ cell.color }}">
+        <title>{{ cell.title }}</title>
+      </rect>
+    </a>
+  {% endfor %}
+  {% for item in map.numbers %}
+    <text x="{{ item.x }}" y="{{ map.number_y }}" text-anchor="middle" data-num-tier="{{ item.tier }}" style="font-size:10px">{{ item.text }}</text>
+  {% endfor %}
+</svg>
+{% endmacro %}
+
+{% block content %}
+
+{% set k = kpis %}
+<div class="kpis">
+  <div class="kpi">
+    <span>Leader, single-turn</span>
+    <b>{{ k.leader.single.mean|pct(1) }}</b>
+    <small>{{ k.leader.short }} · ${{ "%.3f"|format(k.leader.single.cost_per_100) }}/100</small>
+  </div>
+  <div class="kpi">
+    <span>Best value</span>
+    <b>{{ k.cheap.single.mean|pct(1) }}</b>
+    <small>{{ k.cheap.short }}{% if k.cheap.default_sampling %}*{% endif %} · ${{ "%.3f"|format(k.cheap.single.cost_per_100) }}/100</small>
+  </div>
+  <div class="kpi">
+    <span>Leader, tools + calculator</span>
+    <b>{{ k.tool_leader.tools.mean|pct(1) if k.tool_leader else "-" }}</b>
+    <small>{{ k.tool_leader.short if k.tool_leader else "-" }}</small>
+  </div>
+  <div class="kpi">
+    <span>Scored answers</span>
+    <b>{{ "{:,}".format(answers) }}</b>
+    <small>{{ models|length }} models · {{ "{:,}".format(gym.total_tasks) }} v4 tasks</small>
+  </div>
+  <div class="kpi">
+    <span>MiniCPM5-1B with calculator, exact test payslips</span>
+    <b>{{ k.best_stage.cells[0].value|pct(1) if k.best_stage else "-" }}</b>
+    <small>frozen {{ k.raw_exact|pct(0) }} · {{ k.best_stage.label if k.best_stage else "" }}</small>
+  </div>
+  <div class="kpi">
+    <span>API spend</span>
+    <b>${{ "%.2f"|format(gym.spent) }}</b>
+    <small>{{ "%.1f"|format(gym.gpu_hours) }}h local GPU</small>
+  </div>
+</div>
+
+<section id="verdict" class="sec" data-module="verdict">
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Cost vs. score, single-turn</span>
+        <span class="muted" style="font-size:13px">Bubble size = median latency</span>
+      </div>
+      <svg viewBox="0 0 {{ pareto.width }} {{ pareto.height }}" role="img" aria-label="Cost versus score" style="width:100%">
+        {% for yt in pareto.y_ticks %}
+          <line class="grid" x1="{{ pareto.left }}" x2="{{ pareto.right }}" y1="{{ yt.y }}" y2="{{ yt.y }}"/>
+          <text x="{{ pareto.left - 8 }}" y="{{ yt.y + 4 }}" text-anchor="end">{{ yt.label }}</text>
+        {% endfor %}
+        {% for xt in pareto.x_ticks %}
+          <line class="grid" x1="{{ xt.x }}" x2="{{ xt.x }}" y1="{{ pareto.top }}" y2="{{ pareto.bottom }}"/>
+          <text x="{{ xt.x }}" y="{{ pareto.bottom + 18 }}" text-anchor="middle">{{ xt.label }}</text>
+        {% endfor %}
+        <polyline points="{{ pareto.frontier }}" fill="none" stroke="#cbd5e1" stroke-width="1.8" stroke-dasharray="5 4"/>
+        {% for pt in pareto.points %}
+          <line x1="{{ pt.x }}" x2="{{ pt.x }}" y1="{{ pt.high_y }}" y2="{{ pt.low_y }}" stroke="{{ pt.color }}" stroke-width="1.8"/>
+          <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="{{ pt.r }}" fill="{{ pt.color }}" fill-opacity="0.88" stroke="#fff" stroke-width="1.8">
+            <title>{{ pt.name }}: {{ pt.mean }}, {{ pt.cost }}/100, {{ pt.latency }}</title>
+          </circle>
+        {% endfor %}
+      </svg>
+      <div class="plot-legend">
+        {% for pt in pareto.points %}<span><i class="dot" style="background:{{ pt.color }}"></i>{{ pt.short }} <b>{{ pt.mean }}</b></span>{% endfor %}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Best model by slice</span>
+        <span class="muted" style="font-size:12.5px">*Luna: provider default temperature</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Slice</th>
+              <th>Best score</th>
+              <th>Best value</th>
+              <th>Lowest</th>
+              <th class="narrow-hide">Main failure</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in verdict %}
+            <tr>
+              <td><b>{{ row.label }}</b></td>
+              <td class="nowrap">{{ model_tag(row.best.model) }} <span class="muted">{{ row.best.mean|pct(1) }}</span></td>
+              <td class="nowrap">{{ model_tag(row.value.model) }} <span class="muted">${{ "%.3f"|format(row.value.cost) }}</span></td>
+              <td class="nowrap">
+                {% if row.worst %}
+                  {{ model_tag(row.worst.model) }} <span class="pill bad">{{ row.worst.mean|pct(0) }}</span>
+                {% else %}
+                  <span class="pill good">All 100%</span>
+                {% endif %}
+              </td>
+              <td class="narrow-hide nowrap muted">{{ row.failure }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leaderboard" class="sec" data-module="leaderboard">
+  <div class="grid-2" style="margin-bottom:20px">
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Score by tier and mode</span>
+        <div class="legend">
+          {% for m in models %}
+            <span><i class="dot" style="background:{{ m.color }}"></i>{{ m.short }}{% if m.default_sampling %}*{% endif %}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <svg viewBox="0 0 {{ tier_chart.width }} {{ tier_chart.height }}" role="img" aria-label="Scores by tier and mode" style="width:100%">
+        {% for yt in tier_chart.y_ticks %}
+          <line class="grid" x1="{{ tier_chart.left }}" x2="{{ tier_chart.right }}" y1="{{ yt.y }}" y2="{{ yt.y }}"/>
+          <text x="{{ tier_chart.left - 8 }}" y="{{ yt.y + 4 }}" text-anchor="end">{{ yt.label }}</text>
+        {% endfor %}
+        {% for grp in tier_chart.groups %}
+          {% for bar in grp.bars %}
+            <rect x="{{ bar.x }}" y="{{ bar.y }}" width="{{ bar.w }}" height="{{ bar.h }}" rx="2.5" fill="{{ bar.color }}">
+              <title>{{ grp.label }} · {{ bar.model }}: {{ bar.value }}</title>
+            </rect>
+          {% endfor %}
+          <text x="{{ grp.cx }}" y="{{ tier_chart.bottom + 18 }}" text-anchor="middle" style="fill:#374151;font-weight:500">{{ grp.label }}</text>
+        {% endfor %}
+      </svg>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Rubric components</span>
+        <span class="muted" style="font-size:13px">Single-turn, 108 tasks × 3</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="r">Exact</th>
+              <th class="r">Fields</th>
+              <th class="r">Clauses</th>
+              <th class="r">Judge</th>
+              <th class="r">Malformed</th>
+              <th class="r">Wrong decision</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for m in models %}
+            {% set s = m.single %}
+            <tr>
+              <td>{{ model_tag(m) }}</td>
+              <td class="r"><b>{{ s.exact|pct(1) }}</b></td>
+              <td class="r">{{ s.fields|pct(1) }}</td>
+              <td class="r">{{ s.clauses|pct(1) }}</td>
+              <td class="r">{{ s.explanation|pct(1) }}</td>
+              <td class="r {{ 'muted' if not s.malformed }}">{{ s.malformed|pct(1) }}</td>
+              <td class="r {{ 'muted' if not s.wrong_decision }}">{{ s.wrong_decision|pct(1) }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Leaderboard</span>
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab active" data-lb-filter="all">All ({{ leaderboard|length }})</button>
+        <button type="button" class="tab" data-lb-filter="model">Models ({{ models|length }})</button>
+        <button type="button" class="tab" data-lb-filter="baseline">Baselines ({{ leaderboard|length - models|length }})</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="r narrow-hide">#</th>
+            <th>Model / Baseline</th>
+            <th style="width:230px">
+              <svg viewBox="0 0 {{ score_chart.width }} 16" aria-hidden="true" style="width:220px;height:16px">
+                {% for mark in score_chart.axis %}
+                  <text x="{{ mark.x }}" y="12" text-anchor="middle" style="font-size:10.5px">{{ mark.label }}</text>
+                {% endfor %}
+              </svg>
+            </th>
+            <th class="r">Mean</th>
+            <th class="r narrow-hide">±SD</th>
+            <th class="c">Retrieval</th>
+            <th class="c">Calculation</th>
+            <th class="c">Traps</th>
+            <th class="c narrow-hide">Tools</th>
+            <th class="c narrow-hide">Transfer</th>
+            <th class="r narrow-hide">$/100</th>
+            <th class="r wide-only">Latency</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for row in leaderboard %}
+          <tr class="{{ 'baseline-row' if row.kind == 'baseline' else '' }}{% if row.kind == 'baseline' and loop.previtem and loop.previtem.kind == 'model' %} first-baseline{% endif %}" data-lb-kind="{{ row.kind }}">
+            <td class="r narrow-hide muted">{{ row.rank if row.kind == "model" else "" }}</td>
+            <td class="nowrap">
+              {% if row.kind == "model" %}
+                <i class="dot" style="background:{{ row.color }}"></i><b>{{ row.name }}{% if row.default_sampling %}*{% endif %}</b>
+              {% else %}
+                {{ row.name }}
+              {% endif %}
+            </td>
+            <td>
+              <svg viewBox="0 0 {{ score_chart.width }} 20" role="img" aria-label="{{ row.mean|pct(1) }}" style="width:220px;height:20px">
+                <line class="zero" x1="{{ row.chart.zero_x }}" x2="{{ row.chart.zero_x }}" y1="2" y2="18"/>
+                <rect x="{{ row.chart.bar_x }}" y="5" width="{{ row.chart.bar_w }}" height="10" rx="2.5" fill="{{ row.color if row.kind == 'model' else '#9ca3af' }}" fill-opacity="{{ '0.85' if row.kind == 'model' else '0.5' }}"/>
+                <line x1="{{ row.chart.low_x }}" x2="{{ row.chart.high_x }}" y1="10" y2="10" stroke="#111827" stroke-width="1.6"/>
+                <circle cx="{{ row.chart.mean_x }}" cy="10" r="3" fill="#111827"/>
+              </svg>
+            </td>
+            <td class="r"><b>{{ row.mean|pct(1) }}</b></td>
+            <td class="r narrow-hide muted">{{ "%.1f"|format(row.sd * 100) }}</td>
+            {% for tier in (1, 2, 3) %}
+              <td class="c">{% if tier in row.tiers %}<span class="pill" style="background:{{ row.tiers[tier]|soft_heat }};color:{{ row.tiers[tier]|text_heat }}">{{ row.tiers[tier]|pct(0) }}</span>{% endif %}</td>
+            {% endfor %}
+            <td class="c narrow-hide">{% if row.tools is not none and row.kind == "model" %}<span class="pill" style="background:{{ row.tools|soft_heat }};color:{{ row.tools|text_heat }}">{{ row.tools|pct(0) }}</span>{% endif %}</td>
+            <td class="c narrow-hide">{% if row.transfer is not none and row.kind == "model" %}<span class="pill" style="background:{{ row.transfer|soft_heat }};color:{{ row.transfer|text_heat }}">{{ row.transfer|pct(0) }}</span>{% endif %}</td>
+            <td class="r narrow-hide">{% if row.kind == "model" %}${{ "%.3f"|format(row.cost_per_100) }}{% endif %}</td>
+            <td class="r wide-only">{% if row.kind == "model" and row.latency %}{{ "%.1f"|format(row.latency) }}s{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px">
+    <div class="card-head">
+      <span class="card-title">Calculator effect</span>
+      <span class="muted" style="font-size:13px">108 tasks × 3 per mode</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th class="r">Exact payslips: single</th><th class="r">tools, no calculator</th><th class="r">tools + calculator</th>
+              <th class="r">Correct traps: single</th><th class="r">tools, no calculator</th><th class="r">tools + calculator</th></tr>
+        </thead>
+        <tbody>
+        {% for row in calculator %}
+          <tr>
+            <td>{{ model_tag(row.model) }}</td>
+            {% for metric in ("payslips", "traps") %}
+              {% for key in ("single", "nocalc", "tools") %}
+                <td class="r">{% if row[key] and row[key][metric] is not none %}<span class="pill" style="background:{{ row[key][metric]|soft_heat }};color:{{ row[key][metric]|text_heat }}">{{ row[key][metric]|pct(0) }}</span>{% else %}<span class="muted">-</span>{% endif %}</td>
+              {% endfor %}
+            {% endfor %}
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="failures" class="sec" data-module="failures">
+  <div class="grid-2" style="margin-bottom:20px">
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Failure breakdown, single-turn</span>
+        <div class="legend">
+          {% for b in failure_stack.buckets %}
+            <span><i class="dot" style="background:{{ b.color }}"></i>{{ b.label }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div style="margin-top:4px">
+        {% for row in failure_stack.rows %}
+          <div class="stack-row">
+            <div>{{ model_tag(row.model) }}</div>
+            <div class="stack-bar">
+              {% for seg in row.segments %}
+                <div class="stack-seg" style="width:{{ seg.w }}%;background:{{ seg.color }}" title="{{ seg.title }}"></div>
+              {% endfor %}
+            </div>
+            <div class="r muted" style="font-size:13px"><b>{{ row.failed }}</b> / {{ row.total }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Reviewed failures</span>
+        <span class="muted" style="font-size:13px">Counts cover all matching answers; 10 transcripts read</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Pattern</th><th>Type</th><th class="r">Answers</th><th>Transcripts</th></tr>
+          </thead>
+          <tbody>
+          {% for item in reviewed %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td><span class="pill neutral">{{ item.tag }}</span></td>
+              <td class="r">{{ item.count }}</td>
+              <td class="nowrap">
+                {% for link in item.links %}
+                  <a href="{{ link.url }}" style="color:#2563eb;margin-right:10px">{{ link.text }}</a>
+                {% endfor %}
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <span class="card-title">Task × model heatmap</span>
+        <div class="legend">
+          <span>-50%<i class="ramp"></i>100%</span>
+          <span id="hm-status">Select a cell to open its transcript</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div class="tabs" id="hm-mode-tabs">
+          <button type="button" class="tab active" data-hm-mode="single">Single-turn ({{ heatmap.shown }} failed)</button>
+          <button type="button" class="tab" data-hm-mode="tools">Tool use ({{ tool_heatmap.shown }} failed)</button>
+        </div>
+        <div class="tabs" id="hm-tier-tabs">
+          <button type="button" class="tab active" data-hm-tier="all">All</button>
+          {% for band in heatmap.bands %}
+            <button type="button" class="tab" data-hm-tier="{{ band.tier }}">{{ band.label }}</button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div id="hm-single-wrap" class="table-wrap">{{ heat_svg(heatmap, "Single-turn failure heatmap") }}</div>
+    <div id="hm-tools-wrap" class="table-wrap" style="display:none">{{ heat_svg(tool_heatmap, "Tool-use failure heatmap") }}</div>
+  </div>
+</section>
+
+<section id="training" class="sec" data-module="training">
+  <div class="grid-2" style="margin-bottom:20px">
+    <div class="card stages-card">
+      <div class="card-head">
+        <span class="card-title">MiniCPM5-1B training stages</span>
+        <span class="muted" style="font-size:13px">{{ "Test, 192 tasks × 4" if stages.split == "test" else "Development, 96 tasks × 4 (test pending)" }}, documents in the prompt</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Stage</th>{% for title in stages.metrics %}<th class="r">{{ title }}</th>{% endfor %}<th class="r">Reward</th></tr>
+          </thead>
+          <tbody>
+          {% for stage in stages.stages %}
+            <tr>
+              <td class="nowrap"><i class="dot" style="background:{{ stage.color }}"></i><b>{{ stage.label }}</b></td>
+              {% for cell in stage.cells %}
+                <td class="r">
+                  <div style="font-weight:600">{{ cell.value|pct(1) }}</div>
+                  {% if cell.change %}<span class="pill {{ cell.tone }}" style="min-width:0;padding:1px 6px;font-size:11.5px">{{ cell.change.difference|signed }}</span>{% endif %}
+                </td>
+              {% endfor %}
+              <td class="r"><b>{{ stage.reward|pct(1) }}</b></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="font-size:12.5px;margin-top:10px">Change from the previous stage (SFT vs. frozen + calculator, RL vs. SFT), paired by task. Green or red: the 95% interval excludes zero.</p>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Payslip outcomes by stage</span>
+        <div class="legend">{% for kind in stages.kinds %}<span><i class="dot" style="background:{{ kind.color }}"></i>{{ kind.label }}</span>{% endfor %}</div>
+      </div>
+      {% for row in stages.breakdown %}
+        <div class="stack-row" style="grid-template-columns:150px minmax(0,1fr) 70px">
+          <div><i class="dot" style="background:{{ row.color }}"></i><b style="font-size:13px">{{ row.label }}</b></div>
+          <div class="stack-bar">{% for seg in row.segments %}<div class="stack-seg" style="width:{{ seg.w }}%;background:{{ seg.color }}" title="{{ seg.label }}: {{ seg.count }} of {{ row.total }}"></div>{% endfor %}</div>
+          <div class="r muted" style="font-size:12.5px">{{ row.total }} answers</div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Exact payslips by half-year</span>
+        <div class="legend">{% for stage in stages.stages if not stage.key.startswith("raw-") %}<span><i class="dot" style="background:{{ stage.color }}"></i>{{ stage.label }}</span>{% endfor %}</div>
+      </div>
+      {% for row in stages.halves %}
+        <div class="shift-item" style="padding:6px 0">
+          <b>{{ row.label }}</b>
+          {% for value in row["values"] %}
+            <div class="shift-line">
+              <span class="muted" style="font-size:11.5px"></span>
+              <div class="bar-track"><div class="bar-fill" style="width:{{ value.bar }}%;background:{{ value.color }}"></div></div>
+              <span class="r mono">{{ value.value|pct(0) }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Exact payslips by stratum</span>
+        <div class="legend">{% for stage in stages.stages if stage.key != "raw-single" %}<span><i class="dot" style="background:{{ stage.color }}"></i>{{ stage.label }}</span>{% endfor %}</div>
+      </div>
+      {% for row in stages.strata %}
+        <div class="shift-item" style="padding:6px 0">
+          <b>{{ row.label }}</b>
+          {% for value in row["values"] %}
+            <div class="shift-line">
+              <span class="muted" style="font-size:11.5px"></span>
+              <div class="bar-track"><div class="bar-fill" style="width:{{ value.bar }}%;background:{{ value.color }}"></div></div>
+              <span class="r mono">{{ value.value|pct(0) }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="card sweep-card">
+      <div class="card-head"><span class="card-title">KL coefficient sweep</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Run</th><th class="r">Steps</th><th>KL, last 10</th><th class="r">Max KL</th><th class="r">Entropy</th><th class="r">Reward</th></tr>
+          </thead>
+          <tbody>
+          {% for row in sweep %}
+            <tr>
+              <td class="nowrap"><i class="dot" style="background:{{ row.color }}"></i><a href="{{ row.url }}"><b>{{ row.label }}</b></a></td>
+              <td class="r">{{ row.done }}/{{ row.planned }}</td>
+              <td style="width:125px">
+                <div style="display:flex;align-items:center;gap:8px">
+                  <div class="bar-track" style="flex:1"><div class="bar-fill" style="width:{{ row.kl_bar }}%;background:{{ row.color }}"></div></div>
+                  <span class="mono">{{ "%.4f"|format(row.kl) }}</span>
+                </div>
+              </td>
+              <td class="r mono">{{ "%.4f"|format(row.max_kl) }}</td>
+              <td class="r mono">{{ "%.3f"|format(row.entropy) }}</td>
+              <td class="r"><b>{{ row.reward|pct(1) }}</b></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-head">
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <span class="card-title">GRPO training curves, MiniCPM5-1B</span>
+        <div class="legend" id="legend-final">
+          {% for run in final %}
+            <span><i class="dot" style="background:{{ run.color }}"></i><a href="/run/{{ run.id }}">{{ run.title }} ({{ run.done }}/{{ run.planned }})</a></span>
+          {% endfor %}
+        </div>
+        <div class="legend" id="legend-all" style="display:none">
+          {% for run in runs %}
+            <span><i class="dot" style="background:{{ run.color }}"></i><a href="/run/{{ run.id }}">{{ run.title }}</a></span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="tabs">
+        <button type="button" class="tab active" data-curve-mode="final">Final protocol</button>
+        <button type="button" class="tab" data-curve-mode="all">All {{ runs|length }} runs</button>
+      </div>
+    </div>
+    <div id="curves-final-panel">
+      <div class="curves-grid">
+        {% for item in curves %}{{ curve_svg(item) }}{% endfor %}
+      </div>
+      <p class="muted" style="font-size:12.5px;margin-top:10px">Each point is one training step: 8 payslip and 8 trap answers on unseen tasks. Thick lines average the last 10 steps.</p>
+    </div>
+    <div id="curves-all-panel" class="curves-grid" style="display:none">
+      {% for item in all_curves %}{{ curve_svg(item) }}{% endfor %}
+    </div>
+  </div>
+
+  {% if learning_curve %}
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-head">
+      <span class="card-title">Learning curve, development split</span>
+      <div class="legend">{% for run in learning_curve.runs %}<span><i class="dot" style="background:{{ run.color }}"></i>{{ run.label }}</span>{% endfor %}</div>
+    </div>
+    <div class="curves-grid">
+      {% for item in learning_curve.charts %}{{ curve_svg(item) }}{% endfor %}
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:10px">96 development tasks × 4, scored at step 0 and at each saved checkpoint.</p>
+  </div>
+  {% endif %}
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Earlier protocols: held-out checkpoints, no calculator</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Checkpoint</th>
+              <th class="r">Correct clarifications</th>
+              <th class="r">Calculates through traps</th>
+              <th class="r">Refusals</th>
+              <th class="r narrow-hide">Malformed</th>
+              <th class="r">Reward</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for group in evaluations %}
+            <tr><td colspan="6" class="muted" style="font-weight:600;padding-top:12px">{{ group.title }}</td></tr>
+            {% for row in group.rows %}
+              <tr>
+                <td class="nowrap">
+                  <i class="dot" style="background:{{ row.color }}"></i>
+                  {% if row.url %}<a href="{{ row.url }}"><b>{{ row.label }}</b></a>{% else %}{{ row.label }}{% endif %}
+                </td>
+                {% if row.pending %}
+                  <td colspan="5" class="r muted">Pending</td>
+                {% else %}
+                  {% for cell in row.cells %}
+                    {% if loop.index != 4 %}
+                      <td class="r {{ 'narrow-hide' if loop.index == 5 }}">
+                        <div style="font-weight:600">{{ cell.value|pct(1) }}</div>
+                        {% if cell.change %}
+                          <div><span class="pill {{ 'good' if cell.tone == 'good' else ('bad' if cell.tone == 'bad' else 'neutral') }}" style="min-width:0;padding:1px 6px;font-size:11.5px;margin-top:2px">{{ cell.change.difference|signed }}</span></div>
+                        {% endif %}
+                      </td>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              </tr>
+            {% endfor %}
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Reward exploits found in training</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Rubric</th><th>Exploit</th><th>Fix</th></tr>
+          </thead>
+          <tbody>
+          {% for ep in episodes %}
+            <tr>
+              <td class="nowrap"><a href="{{ ep.url }}" style="color:#2563eb"><b>{{ ep.rule }}</b></a></td>
+              <td>
+                <div>{{ ep.exploit }}</div>
+                {% if ep.sample %}
+                  <details style="margin-top:4px">
+                    <summary class="muted" style="font-size:12px;cursor:pointer">Step {{ ep.sample_step }} output</summary>
+                    <code style="display:block;margin-top:4px;font-size:12px;overflow-wrap:anywhere">{{ ep.sample }}</code>
+                  </details>
+                {% endif %}
+              </td>
+              <td class="muted">{{ ep.fix }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sandbox" class="sec" data-module="sandbox">
+  <div class="grid-2" id="gym">
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Sandbox API</span>
+        <button type="button" id="probe-btn" class="tab active" style="border:1px solid #e5e7eb">Try /health and /tasks</button>
+      </div>
+      <pre style="margin-bottom:12px">uv run python scripts/quickstart.py</pre>
+      <pre id="probe-out" style="display:none;max-height:170px;overflow:auto;margin-bottom:12px"></pre>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Endpoint</th><th>Response</th></tr></thead>
+          <tbody>
+            <tr><td class="mono nowrap">GET /tasks?n=3&amp;tier=all</td><td class="muted">Rules, documents, tables, <code>run_id</code>, seed</td></tr>
+            <tr><td class="mono nowrap">POST /submit</td><td class="muted">Score, component breakdown, cited clauses</td></tr>
+            <tr><td class="mono nowrap">GET /runs/{id}</td><td class="muted">Saved run result (24h TTL)</td></tr>
+            <tr><td class="mono nowrap">GET /health</td><td class="muted">Ruleset &amp; rubric versions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+        {% for check in sandbox %}
+          <span class="pill {{ 'good' if check.result.mean_reward >= 0.99 else 'neutral' }}">
+            {{ {"useful": "Useful explanation", "empty": "Empty explanation", "injection": "Prompt injection"}.get(check.kind, check.kind) }}: {{ "%.2f"|format(check.result.mean_reward) }}
+          </span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Verification</span>
+      </div>
+      <div class="grid-4" style="margin-bottom:14px">
+        <div style="padding:12px;background:#f8f9fa;border:1px solid #e5e7eb;border-radius:8px">
+          <span class="muted" style="font-size:12px">Eval task mix</span>
+          <div style="font-size:18px;font-weight:700;margin-top:3px">{{ gym.counts.get(1, 0) }} / {{ gym.counts.get(2, 0) }} / {{ gym.counts.get(3, 0) }}</div>
+          <span class="muted" style="font-size:12px">Retrieval / payslips / traps</span>
+        </div>
+        <div style="padding:12px;background:#f8f9fa;border:1px solid #e5e7eb;border-radius:8px">
+          <span class="muted" style="font-size:12px">Task audit</span>
+          <div style="font-size:18px;font-weight:700;margin-top:3px">{{ gym.leaks }} leaks</div>
+          <span class="muted" style="font-size:12px">{{ "{:,}".format(gym.total_tasks) }} tasks · {{ gym.crosscheck|pct(0) }} cross-check mismatch</span>
+        </div>
+        <div style="padding:12px;background:#f8f9fa;border:1px solid #e5e7eb;border-radius:8px">
+          <span class="muted" style="font-size:12px">Judge reliability</span>
+          <div style="font-size:18px;font-weight:700;margin-top:3px">{{ (1 - gym.judge_controlled.disagreement_rate)|pct(0) }}</div>
+          <span class="muted" style="font-size:12px">{{ gym.judge_high.calls }} calls · {{ gym.judge_high.failures }} failures</span>
+        </div>
+        <div style="padding:12px;background:#f8f9fa;border:1px solid #e5e7eb;border-radius:8px">
+          <span class="muted" style="font-size:12px">Transfer ranking</span>
+          <div style="font-size:18px;font-weight:700;margin-top:3px">{{ gym.transfer_concordant }}/{{ gym.transfer_concordant + gym.transfer_ties + gym.transfer_discordant }}</div>
+          <span class="muted" style="font-size:12px">{{ gym.transfer_ties }} tied · {{ gym.transfer_discordant }} discordant</span>
+        </div>
+      </div>
+      <details class="objective"><summary>Training objective</summary>
+      <pre>J = mean_groups [ mean_tokens (min(rho A, clip(rho, 0.8, 1.2) A) - beta k3) ]
+A = (reward - mean(reward)) / (std(reward) + 1e-4)
+k3 = pi_ref / pi_theta - log(pi_ref / pi_theta) - 1</pre></details>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-mod-link]').forEach(link => {
+    link.addEventListener('click', () => {
+      const target = link.getAttribute('data-mod-link');
+      document.querySelectorAll('[data-mod-link]').forEach(el => el.classList.remove('active'));
+      link.classList.add('active');
+      document.querySelectorAll('.sec').forEach(sec => {
+        sec.style.display = (target === 'all' || sec.getAttribute('data-module') === target) ? '' : 'none';
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-lb-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const kind = btn.getAttribute('data-lb-filter');
+      document.querySelectorAll('[data-lb-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('[data-lb-kind]').forEach(row => {
+        row.style.display = (kind === 'all' || row.getAttribute('data-lb-kind') === kind) ? '' : 'none';
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-hm-mode]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.getAttribute('data-hm-mode');
+      document.querySelectorAll('[data-hm-mode]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('hm-single-wrap').style.display = mode === 'single' ? '' : 'none';
+      document.getElementById('hm-tools-wrap').style.display = mode === 'tools' ? '' : 'none';
+      document.getElementById('hm-tier-tabs').style.display = mode === 'single' ? '' : 'none';
+    });
+  });
+
+  document.querySelectorAll('[data-hm-tier]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tier = btn.getAttribute('data-hm-tier');
+      document.querySelectorAll('[data-hm-tier]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#hm-single-wrap [data-cell-tier]').forEach(cell => {
+        const match = (tier === 'all' || cell.getAttribute('data-cell-tier') === tier);
+        cell.style.opacity = match ? '1' : '0.12';
+        cell.style.pointerEvents = match ? 'auto' : 'none';
+      });
+      document.querySelectorAll('#hm-single-wrap [data-num-tier], #hm-single-wrap [data-band-tier]').forEach(lbl => {
+        const t = lbl.getAttribute('data-num-tier') || lbl.getAttribute('data-band-tier');
+        lbl.style.opacity = (tier === 'all' || t === tier) ? '1' : '0.2';
+      });
+    });
+  });
+
+  const hmStatus = document.getElementById('hm-status');
+  document.querySelectorAll('[data-tip]').forEach(cell => {
+    cell.addEventListener('mouseenter', () => {
+      if (hmStatus) hmStatus.textContent = cell.getAttribute('data-tip');
+    });
+  });
+
+  document.querySelectorAll('[data-curve-mode]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.getAttribute('data-curve-mode');
+      document.querySelectorAll('[data-curve-mode]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('curves-final-panel').style.display = mode === 'final' ? '' : 'none';
+      document.getElementById('curves-all-panel').style.display = mode === 'all' ? '' : 'none';
+      document.getElementById('legend-final').style.display = mode === 'final' ? '' : 'none';
+      document.getElementById('legend-all').style.display = mode === 'all' ? '' : 'none';
+    });
+  });
+
+  const probeBtn = document.getElementById('probe-btn');
+  const probeOut = document.getElementById('probe-out');
+  if (probeBtn && probeOut) {
+    probeBtn.addEventListener('click', async () => {
+      probeOut.style.display = 'block';
+      probeOut.textContent = 'Fetching /health and /tasks?n=2 ...';
+      try {
+        const [hRes, tRes] = await Promise.all([fetch('/health'), fetch('/tasks?n=2')]);
+        const health = await hRes.json();
+        const tasks = await tRes.json();
+        probeOut.textContent = JSON.stringify({
+          health: health,
+          run_id: tasks.run_id,
+          seed: tasks.seed,
+          tier_mix: tasks.tier_mix,
+          tasks: tasks.tasks.map(t => ({ id: t.id, prompt: t.prompt }))
+        }, null, 2);
+      } catch (err) {
+        probeOut.textContent = String(err);
+      }
+    });
+  }
+</script>
+{% endblock %}
