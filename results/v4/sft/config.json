@@ -1,0 +1,38 @@
+{
+  "stage": "supervised warm start for calculator tool use",
+  "model": "openbmb/MiniCPM5-1B",
+  "revision": "87179e5c1f455ef22e6223592d2d61351b525bfc",
+  "quantization": "NF4 double quantization, bf16 compute",
+  "labels": "Python reference and calculator only",
+  "loss": "mean cross-entropy over the model's own turns; prompt and calculator replies masked",
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.0,
+    "targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "optimizer": "AdamW, betas 0.9 and 0.99, no weight decay, gradient norm clipped to 1.0",
+  "lr": 0.0001,
+  "warmup_steps": 8,
+  "epochs": 2,
+  "accumulation": 8,
+  "tasks": "data/v4/sft.json",
+  "task_count": 256,
+  "taskset_sha256": "b0923bc9d924fce1215124fd2d804c285ec3cc93b3b43fafbbc5132ca968e202",
+  "demos_sha256": "ac9759c5a659b97859c52b112b1c265553c8d064404c1332948d712e3784b320",
+  "rules_sha256": "5a87c8929e3b51c929e8e4b48138835d0ce96fb57477b891d31be7784b0a5cee",
+  "seed": 7,
+  "target_tokens": 37000,
+  "torch": "2.14.0+cu130",
+  "transformers": "5.19.0",
+  "peft": "0.21.0",
+  "python_executable": "/mnt/DATA/Bibek/Projects/LeWM/.venv/bin/python"
+}
