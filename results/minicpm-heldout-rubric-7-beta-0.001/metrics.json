@@ -1,0 +1,17 @@
+{
+  "rollouts": 400,
+  "mean_reward": -0.023166665,
+  "sd_reward": 0.6984214432261642,
+  "passed": 125,
+  "truncated": 1,
+  "judge_cost_usd": 0.011513577240000001,
+  "local_inference_api_cost_usd": 0,
+  "total_generation_seconds": 1311.8770138010586,
+  "statuses": {
+    "wrong_decision": 46,
+    "wrong_clarification": 50,
+    "scored": 297,
+    "invalid_format": 7
+  },
+  "rubric_version": "8"
+}
