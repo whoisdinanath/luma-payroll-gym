@@ -1,11 +1,102 @@
-<!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Payroll transcript</title>
-<style>body{font:16px system-ui;max-width:1100px;margin:32px auto;padding:0 20px}pre{white-space:pre-wrap;word-break:break-word;background:#f4f6f8;padding:16px}</style></head>
-<body>
-  <a href="/">Back to dashboard</a>
-  <h1>{{ task_id }}</h1><p>{{ run }}</p>
-  <h2>Scores</h2><pre>{{ scores }}</pre>
-  <h2>Saved conversation</h2><pre>{{ transcripts }}</pre>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block title %}Task {{ number or task_id }} · {{ model_name }}{% endblock %}
+{% block content %}
+<div class="crumb"><a href="/#failures">← Heatmap</a> / {{ model_name }} · Task {{ number or task_id }}</div>
+
+<div class="grid-2-wide" style="margin-bottom:16px">
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title"><i class="dot" style="background:{{ color }}"></i>{{ model_name }}{% if default_sampling %}*{% endif %} · {{ mode }} · Task {{ number or task_id }} ({{ kind }}{% if detail %}, {{ detail }}{% endif %})</span>
+      <span class="pill" style="background:{{ mean|soft_heat }};color:{{ mean|text_heat }}">Mean {{ mean|pct(1) }}</span>
+    </div>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Field</th>
+            {% if expected %}<th>Expected</th>{% endif %}
+            {% for attempt in attempts %}
+              <th>Rollout #{{ attempt.number }} ({{ attempt.reward|pct(0) }})</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+        {% for row in comparison %}
+          <tr>
+            <th>{{ row.field }}</th>
+            {% if expected %}<td class="expected">{{ row.expected }}</td>{% endif %}
+            {% for cell in row.cells %}
+              <td class="{{ cell.state }}">{{ cell.value }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {% if prompt %}
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Prompt</span>
+    </div>
+    <pre style="max-height:320px;overflow:auto">{{ prompt }}</pre>
+  </div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <span class="card-title">Rollouts</span>
+  </div>
+  {% for attempt in attempts %}
+    <details style="margin-top:{{ '0' if loop.first else '10px' }};border:1px solid #e4e4e7;border-radius:8px;padding:10px 14px;background:#fafafa" {% if loop.first %}open{% endif %}>
+      <summary style="cursor:pointer;font-weight:600">
+        Rollout #{{ attempt.number }}
+        <span class="pill" style="background:{{ attempt.reward|soft_heat }};color:{{ attempt.reward|text_heat }};margin:0 6px">{{ attempt.reward|pct(1) if attempt.reward is not none else "error" }}</span>
+        <span class="muted" style="font-weight:400">
+          {{ attempt.failure }}
+          {% if attempt.calls %} · {{ attempt.calls }} tool call{{ 's' if attempt.calls != 1 }}{% endif %}
+          {% if attempt.latency %} · {{ "%.1f"|format(attempt.latency) }}s{% endif %}
+          {% if attempt.cost %} · ${{ "%.4f"|format(attempt.cost) }}{% endif %}
+        </span>
+      </summary>
+
+      {% if attempt.breakdown %}
+        <table style="margin:10px 0;background:#fff;border-radius:6px">
+          <thead><tr><th>Component</th><th class="r">Score</th><th>Clauses</th></tr></thead>
+          <tbody>
+          {% for part in attempt.breakdown %}
+            <tr>
+              <td>{{ part.name }}</td>
+              <td class="r">{% if part.score is not none %}{{ part.score|pct(1) }}{% endif %}</td>
+              <td class="mono muted">{{ part.clauses }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      {% endif %}
+
+      {% if attempt.error %}<pre style="margin-top:8px">{{ attempt.error }}</pre>{% endif %}
+
+      {% for step in attempt.steps %}
+        <div class="step-row">
+          <div class="muted">{{ step.role }}</div>
+          <div>
+            {% if step.calls %}
+              <div>{% for call in step.calls %}<code class="call-chip">{{ call }}</code>{% endfor %}</div>
+            {% endif %}
+            {% if step.text %}<pre>{{ step.text }}</pre>{% endif %}
+            {% if step.reasoning %}
+              <details style="margin-top:6px">
+                <summary class="muted" style="cursor:pointer;font-size:12px">Reasoning</summary>
+                <pre style="margin-top:4px">{{ step.reasoning }}</pre>
+              </details>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </details>
+  {% endfor %}
+</div>
+{% endblock %}

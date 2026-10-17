@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block title %}{{ run.title }} · Training{% endblock %}
+{% block content %}
+<div class="crumb"><a href="/#training">← Training</a> / {{ run.title }}</div>
+
+<div class="card" style="margin-bottom:16px">
+  <div class="card-head">
+    <span class="card-title"><i class="dot" style="background:{{ run.color }}"></i>{{ run.title }}</span>
+    <div class="tabs">
+      {% for other in runs %}
+        <a class="tab {{ 'active' if other.id == run.id else '' }}" href="/run/{{ other.id }}">{{ other.title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="grid-4">
+    {% for label, value in facts %}
+      <div style="padding:8px 12px;background:#fafafa;border:1px solid #e4e4e7;border-radius:7px">
+        <span class="muted" style="font-size:11px">{{ label }}</span>
+        <div style="font-size:14px;font-weight:600;margin-top:1px">{{ value }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:16px">
+  <div class="card-head">
+    <span class="card-title">Training curves, {{ run.done }} steps</span>
+  </div>
+  <div class="curves-grid">
+    {% for item in charts %}
+      <div class="curve-box">
+        <h4>{{ item.title }}</h4>
+        <svg viewBox="0 0 {{ item.width }} {{ item.height }}" role="img" aria-label="{{ item.title }}">
+          {% for mark in item.y_marks %}
+            <line class="{{ 'zero' if mark.zero else 'grid' }}" x1="{{ item.left }}" x2="{{ item.right }}" y1="{{ mark.y }}" y2="{{ mark.y }}"/>
+            <text x="{{ item.left - 5 }}" y="{{ mark.y + 3.5 }}" text-anchor="end">{{ mark.label }}</text>
+          {% endfor %}
+          {% for mark in item.x_marks %}
+            <text x="{{ mark.x }}" y="{{ item.bottom + 15 }}" text-anchor="{{ mark.anchor }}">Step {{ mark.label }}</text>
+          {% endfor %}
+          {% for path in item.paths %}
+            <polygon points="{{ path.area }}" fill="{{ path.color }}" fill-opacity="0.07"/>
+            <polyline points="{{ path.raw }}" fill="none" stroke="{{ path.color }}" stroke-opacity="0.22" stroke-width="1"/>
+            <polyline points="{{ path.smooth }}" fill="none" stroke="{{ path.color }}" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="{{ path.end_x }}" cy="{{ path.end_y }}" r="2.8" fill="{{ path.color }}"/>
+          {% endfor %}
+        </svg>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% if steps %}
+<div class="card">
+  <div class="card-head">
+    <span class="card-title">Sampled completions</span>
+  </div>
+  {% for item in steps %}
+    <div style="margin-top:{{ '0' if loop.first else '16px' }}">
+      <div class="muted" style="font-weight:600;margin-bottom:8px">Step {{ item.step }}</div>
+      <div class="grid-2">
+        {% for group in item.groups %}
+          <div style="padding:10px 12px;background:#fafafa;border:1px solid #e4e4e7;border-radius:8px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+              <b><code>{{ group.task }}</code> · {{ "Trap" if group.tier == 3 else "Calculation" }}</b>
+              {% if group.reason %}<span class="pill warn">{{ group.reason }}</span>{% endif %}
+            </div>
+            {% for answer in group.answers[:4] %}
+              <div style="margin-top:5px;padding:6px 8px;background:#fff;border:1px solid #e4e4e7;border-radius:6px">
+                <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:3px">
+                  <span class="pill" style="background:{{ answer.reward|soft_heat }};color:{{ answer.reward|text_heat }}">{{ answer.reward|pct(0) }}</span>
+                  <span class="muted">{{ answer.decision or "invalid" }} · {{ answer.status|replace("_", " ") }}</span>
+                </div>
+                <div class="mono" style="font-size:11px;overflow-wrap:anywhere">{{ answer.text }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }} · Luma Payroll Gym{% endblock %}
+{% block content %}
+<div class="crumb"><a href="/">← Dashboard</a> / {{ title }}</div>
+<div class="doc-grid">
+  {% if contents %}
+  <aside class="doc-toc" aria-label="Sections">
+    {% for item in contents %}
+      <a href="#{{ item.id }}">{{ item.title }}</a>
+    {% endfor %}
+  </aside>
+  {% endif %}
+  <article class="prose">
+    {{ content|safe }}
+  </article>
+</div>
+{% endblock %}
