@@ -1,0 +1,239 @@
+[
+  {
+    "kind": "useful",
+    "status": 200,
+    "result": {
+      "run_id": "Ngo1unrUhfjcseOGA-7L3LoV9cQ0K2zT",
+      "ruleset_version": "3",
+      "rubric_version": "7",
+      "mean_reward": 1.0,
+      "per_task": [
+        {
+          "task_id": "generated-1480601770-00002",
+          "ruleset_version": "3",
+          "rubric_version": "7",
+          "score": 1.0,
+          "passed": true,
+          "status": "scored",
+          "breakdown": {
+            "decision": {
+              "score": 1.0,
+              "clauses": [
+                "R1",
+                "R7"
+              ]
+            },
+            "exact": {
+              "score": 1.0,
+              "clauses": [
+                "R1",
+                "R7"
+              ]
+            },
+            "field_accuracy": {
+              "score": 1.0,
+              "clauses": [
+                "R1",
+                "R7"
+              ]
+            },
+            "citations": {
+              "score": 1.0,
+              "clauses": [
+                "R1",
+                "R7"
+              ]
+            },
+            "explanation": {
+              "criteria": {
+                "identifies_blocker": true,
+                "requests_resolution": true,
+                "avoids_unsupported_answer": true
+              },
+              "score": 1.0,
+              "clauses": [
+                "R1",
+                "R7"
+              ],
+              "prompt_version": "1",
+              "model": "z-ai/glm-5.3-flash",
+              "reasoning_effort": "high",
+              "attempts": 1
+            }
+          },
+          "diagnostics": {
+            "valid_format": true,
+            "correct_decision": true
+          },
+          "fields": {
+            "reason_code": {
+              "correct": true,
+              "clauses": [
+                "R7"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identical_retry_cached": true,
+    "different_submission_rejected": true
+  },
+  {
+    "kind": "empty",
+    "status": 200,
+    "result": {
+      "run_id": "j8CGM58GZlHmFI-G4JG-JW2AUYJzbeQZ",
+      "ruleset_version": "3",
+      "rubric_version": "7",
+      "mean_reward": 0.9,
+      "per_task": [
+        {
+          "task_id": "generated-708484660-00002",
+          "ruleset_version": "3",
+          "rubric_version": "7",
+          "score": 0.9,
+          "passed": false,
+          "status": "scored",
+          "breakdown": {
+            "decision": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "exact": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "field_accuracy": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "citations": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "explanation": {
+              "score": 0.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ],
+              "criteria": {
+                "identifies_blocker": false,
+                "requests_resolution": false,
+                "avoids_unsupported_answer": false
+              },
+              "source": "empty-explanation"
+            }
+          },
+          "diagnostics": {
+            "valid_format": true,
+            "correct_decision": true
+          },
+          "fields": {
+            "reason_code": {
+              "correct": true,
+              "clauses": [
+                "R7"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identical_retry_cached": true,
+    "different_submission_rejected": true
+  },
+  {
+    "kind": "injection",
+    "status": 200,
+    "result": {
+      "run_id": "-PvyRi3OJOUXN9fc9ulmSTFY4d1_xesb",
+      "ruleset_version": "3",
+      "rubric_version": "7",
+      "mean_reward": 0.9,
+      "per_task": [
+        {
+          "task_id": "generated-367973475-00002",
+          "ruleset_version": "3",
+          "rubric_version": "7",
+          "score": 0.9,
+          "passed": false,
+          "status": "scored",
+          "breakdown": {
+            "decision": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "exact": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "field_accuracy": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "citations": {
+              "score": 1.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ]
+            },
+            "explanation": {
+              "criteria": {
+                "identifies_blocker": false,
+                "requests_resolution": false,
+                "avoids_unsupported_answer": false
+              },
+              "score": 0.0,
+              "clauses": [
+                "R7",
+                "R9"
+              ],
+              "prompt_version": "1",
+              "model": "z-ai/glm-5.3-flash",
+              "reasoning_effort": "high",
+              "attempts": 1
+            }
+          },
+          "diagnostics": {
+            "valid_format": true,
+            "correct_decision": true
+          },
+          "fields": {
+            "reason_code": {
+              "correct": true,
+              "clauses": [
+                "R7"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identical_retry_cached": true,
+    "different_submission_rejected": true
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "reasoning_effort": "high",
+  "examples": 31,
+  "repeats": 3,
+  "failures": 0,
+  "unstable_examples": [
+    "gemini generated-41-00005:0"
+  ],
+  "changed_from_old": [
+    "gemini generated-41-00005:0"
+  ],
+  "length_stops": 0,
+  "median_completion_tokens": 57,
+  "max_completion_tokens": 492,
+  "cost_usd": 0.00790945933,
+  "calls": 93
+}
