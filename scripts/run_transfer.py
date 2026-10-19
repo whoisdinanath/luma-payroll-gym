@@ -24,13 +24,13 @@ def run_model(item):
                "--mode", "single", "--output", f"results/v4/transfer-human-{name}", "--execute"]
     if name == "luna-default":
         command.append("--provider-default-temperature")
-    result = None
+    code = 1
     with (ROOT / "results/v4" / f"transfer-human-{name}.log").open("a") as log:
         for _ in range(3):
-            result = subprocess.run(command, cwd=ROOT, stdout=log, stderr=log)
-            if result.returncode == 0:
+            code = subprocess.run(command, cwd=ROOT, stdout=log, stderr=log).returncode
+            if code == 0:
                 break
-    print(f"{name} {'completed' if result.returncode == 0 else 'stopped for review'}", flush=True)
+    print(f"{name} {'completed' if code == 0 else 'stopped for review'}", flush=True)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,20 @@
+{
+  "rollouts": 324,
+  "tasks": "data/v4/eval.json",
+  "generator_seeds": [
+    4041
+  ],
+  "mean_reward": 0.053240740740740734,
+  "sd_reward": 0.7197653926816959,
+  "passed": 96,
+  "truncated": 0,
+  "judge_cost_usd": 0.004867946,
+  "local_inference_api_cost_usd": 0,
+  "total_generation_seconds": 2753.2536581840027,
+  "statuses": {
+    "wrong_decision": 143,
+    "scored": 145,
+    "wrong_clarification": 34,
+    "invalid_format": 2
+  }
+}

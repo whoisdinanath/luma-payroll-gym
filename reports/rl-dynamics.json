@@ -242,46 +242,49 @@
     }
   },
   "rl-100": {
-    "steps": 25,
+    "steps": 60,
     "groups": {
       "2": {
-        "informative": 35,
-        "tied, every answer right": 14,
-        "tied, every answer wrong: refused/wrong row": 1
+        "informative": 75,
+        "tied, every answer right": 36,
+        "tied, every answer wrong: refused/wrong row": 5,
+        "tied, every answer wrong: other wrong": 1,
+        "tied, every answer wrong: wrong row": 2,
+        "tied, every answer wrong: refused": 1
       },
       "3": {
-        "tied, every answer right": 46,
-        "informative": 4
+        "tied, every answer right": 111,
+        "informative": 9
       }
     },
-    "answers": 496,
-    "share_of_generated_tokens_in_informative_groups": 0.6172270358746414,
-    "steps_without_update": 3,
+    "answers": 1272,
+    "share_of_generated_tokens_in_informative_groups": 0.5304994346669103,
+    "steps_without_update": 11,
     "mean_tokens": {
-      "payslip answer": 230.80645161290323,
-      "clarification": 59.168458781362006
+      "payslip answer": 230.96563573883162,
+      "clarification": 58.97971014492754
     },
     "update_size": {
       "learning_rate": 1e-05,
-      "updates": 44,
-      "drift_per_update_mean": 3.4861793066534106e-05,
-      "drift_per_update_max": 0.00020216462298532187,
+      "updates": 98,
+      "drift_per_update_mean": 3.0278724362981168e-05,
+      "drift_per_update_max": 0.00021439398695158478,
       "drift_stop": 0.02,
-      "clip_fraction_mean": 0.00013652641291838206,
+      "clip_fraction_mean": 0.00013096739848352497,
       "clip_fraction_max": 0.0016146393972012918,
       "ratio_range": [
         0.6012782454490662,
-        1.700648546218872
+        2.018761396408081
       ],
-      "grad_norm_mean": 5.69610483690419,
-      "share_of_updates_with_grad_norm_clipped": 0.7954545454545454
+      "grad_norm_mean": 5.801432703754732,
+      "share_of_updates_with_grad_norm_clipped": 0.826530612244898
     },
     "kl_to_reference": {
-      "mean": 5.096519379716883e-05,
-      "max": 0.00026676037416487416,
-      "last_10": 4.503658413657144e-05
+      "mean": 3.90080563546123e-05,
+      "max": 0.0002869017746137536,
+      "last_10": 5.819031802946819e-06
     },
-    "entropy_per_token_mean": 0.003219405012616967,
+    "entropy_per_token_mean": 0.003061058016807155,
     "payslip_contrasts_by_block": {
       "steps 1-20": {
         "toward the first-half row": 9,
@@ -289,9 +292,68 @@
         "toward the second-half row": 4
       },
       "steps 21-40": {
-        "toward attempting (refusal contrast)": 4,
-        "toward the first-half row": 3,
-        "toward the second-half row": 1
+        "toward attempting (refusal contrast)": 18,
+        "toward the first-half row": 11,
+        "toward the second-half row": 4
+      },
+      "steps 41-60": {
+        "toward the first-half row": 11,
+        "toward attempting (refusal contrast)": 9,
+        "toward the second-half row": 4
+      }
+    }
+  },
+  "rl-0.04-signal": {
+    "steps": 40,
+    "groups": {
+      "2": {
+        "informative": 77,
+        "tied, every answer right": 151,
+        "tied, every answer wrong: wrong row": 10,
+        "tied, every answer wrong: other wrong": 2
+      },
+      "3": {
+        "tied, every answer right": 36,
+        "informative": 4
+      }
+    },
+    "answers": 1384,
+    "share_of_generated_tokens_in_informative_groups": 0.3373564189480436,
+    "steps_without_update": 8,
+    "mean_tokens": {
+      "clarification": 57.98830409356725,
+      "payslip answer": 230.89612530915088
+    },
+    "update_size": {
+      "learning_rate": 5e-05,
+      "updates": 64,
+      "drift_per_update_mean": 0.00024333814168114604,
+      "drift_per_update_max": 0.003997629799930146,
+      "drift_stop": 0.02,
+      "clip_fraction_mean": 0.0007549903599847226,
+      "clip_fraction_max": 0.005506607929515419,
+      "ratio_range": [
+        0.16822008788585663,
+        10.041289329528809
+      ],
+      "grad_norm_mean": 0.2532281932653859,
+      "share_of_updates_with_grad_norm_clipped": 0.046875
+    },
+    "kl_to_reference": {
+      "mean": 0.003988090872021153,
+      "max": 0.04716272996978017,
+      "last_10": 0.004537685601674758
+    },
+    "entropy_per_token_mean": 0.001542304434268038,
+    "payslip_contrasts_by_block": {
+      "steps 1-20": {
+        "toward attempting (refusal contrast)": 7,
+        "toward the first-half row": 22,
+        "toward the second-half row": 21
+      },
+      "steps 21-40": {
+        "toward the first-half row": 6,
+        "toward the second-half row": 4
       }
     }
   }

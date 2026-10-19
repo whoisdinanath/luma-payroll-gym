@@ -92,8 +92,12 @@ def jobs():
             planned.append((f"{prefix}-{run}-calculator-noexamples", calculator + ["--zero-shot", "--tasks", tasks] + model(run)))
         planned.append((f"eval-{run}-tools-examples", ["--mode", "tools", "--tool-demos", "--rollouts", "3", "--max-turns", "8",
                                                        "--tasks", "data/v4/eval.json"] + model(run)))
-    planned.append(("test-rl-0.04-signal-calculator", calculator + ["--tasks", "data/v4/test.json", "--base", "results/v4/sft/merged",
-                                                              "--adapter", "results/v4/rl-0.04-signal/checkpoints/step-40"]))
+    signal = ["--base", "results/v4/sft/merged", "--adapter", "results/v4/rl-0.04-signal/checkpoints/step-40"]
+    planned.append(("test-rl-0.04-signal-calculator", calculator + ["--tasks", "data/v4/test.json"] + signal))
+    planned.append(("transfer-local-rl-0.04-signal-calculator", calculator + ["--tasks", "data/transfer-human.json"] + signal))
+    planned.append(("transfer-fixed-line-rl-0.04-signal-calculator", calculator + ["--tasks", "data/transfer-fixed-line.json"] + signal))
+    planned.append(("eval-rl-0.04-signal-tools-examples", ["--mode", "tools", "--tool-demos", "--rollouts", "3", "--max-turns", "8",
+                                                            "--tasks", "data/v4/eval.json"] + signal))
     return planned
 
 

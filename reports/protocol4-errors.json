@@ -50,6 +50,12 @@
       "wrong program line: tax": 9,
       "refused": 1,
       "wrong program line: contribution": 1
+    },
+    "rl-0.04-signal-calculator": {
+      "exact": 180,
+      "wrong program line: tax": 6,
+      "used the other half-year row": 3,
+      "wrong program line: contribution": 3
     }
   },
   "test": {
@@ -105,6 +111,11 @@
       "wrong program line: tax": 3,
       "wrong program line: contribution": 1,
       "refused": 1
+    },
+    "rl-0.04-signal-calculator": {
+      "exact": 373,
+      "wrong program line: tax": 7,
+      "used the other half-year row": 4
     }
   },
   "other_row_by_half": {
@@ -178,6 +189,16 @@
           30,
           104
         ]
+      },
+      "rl-0.04-signal-calculator": {
+        "first-half": [
+          2,
+          88
+        ],
+        "second-half": [
+          1,
+          104
+        ]
       }
     },
     "test": {
@@ -248,6 +269,16 @@
         ],
         "second-half": [
           38,
+          180
+        ]
+      },
+      "rl-0.04-signal-calculator": {
+        "first-half": [
+          1,
+          204
+        ],
+        "second-half": [
+          3,
           180
         ]
       }
@@ -477,6 +508,34 @@
         "other half-year row": 28,
         "refused": 5
       }
+    },
+    "rl-0.04-signal": {
+      "steps 1-20, first-half": {
+        "answers": 240,
+        "prompts": 60,
+        "refused": 5,
+        "exact": 150,
+        "other half-year row": 62
+      },
+      "steps 1-20, second-half": {
+        "answers": 240,
+        "prompts": 60,
+        "exact": 163,
+        "other half-year row": 61,
+        "refused": 3
+      },
+      "steps 21-40, first-half": {
+        "answers": 240,
+        "prompts": 60,
+        "exact": 210,
+        "other half-year row": 21
+      },
+      "steps 21-40, second-half": {
+        "answers": 240,
+        "prompts": 60,
+        "exact": 220,
+        "other half-year row": 8
+      }
     }
   },
   "checks": {
@@ -543,6 +602,15 @@
         "calculator called on a trap": 1,
         "template explanation": 191,
         "template from another reason": 0
+      },
+      "rl-0.04-signal-calculator": {
+        "truncated": 0,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 192,
+        "calculator called on a trap": 3,
+        "template explanation": 190,
+        "template from another reason": 0
       }
     },
     "test": {
@@ -607,6 +675,15 @@
         "trap answers": 384,
         "calculator called on a trap": 4,
         "template explanation": 380,
+        "template from another reason": 0
+      },
+      "rl-0.04-signal-calculator": {
+        "truncated": 1,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 384,
+        "calculator called on a trap": 3,
+        "template explanation": 381,
         "template from another reason": 0
       }
     }
@@ -742,6 +819,28 @@
         "10": 0.08888888888888889,
         "11": 0.16666666666666666,
         "12": 0.42857142857142855
+      }
+    },
+    "rl-0.04-signal-calculator": {
+      "wrong_row_share": 0.012152777777777778,
+      "attempts": 576,
+      "wrong_row_january_june": 0.010273972602739725,
+      "wrong_row_july_december": 0.014084507042253521,
+      "month_use": 0.9756415203550067,
+      "lean_toward_july_december_row": -0.003810534439513796,
+      "wrong_row_by_month": {
+        "01": 0.0,
+        "02": 0.0,
+        "03": 0.0,
+        "04": 0.020833333333333332,
+        "05": 0.0,
+        "06": 0.038461538461538464,
+        "07": 0.0,
+        "08": 0.0625,
+        "09": 0.017857142857142856,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0
       }
     }
   }
