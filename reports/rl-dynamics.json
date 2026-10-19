@@ -1,0 +1,298 @@
+{
+  "rl-0.04": {
+    "steps": 60,
+    "groups": {
+      "2": {
+        "informative": 63,
+        "tied, every answer right": 52,
+        "tied, every answer wrong: wrong row": 4,
+        "tied, every answer wrong: other wrong": 1
+      },
+      "3": {
+        "tied, every answer right": 106,
+        "informative": 14
+      }
+    },
+    "answers": 1140,
+    "share_of_generated_tokens_in_informative_groups": 0.49183035714285717,
+    "steps_without_update": 13,
+    "mean_tokens": {
+      "payslip answer": 231.2688172043011,
+      "clarification": 58.576687116564415
+    },
+    "update_size": {
+      "learning_rate": 1e-05,
+      "updates": 94,
+      "drift_per_update_mean": 2.1323196716842013e-05,
+      "drift_per_update_max": 0.00014874065807292554,
+      "drift_stop": 0.02,
+      "clip_fraction_mean": 0.00016571207428854256,
+      "clip_fraction_max": 0.002482929857231533,
+      "ratio_range": [
+        0.4929705262184143,
+        1.5278689861297607
+      ],
+      "grad_norm_mean": 0.2496610571570853,
+      "share_of_updates_with_grad_norm_clipped": 0.02127659574468085
+    },
+    "kl_to_reference": {
+      "mean": 0.0011336905915158835,
+      "max": 0.009242538149683273,
+      "last_10": 0.0018118135438526407
+    },
+    "entropy_per_token_mean": 0.0022729861284348364,
+    "payslip_contrasts_by_block": {
+      "steps 1-20": {
+        "toward the first-half row": 8,
+        "toward attempting (refusal contrast)": 6,
+        "toward the second-half row": 6
+      },
+      "steps 21-40": {
+        "toward the first-half row": 12,
+        "toward the second-half row": 5,
+        "toward attempting (refusal contrast)": 1
+      },
+      "steps 41-60": {
+        "toward the first-half row": 7,
+        "toward the second-half row": 8,
+        "toward attempting (refusal contrast)": 1
+      }
+    }
+  },
+  "rl-0.001": {
+    "steps": 60,
+    "groups": {
+      "2": {
+        "informative": 62,
+        "tied, every answer right": 54,
+        "tied, every answer wrong: other wrong": 1,
+        "tied, every answer wrong: wrong row": 2,
+        "tied, every answer wrong: refused/wrong row": 1
+      },
+      "3": {
+        "tied, every answer right": 105,
+        "informative": 15
+      }
+    },
+    "answers": 1128,
+    "share_of_generated_tokens_in_informative_groups": 0.4846461329604855,
+    "steps_without_update": 14,
+    "mean_tokens": {
+      "payslip answer": 231.25895765472313,
+      "clarification": 59.09338521400778
+    },
+    "update_size": {
+      "learning_rate": 1e-05,
+      "updates": 92,
+      "drift_per_update_mean": 3.0968490919500356e-05,
+      "drift_per_update_max": 0.0006750298388483245,
+      "drift_stop": 0.02,
+      "clip_fraction_mean": 0.00024204693970830934,
+      "clip_fraction_max": 0.004464285714285714,
+      "ratio_range": [
+        0.5074262619018555,
+        2.4187231063842773
+      ],
+      "grad_norm_mean": 0.22776522616997297,
+      "share_of_updates_with_grad_norm_clipped": 0.021739130434782608
+    },
+    "kl_to_reference": {
+      "mean": 0.0010696395215951222,
+      "max": 0.0054193615707502875,
+      "last_10": 0.001092413769543854
+    },
+    "entropy_per_token_mean": 0.0024091643456672905,
+    "payslip_contrasts_by_block": {
+      "steps 1-20": {
+        "toward the first-half row": 9,
+        "toward attempting (refusal contrast)": 7,
+        "toward the second-half row": 6
+      },
+      "steps 21-40": {
+        "toward the first-half row": 10,
+        "toward the second-half row": 5
+      },
+      "steps 41-60": {
+        "toward the first-half row": 8,
+        "toward the second-half row": 7,
+        "toward attempting (refusal contrast)": 1
+      }
+    }
+  },
+  "rl-0.04-balanced": {
+    "steps": 60,
+    "groups": {
+      "2": {
+        "informative": 70,
+        "tied, every answer right": 45,
+        "tied, every answer wrong: wrong row": 4,
+        "tied, every answer wrong: other wrong": 1
+      },
+      "3": {
+        "tied, every answer right": 108,
+        "informative": 12
+      }
+    },
+    "answers": 1188,
+    "share_of_generated_tokens_in_informative_groups": 0.5438800006444648,
+    "steps_without_update": 10,
+    "mean_tokens": {
+      "clarification": 58.9140625,
+      "payslip answer": 230.82396449704143
+    },
+    "update_size": {
+      "learning_rate": 1e-05,
+      "updates": 100,
+      "drift_per_update_mean": 2.7107234841135135e-05,
+      "drift_per_update_max": 0.0007725925424734057,
+      "drift_stop": 0.02,
+      "clip_fraction_mean": 0.00013341385980775107,
+      "clip_fraction_max": 0.004366812227074236,
+      "ratio_range": [
+        0.3743489682674408,
+        1.7058788537979126
+      ],
+      "grad_norm_mean": 0.23477445658594662,
+      "share_of_updates_with_grad_norm_clipped": 0.03
+    },
+    "kl_to_reference": {
+      "mean": 0.0008286772596762378,
+      "max": 0.01497366579937177,
+      "last_10": 0.0021841671191656555
+    },
+    "entropy_per_token_mean": 0.0022627682302885097,
+    "payslip_contrasts_by_block": {
+      "steps 1-20": {
+        "toward attempting (refusal contrast)": 4,
+        "toward the first-half row": 7,
+        "toward the second-half row": 8
+      },
+      "steps 21-40": {
+        "toward the first-half row": 10,
+        "toward the second-half row": 6,
+        "toward attempting (refusal contrast)": 3
+      },
+      "steps 41-60": {
+        "toward the first-half row": 10,
+        "toward the second-half row": 13,
+        "toward attempting (refusal contrast)": 4
+      }
+    }
+  },
+  "rl-10": {
+    "steps": 60,
+    "groups": {
+      "2": {
+        "informative": 77,
+        "tied, every answer right": 34,
+        "tied, every answer wrong: refused/wrong row": 5,
+        "tied, every answer wrong: other wrong": 1,
+        "tied, every answer wrong: wrong row": 2,
+        "tied, every answer wrong: refused": 1
+      },
+      "3": {
+        "tied, every answer right": 113,
+        "informative": 7
+      }
+    },
+    "answers": 1284,
+    "share_of_generated_tokens_in_informative_groups": 0.5525366341030196,
+    "steps_without_update": 9,
+    "mean_tokens": {
+      "payslip answer": 230.89473684210526,
+      "clarification": 58.84023668639053
+    },
+    "update_size": {
+      "learning_rate": 1e-05,
+      "updates": 102,
+      "drift_per_update_mean": 2.689798050067276e-05,
+      "drift_per_update_max": 0.00033221905490002,
+      "drift_stop": 0.02,
+      "clip_fraction_mean": 0.00015726708006980075,
+      "clip_fraction_max": 0.004329004329004329,
+      "ratio_range": [
+        0.37267056107521057,
+        2.1288886070251465
+      ],
+      "grad_norm_mean": 0.6188434901167092,
+      "share_of_updates_with_grad_norm_clipped": 0.19607843137254902
+    },
+    "kl_to_reference": {
+      "mean": 4.283274361976619e-05,
+      "max": 0.00033718993645587953,
+      "last_10": 2.2255386489181326e-05
+    },
+    "entropy_per_token_mean": 0.0030517672751722456,
+    "payslip_contrasts_by_block": {
+      "steps 1-20": {
+        "toward the first-half row": 8,
+        "toward attempting (refusal contrast)": 11,
+        "toward the second-half row": 5
+      },
+      "steps 21-40": {
+        "toward attempting (refusal contrast)": 18,
+        "toward the first-half row": 11,
+        "toward the second-half row": 4
+      },
+      "steps 41-60": {
+        "toward the first-half row": 12,
+        "toward attempting (refusal contrast)": 8,
+        "toward the second-half row": 6
+      }
+    }
+  },
+  "rl-100": {
+    "steps": 25,
+    "groups": {
+      "2": {
+        "informative": 35,
+        "tied, every answer right": 14,
+        "tied, every answer wrong: refused/wrong row": 1
+      },
+      "3": {
+        "tied, every answer right": 46,
+        "informative": 4
+      }
+    },
+    "answers": 496,
+    "share_of_generated_tokens_in_informative_groups": 0.6172270358746414,
+    "steps_without_update": 3,
+    "mean_tokens": {
+      "payslip answer": 230.80645161290323,
+      "clarification": 59.168458781362006
+    },
+    "update_size": {
+      "learning_rate": 1e-05,
+      "updates": 44,
+      "drift_per_update_mean": 3.4861793066534106e-05,
+      "drift_per_update_max": 0.00020216462298532187,
+      "drift_stop": 0.02,
+      "clip_fraction_mean": 0.00013652641291838206,
+      "clip_fraction_max": 0.0016146393972012918,
+      "ratio_range": [
+        0.6012782454490662,
+        1.700648546218872
+      ],
+      "grad_norm_mean": 5.69610483690419,
+      "share_of_updates_with_grad_norm_clipped": 0.7954545454545454
+    },
+    "kl_to_reference": {
+      "mean": 5.096519379716883e-05,
+      "max": 0.00026676037416487416,
+      "last_10": 4.503658413657144e-05
+    },
+    "entropy_per_token_mean": 0.003219405012616967,
+    "payslip_contrasts_by_block": {
+      "steps 1-20": {
+        "toward the first-half row": 9,
+        "toward attempting (refusal contrast)": 12,
+        "toward the second-half row": 4
+      },
+      "steps 21-40": {
+        "toward attempting (refusal contrast)": 4,
+        "toward the first-half row": 3,
+        "toward the second-half row": 1
+      }
+    }
+  }
+}
