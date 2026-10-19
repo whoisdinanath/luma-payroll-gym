@@ -79,7 +79,7 @@
   <div class="kpi">
     <span>API spend</span>
     <b>${{ "%.2f"|format(gym.spent) }}</b>
-    <small>{{ "%.1f"|format(gym.gpu_hours) }}h local GPU</small>
+    <small>{{ "%.1f"|format(gym.gpu_hours) }} GPU hours</small>
   </div>
 </div>
 
@@ -378,7 +378,7 @@
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <div class="tabs" id="hm-mode-tabs">
           <button type="button" class="tab active" data-hm-mode="single">Single-turn ({{ heatmap.shown }} failed)</button>
-          <button type="button" class="tab" data-hm-mode="tools">Tool use ({{ tool_heatmap.shown }} failed)</button>
+          <button type="button" class="tab" data-hm-mode="tools">Tools + calculator ({{ tool_heatmap.shown }} failed)</button>
         </div>
         <div class="tabs" id="hm-tier-tabs">
           <button type="button" class="tab active" data-hm-tier="all">All</button>
@@ -525,7 +525,7 @@
       <div class="curves-grid">
         {% for item in curves %}{{ curve_svg(item) }}{% endfor %}
       </div>
-      <p class="muted" style="font-size:12.5px;margin-top:10px">Each point is one training step: 8 payslip and 8 trap answers on unseen tasks. Thick lines average the last 10 steps.</p>
+      <p class="muted" style="font-size:12.5px;margin-top:10px">Each point is one training step on tasks the policy had not seen. Thick lines average the last 10 steps.</p>
     </div>
     <div id="curves-all-panel" class="curves-grid" style="display:none">
       {% for item in all_curves %}{{ curve_svg(item) }}{% endfor %}

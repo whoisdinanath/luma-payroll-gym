@@ -1,14 +1,15 @@
 # Luma Payroll Gym
 
-A verifiable gym for one slice of payroll work under a fictional rule set: look up a rate for a given month, compute a monthly payslip, or ask for clarification when the records do not determine an answer. Every answer can be computed exactly, the rates must be looked up rather than recalled, and caps and conflicting records make natural traps. The same grader serves the evaluation, the RL trainer, and a live sandbox.
+A verifiable gym for one slice of payroll work under a fictional rule set: look up a rate for a given month, compute a monthly payslip, or ask for clarification when the records do not determine an answer. Every answer is computed by a reference implementation of the written rules, rates differ per case so they must be looked up, and caps and conflicting records make natural traps. The same grader serves the evaluation, the RL trainer, and a live sandbox.
 
 - Dashboard: https://luma-payroll-sandbox.whoisdinanath.workers.dev
 - Sandbox API: the same URL (`/tasks`, `/submit`, `/runs/<run_id>`)
 - Report (evaluation, RL training, failure analysis, transfer test, edge cases, trade-offs, AI usage): https://luma-payroll-sandbox.whoisdinanath.workers.dev/report
+- Trained adapters and training logs: https://huggingface.co/whoisdinanath/MiniCPM5-1B-Luma-Payroll-GRPO
 
 ## Stack
 
-Python 3.12 with uv. `verifiers` 0.1.11 for the environment. OpenRouter for hosted models and the judge (GLM-5.3 Flash). PyTorch, Transformers, and PEFT to train MiniCPM5-1B with LoRA on a 6 GB RTX 3050. FastAPI and Jinja templates render the dashboard; one Cloudflare Python Worker with D1 serves the static site and the sandbox API.
+Python 3.12 with uv. `verifiers` 0.1.11 for the environment. OpenRouter for hosted models and the judge (GLM 5.3 Flash). PyTorch, Transformers, and PEFT to train MiniCPM5-1B with LoRA on a 6 GB RTX 3050; a few evaluations ran on Modal L4 GPUs (`scripts/modal_eval.py`). FastAPI and Jinja templates render the dashboard; one Cloudflare Python Worker with D1 serves the static site and the sandbox API.
 
 ## Architecture
 
@@ -19,6 +20,7 @@ rules/payroll.md        rule set, version 3, written before the code
   reference.py          Decimal reference; each step cites its clause (R1 to R9)
   cases.py              generator 4: seed -> tasks, ground truth from reference.py, never from a model
   data/v4/              train, development, test, hosted evaluation, SFT, and demonstration sets
+  data/seed_tasks.json  21 hand-checked tasks across the three tiers
 environment.py          load_environment(): single-turn or tool mode (verifiers)
 scoring.py, judge.py    rubric 8, one grader shared by every path below
   eval.py               hosted runs -> results/<run>/config.json, transcript.jsonl, metrics.json, scores.json
@@ -35,7 +37,7 @@ Every task is a JSON object validated on load (`src/tasks.py`): `id`, `slice`, `
 
 `rules/payroll.md` is the authoritative rule set. `reference.py` implements it with Decimal arithmetic and half-up rounding, and every step cites its clause. Money must match to the cent with no tolerance, because R2 rounds every amount to the cent.
 
-The reference implementation is the verifier: from any seed, the generator produces new tasks with exact answers and no human labelling. This holds only where the written rules and the record decide the answer. It cannot read real statute, judge whether a document can be trusted, or judge the quality of an explanation (the judge does that), and it inherits any misreading of the rules, which the human fidelity audit checks.
+The reference implementation is the verifier: from any seed, the generator produces new tasks with exact answers and no human labelling. This holds only where the written rules and the record decide the answer. It cannot read real statute, judge whether a document can be trusted, or judge the quality of an explanation (the judge does that), and it inherits any misreading of the rules. A hand audit of 21 generated tasks against the rule text found no divergence (`reports/fidelity-audit.json`).
 
 ## Reward (rubric 8)
 
@@ -97,6 +99,8 @@ uv run --extra local python -m luma_gym.local --tasks data/v4/test.json --demos 
 uv run --extra environment python scripts/score_local.py results/v4/test-rl-0.04-calculator --tasks data/v4/test.json
 ```
 
+`luma_gym.local` options `--zero-shot` (no worked examples) and `--mode tools --tool-demos` (examples shown as tool calls) reproduce the checks in section 6 of the report; `scripts/modal_eval.py` runs the same evaluations on Modal GPUs.
+
 ## Sandbox quickstart
 
 ```bash
@@ -109,39 +113,8 @@ It fetches three tasks, submits deliberately malformed answers, and prints their
 - `POST /submit` with `{"run_id": ..., "answers": [{"id": ..., "answer": {...}}]}` returns each task's score, its components, and the clauses behind each mark.
 - `GET /runs/<run_id>` returns the saved result.
 
-Abuse and cost: a run holds at most 10 tasks, each caller gets 12 requests per minute, and run IDs expire after 24 hours. A repeated submission returns the saved score, a changed one is rejected, and concurrent submissions are claimed atomically in D1. No caller API keys are accepted or stored. Only correct clarifications reach the paid judge, which has its own $0.50 ceiling; once it is spent, a submission that needs the judge gets HTTP 503 instead of a score without it. The first request after idle time can be slow while the Worker cold starts.
-
-## Training objective
-
-GRPO with PPO clipping and a k3 KL penalty to a frozen reference, over each group of G answers to one task:
-
-```text
-J(theta) = 1/G sum_i 1/|o_i| sum_t [ min(rho_t A_i, clip(rho_t, 0.8, 1.2) A_i) - beta k3_t ]
-rho_t = pi_theta / pi_old        A_i = (r_i - mean(r)) / (std(r) + 1e-4)
-k3_t  = pi_ref / pi_theta - log(pi_ref / pi_theta) - 1
-```
-
-GRPO needs no value network, which matters on a 6 GB GPU, and it turns the rubric directly into a group-relative advantage, so the share of groups where every answer scored the same shows exactly when a task teaches nothing. PPO would need a critic and more memory, plain REINFORCE has higher variance, and DPO is offline. RLOO is close to GRPO; GRPO was kept because its objective is the one written out in the assignment, so the code can be checked against it line by line. Old-policy log-probabilities are fixed for two epochs per batch so the clip can bind. The reward r is rubric 8; pi_ref is the starting model with the LoRA adapter disabled, so the KL term measures only what RL changed, and it is logged every step.
-
-The final protocol gives the model the `calculate` tool and a supervised fine-tuning (SFT) warm start on examples labelled by the reference, because the frozen model called the tool in 0.8% of answers; the calculator does the arithmetic, so training measures the decisions around it.
-
-## Timeline
-
-- 15 October: assignment received; rule set, seed tasks, reference, and task generator written; first hosted model comparison and transfer runs; sandbox deployed.
-- 16 October: first RL runs on MiniCPM5-1B (rubrics 3 to 6).
-- 17 October: rubric 7 runs and the first KL sweep, still without a calculator; dashboard rebuilt as one page.
-- 18 October: generator 4, the calculator tool, SFT, rubric 8, hosted runs on the new data, small models, and RL with the calculator (β 0.04, β 0.001, balanced batches).
-- 19 October: KL sweep at β 10 and 100, the 1B model in the hosted tool mode, the learning curve and repeat seeds, and cleanup.
-
-## What I would build next
-
-- Make the rate-row choice a tool call or a separate reward check: RL drifted toward one half-year row.
-- Test small models that can show their work (Qwen3-1.7B with thinking, Qwen2.5-Math-1.5B): no model at 7B or below did the payslip arithmetic without a scratchpad.
-- Build a fresh confirmation set; the current test set has been read for error analysis.
-- Write more transfer tasks by hand and widen the human fidelity audit.
-- Version 4 of the rule set: separate the payroll rules from the answer format and harness notes, and state the deduction cap once (the text says 350.00 while case schedules allow 400.00).
-- Move results to Postgres behind a small API, and add a sandbox mode that drives an agent from an OpenAI-compatible URL.
+Abuse and cost: a run holds at most 10 tasks, each caller gets 12 requests per minute, and run IDs expire after 24 hours. A repeated submission returns the saved score, a changed one is rejected, and concurrent submissions are claimed atomically in D1. No caller API keys are accepted or stored. Only correct clarifications reach the paid judge, which has its own \$0.50 ceiling; once it is spent, a submission that needs the judge gets HTTP 503 instead of a score without it. The first request after idle time can be slow while the Worker cold starts.
 
 ## AI usage
 
-OpenCode, an AI coding agent, wrote most of the code and documents under my direction. No model wrote an expected answer, a training target, or a rule. Details are in the report.
+OpenCode was used for coding assistance. All changes were reviewed.

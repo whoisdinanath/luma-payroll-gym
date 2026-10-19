@@ -505,7 +505,7 @@ def build_tier_grouped_chart(models):
         ("Retrieval", lambda m: m["single"]["tiers"].get(1, 0)),
         ("Calculation", lambda m: m["single"]["tiers"].get(2, 0)),
         ("Traps", lambda m: m["single"]["tiers"].get(3, 0)),
-        ("Tool use", lambda m: m.get("tools", {}).get("mean", 0)),
+        ("Tools + calculator", lambda m: m.get("tools", {}).get("mean", 0)),
         ("Transfer", lambda m: m.get("transfer", {}).get("mean", 0)),
     ]
     width, height = 560, 240
@@ -612,7 +612,7 @@ def verdict(models):
         ("Retrieval", "single", 1),
         ("Calculation", "single", 2),
         ("Traps", "single", 3),
-        ("Tool use", "tools", None),
+        ("Tools + calculator", "tools", None),
         ("Transfer", "transfer", None),
     ]
     rows = []
@@ -806,7 +806,7 @@ def skill_checks():
             return None
         return f"{sum(row['score']['breakdown']['exact']['score'] == 1.0 for row in rows) / len(rows):.1%}"
 
-    models = (("raw", "Frozen"), ("sft", "SFT"), ("rl-0.04", "SFT + RL, β 0.04"))
+    models = (("raw", "Frozen"), ("sft", "SFT"), ("rl-0.04", "SFT + RL, β 0.04"), ("rl-0.04-signal", "SFT + RL, more payslips"))
     conditions = [
         ("Test set, six worked examples", "exact payslips", lambda run: share(f"test-{run}-calculator", 2)),
         ("Test set, no worked examples", "exact payslips", lambda run: share(f"test-{run}-calculator-noexamples", 2)),
@@ -1186,7 +1186,7 @@ def load_home():
     eval_groups = evaluations(runs)
     stages = protocol_four()
     by_key = {stage["key"]: stage for stage in stages["stages"]}
-    best = by_key.get("rl-0.04-calculator") or by_key.get("sft-calculator")
+    best = by_key.get("rl-0.04-signal-calculator") or by_key.get("rl-0.04-calculator") or by_key.get("sft-calculator")
     leader = models[0] if models else None
     cheap = min((model for model in models if model["single"]["mean"] >= leader["single"]["mean"] - 0.01),
                 key=lambda model: model["single"]["cost_per_100"]) if leader else None
@@ -1427,7 +1427,7 @@ def load_transcript(run, task_id):
         "model_name": name,
         "color": color,
         "default_sampling": config.get("temperature", 0) is None,
-        "mode": "Transfer" if run.startswith("v4-transfer-") else "Tool use" if config.get("mode") == "tools" else "Single-turn",
+        "mode": "Transfer" if run.startswith("v4-transfer-") else "Tools + calculator" if config.get("mode") == "tools" else "Single-turn",
         "mean": statistics.mean(rewards) if rewards else None,
         "comparison": comparison,
         "expected": expected is not None,
