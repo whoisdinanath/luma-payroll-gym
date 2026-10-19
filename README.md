@@ -27,7 +27,7 @@ scoring.py, judge.py    rubric 8, one grader shared by every path below
 
 ## Task schema
 
-Every task is a JSON object validated on load (`src/luma_gym/tasks.py`): `id`, `slice`, `difficulty` (1 retrieval, 2 calculation, 3 trap), `prompt`, `record` (payroll record, contract, amendment, and the case's reference schedule), `ground_truth`, `verifier`, `tags`, `schema_version`, `ruleset_version`, `seed`, and `retrieval_field` for retrieval tasks. Unknown rule or schema versions are rejected. Ground truth is a payslip with two-decimal money strings, one retrieved value, or a clarification reason code, each with its governing clauses.
+Every task is a JSON object validated on load (`luma_gym/tasks.py`): `id`, `slice`, `difficulty` (1 retrieval, 2 calculation, 3 trap), `prompt`, `record` (payroll record, contract, amendment, and the case's reference schedule), `ground_truth`, `verifier`, `tags`, `schema_version`, `ruleset_version`, `seed`, and `retrieval_field` for retrieval tasks. Unknown rule or schema versions are rejected. Ground truth is a payslip with two-decimal money strings, one retrieved value, or a clarification reason code, each with its governing clauses.
 
 ## Rules and ground truth
 
@@ -122,6 +122,14 @@ k3_t  = pi_ref / pi_theta - log(pi_ref / pi_theta) - 1
 GRPO needs no value network, which matters on a 6 GB GPU, and it turns the rubric directly into a group-relative advantage, so the share of groups where every answer scored the same shows exactly when a task teaches nothing. PPO would need a critic and more memory, plain REINFORCE has higher variance, and DPO is offline. RLOO is close to GRPO; GRPO was kept because its objective is the one written out in the assignment, so the code can be checked against it line by line. Old-policy log-probabilities are fixed for two epochs per batch so the clip can bind. The reward r is rubric 8; pi_ref is the starting model with the LoRA adapter disabled, so the KL term measures only what RL changed, and it is logged every step.
 
 The final protocol gives the model the `calculate` tool and a supervised fine-tuning (SFT) warm start on examples labelled by the reference, because the frozen model called the tool in 0.8% of answers; the calculator does the arithmetic, so training measures the decisions around it.
+
+## Timeline
+
+- 15 October: assignment received; rule set, seed tasks, reference, and task generator written; first hosted model comparison and transfer runs; sandbox deployed.
+- 16 October: first RL runs on MiniCPM5-1B (rubrics 3 to 6).
+- 17 October: rubric 7 runs and the first KL sweep, still without a calculator; dashboard rebuilt as one page.
+- 18 October: generator 4, the calculator tool, SFT, rubric 8, hosted runs on the new data, small models, and RL with the calculator (β 0.04, β 0.001, balanced batches).
+- 19 October: KL sweep at β 10 and 100, the 1B model in the hosted tool mode, the learning curve and repeat seeds, and cleanup.
 
 ## What I would build next
 
