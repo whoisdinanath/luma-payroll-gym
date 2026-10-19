@@ -1,107 +1,325 @@
 {
-  "tasks": 5,
-  "results": [
-    {
-      "model": "deepseek/deepseek-v4.1-flash",
-      "rollouts": 15,
-      "mean": 1.0,
-      "sd": 0.0
-    },
-    {
-      "model": "google/gemini-3.1-flash-lite-preview",
-      "rollouts": 15,
-      "mean": 0.7000002000000001,
-      "sd": 0.569460998288256
-    },
-    {
-      "model": "z-ai/glm-5.3-flash",
-      "rollouts": 15,
-      "mean": 1.0,
-      "sd": 0.0
-    },
-    {
-      "model": "openai/gpt-5.6-luna",
-      "rollouts": 15,
-      "mean": 1.0,
-      "sd": 0.0
-    },
-    {
-      "model": "xiaomi/mimo-v2.6-pro",
-      "rollouts": 15,
-      "mean": 1.0,
-      "sd": 0.0
-    }
-  ],
-  "ranking_pairs": [
-    {
-      "models": [
-        "deepseek/deepseek-v4.1-flash",
-        "google/gemini-3.1-flash-lite-preview"
-      ],
-      "result": "concordant"
-    },
-    {
-      "models": [
-        "deepseek/deepseek-v4.1-flash",
-        "z-ai/glm-5.3-flash"
-      ],
-      "result": "tie"
-    },
-    {
-      "models": [
-        "deepseek/deepseek-v4.1-flash",
-        "openai/gpt-5.6-luna"
-      ],
-      "result": "tie"
-    },
-    {
-      "models": [
-        "deepseek/deepseek-v4.1-flash",
-        "xiaomi/mimo-v2.6-pro"
-      ],
-      "result": "tie"
-    },
-    {
-      "models": [
-        "google/gemini-3.1-flash-lite-preview",
-        "z-ai/glm-5.3-flash"
-      ],
-      "result": "concordant"
-    },
-    {
-      "models": [
-        "google/gemini-3.1-flash-lite-preview",
-        "openai/gpt-5.6-luna"
-      ],
-      "result": "concordant"
-    },
-    {
-      "models": [
-        "google/gemini-3.1-flash-lite-preview",
-        "xiaomi/mimo-v2.6-pro"
-      ],
-      "result": "concordant"
-    },
-    {
-      "models": [
-        "z-ai/glm-5.3-flash",
-        "openai/gpt-5.6-luna"
-      ],
-      "result": "tie"
-    },
-    {
-      "models": [
-        "z-ai/glm-5.3-flash",
-        "xiaomi/mimo-v2.6-pro"
-      ],
-      "result": "tie"
-    },
-    {
-      "models": [
-        "openai/gpt-5.6-luna",
-        "xiaomi/mimo-v2.6-pro"
-      ],
-      "result": "tie"
-    }
-  ]
+  "hand_written": {
+    "tasks": 15,
+    "tie_threshold": 0.01,
+    "results": [
+      {
+        "model": "deepseek",
+        "answers": 45,
+        "mean": 0.9992592666666666,
+        "sd": 0.004968990259600025,
+        "generated_mean": 0.9996913580246913
+      },
+      {
+        "model": "mimo",
+        "answers": 45,
+        "mean": 0.9,
+        "sd": 0.37839373433213475,
+        "generated_mean": 0.9906893024691358
+      },
+      {
+        "model": "gemini",
+        "answers": 45,
+        "mean": 0.2837037777777778,
+        "sd": 0.7176921588708012,
+        "generated_mean": 0.6921296975308642
+      },
+      {
+        "model": "glm",
+        "answers": 45,
+        "mean": 0.7134074222222222,
+        "sd": 0.5668840949776357,
+        "generated_mean": 0.842181074074074
+      },
+      {
+        "model": "luna-default",
+        "answers": 45,
+        "mean": 1.0,
+        "sd": 0.0,
+        "generated_mean": 0.9909465061728395
+      },
+      {
+        "model": "llama-1b",
+        "answers": 45,
+        "mean": -0.5,
+        "sd": 0.0,
+        "generated_mean": -0.49537037037037035
+      },
+      {
+        "model": "llama-3b",
+        "answers": 45,
+        "mean": -0.5,
+        "sd": 0.0,
+        "generated_mean": -0.4573456790123457
+      },
+      {
+        "model": "gemma-4b",
+        "answers": 45,
+        "mean": -0.5,
+        "sd": 0.0,
+        "generated_mean": -0.5
+      },
+      {
+        "model": "qwen-7b",
+        "answers": 45,
+        "mean": -0.4888888888888889,
+        "sd": 0.0317820863081864,
+        "generated_mean": -0.15411521913580248
+      }
+    ],
+    "ranking_pairs": [
+      {
+        "models": [
+          "deepseek",
+          "mimo"
+        ],
+        "result": "tie"
+      },
+      {
+        "models": [
+          "deepseek",
+          "gemini"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "deepseek",
+          "glm"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "deepseek",
+          "luna-default"
+        ],
+        "result": "tie"
+      },
+      {
+        "models": [
+          "deepseek",
+          "llama-1b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "deepseek",
+          "llama-3b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "deepseek",
+          "gemma-4b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "deepseek",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "mimo",
+          "gemini"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "mimo",
+          "glm"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "mimo",
+          "luna-default"
+        ],
+        "result": "tie"
+      },
+      {
+        "models": [
+          "mimo",
+          "llama-1b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "mimo",
+          "llama-3b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "mimo",
+          "gemma-4b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "mimo",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "gemini",
+          "glm"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "gemini",
+          "luna-default"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "gemini",
+          "llama-1b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "gemini",
+          "llama-3b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "gemini",
+          "gemma-4b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "gemini",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "glm",
+          "luna-default"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "glm",
+          "llama-1b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "glm",
+          "llama-3b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "glm",
+          "gemma-4b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "glm",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "luna-default",
+          "llama-1b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "luna-default",
+          "llama-3b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "luna-default",
+          "gemma-4b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "luna-default",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "llama-1b",
+          "llama-3b"
+        ],
+        "result": "tie"
+      },
+      {
+        "models": [
+          "llama-1b",
+          "gemma-4b"
+        ],
+        "result": "tie"
+      },
+      {
+        "models": [
+          "llama-1b",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "llama-3b",
+          "gemma-4b"
+        ],
+        "result": "tie"
+      },
+      {
+        "models": [
+          "llama-3b",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      },
+      {
+        "models": [
+          "gemma-4b",
+          "qwen-7b"
+        ],
+        "result": "concordant"
+      }
+    ]
+  }
 }

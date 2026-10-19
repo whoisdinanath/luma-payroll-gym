@@ -1,0 +1,3092 @@
+[
+  {
+    "event": "finished",
+    "id": "transfer-human-01:0",
+    "task_id": "transfer-human-01",
+    "tier": 2,
+    "rollout": 0,
+    "cost_usd": 0.0001118,
+    "known_cost": true,
+    "latency_seconds": 2.578687836008612,
+    "score": {
+      "task_id": "transfer-human-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2225.0,
+      "output_tokens": 456.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-01:1",
+    "task_id": "transfer-human-01",
+    "tier": 2,
+    "rollout": 1,
+    "cost_usd": 6.732e-05,
+    "known_cost": true,
+    "latency_seconds": 2.1756379540020134,
+    "score": {
+      "task_id": "transfer-human-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2225.0,
+      "output_tokens": 456.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-01:2",
+    "task_id": "transfer-human-01",
+    "tier": 2,
+    "rollout": 2,
+    "cost_usd": 7.082e-05,
+    "known_cost": true,
+    "latency_seconds": 2.653186908006319,
+    "score": {
+      "task_id": "transfer-human-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2225.0,
+      "output_tokens": 526.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-02:0",
+    "task_id": "transfer-human-02",
+    "tier": 2,
+    "rollout": 0,
+    "cost_usd": 9.139e-05,
+    "known_cost": true,
+    "latency_seconds": 3.031206134997774,
+    "score": {
+      "task_id": "transfer-human-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2136.0,
+      "output_tokens": 119.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-02:1",
+    "task_id": "transfer-human-02",
+    "tier": 2,
+    "rollout": 1,
+    "cost_usd": 9.139e-05,
+    "known_cost": true,
+    "latency_seconds": 1.0303316610079492,
+    "score": {
+      "task_id": "transfer-human-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2136.0,
+      "output_tokens": 119.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-02:2",
+    "task_id": "transfer-human-02",
+    "tier": 2,
+    "rollout": 2,
+    "cost_usd": 9.139e-05,
+    "known_cost": true,
+    "latency_seconds": 1.0316816900012782,
+    "score": {
+      "task_id": "transfer-human-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2136.0,
+      "output_tokens": 119.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-03:0",
+    "task_id": "transfer-human-03",
+    "tier": 2,
+    "rollout": 0,
+    "cost_usd": 0.00010892,
+    "known_cost": true,
+    "latency_seconds": 2.5720655779878143,
+    "score": {
+      "task_id": "transfer-human-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2123.0,
+      "output_tokens": 480.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-03:1",
+    "task_id": "transfer-human-03",
+    "tier": 2,
+    "rollout": 1,
+    "cost_usd": 0.00010507,
+    "known_cost": true,
+    "latency_seconds": 2.111289708991535,
+    "score": {
+      "task_id": "transfer-human-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2123.0,
+      "output_tokens": 403.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-03:2",
+    "task_id": "transfer-human-03",
+    "tier": 2,
+    "rollout": 2,
+    "cost_usd": 0.00010472,
+    "known_cost": true,
+    "latency_seconds": 2.0085771339945495,
+    "score": {
+      "task_id": "transfer-human-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2123.0,
+      "output_tokens": 396.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-04:0",
+    "task_id": "transfer-human-04",
+    "tier": 2,
+    "rollout": 0,
+    "cost_usd": 0.00010913,
+    "known_cost": true,
+    "latency_seconds": 2.5030223279900383,
+    "score": {
+      "task_id": "transfer-human-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2127.0,
+      "output_tokens": 481.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-04:1",
+    "task_id": "transfer-human-04",
+    "tier": 2,
+    "rollout": 1,
+    "cost_usd": 0.00010883,
+    "known_cost": true,
+    "latency_seconds": 2.554671444988344,
+    "score": {
+      "task_id": "transfer-human-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2127.0,
+      "output_tokens": 475.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-04:2",
+    "task_id": "transfer-human-04",
+    "tier": 2,
+    "rollout": 2,
+    "cost_usd": 8.953e-05,
+    "known_cost": true,
+    "latency_seconds": 2.552266201004386,
+    "score": {
+      "task_id": "transfer-human-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2127.0,
+      "output_tokens": 473.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-05:0",
+    "task_id": "transfer-human-05",
+    "tier": 2,
+    "rollout": 0,
+    "cost_usd": 0.00010491,
+    "known_cost": true,
+    "latency_seconds": 2.057205974997487,
+    "score": {
+      "task_id": "transfer-human-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2119.0,
+      "output_tokens": 403.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-05:1",
+    "task_id": "transfer-human-05",
+    "tier": 2,
+    "rollout": 1,
+    "cost_usd": 0.00010416,
+    "known_cost": true,
+    "latency_seconds": 2.0421466370025882,
+    "score": {
+      "task_id": "transfer-human-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2119.0,
+      "output_tokens": 388.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-05:2",
+    "task_id": "transfer-human-05",
+    "tier": 2,
+    "rollout": 2,
+    "cost_usd": 0.00010296,
+    "known_cost": true,
+    "latency_seconds": 6.811752535999403,
+    "score": {
+      "task_id": "transfer-human-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2119.0,
+      "output_tokens": 364.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-06:0",
+    "task_id": "transfer-human-06",
+    "tier": 2,
+    "rollout": 0,
+    "cost_usd": 0.00010785,
+    "known_cost": true,
+    "latency_seconds": 2.293101547009428,
+    "score": {
+      "task_id": "transfer-human-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2115.0,
+      "output_tokens": 465.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-06:1",
+    "task_id": "transfer-human-06",
+    "tier": 2,
+    "rollout": 1,
+    "cost_usd": 0.00010485,
+    "known_cost": true,
+    "latency_seconds": 2.0426931029942352,
+    "score": {
+      "task_id": "transfer-human-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2115.0,
+      "output_tokens": 405.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-06:2",
+    "task_id": "transfer-human-06",
+    "tier": 2,
+    "rollout": 2,
+    "cost_usd": 0.0001049,
+    "known_cost": true,
+    "latency_seconds": 2.0132394440006465,
+    "score": {
+      "task_id": "transfer-human-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2115.0,
+      "output_tokens": 406.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-07:0",
+    "task_id": "transfer-human-07",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00011374,
+    "known_cost": true,
+    "latency_seconds": 2.660277988004964,
+    "score": {
+      "task_id": "transfer-human-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 514.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-07:1",
+    "task_id": "transfer-human-07",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00011689,
+    "known_cost": true,
+    "latency_seconds": 2.919765525002731,
+    "score": {
+      "task_id": "transfer-human-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 577.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-07:2",
+    "task_id": "transfer-human-07",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00011184,
+    "known_cost": true,
+    "latency_seconds": 2.5494690800114768,
+    "score": {
+      "task_id": "transfer-human-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 476.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-08:0",
+    "task_id": "transfer-human-08",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00010707,
+    "known_cost": true,
+    "latency_seconds": 2.576127994005219,
+    "score": {
+      "task_id": "transfer-human-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2118.0,
+      "output_tokens": 447.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-08:1",
+    "task_id": "transfer-human-08",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00010842,
+    "known_cost": true,
+    "latency_seconds": 3.059405131993117,
+    "score": {
+      "task_id": "transfer-human-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2118.0,
+      "output_tokens": 474.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-08:2",
+    "task_id": "transfer-human-08",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00010772,
+    "known_cost": true,
+    "latency_seconds": 2.5684831440012204,
+    "score": {
+      "task_id": "transfer-human-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2118.0,
+      "output_tokens": 460.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-09:0",
+    "task_id": "transfer-human-09",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00011089,
+    "known_cost": true,
+    "latency_seconds": 2.5566205189970788,
+    "score": {
+      "task_id": "transfer-human-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2126.0,
+      "output_tokens": 517.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-09:1",
+    "task_id": "transfer-human-09",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00011084,
+    "known_cost": true,
+    "latency_seconds": 2.5496123360062484,
+    "score": {
+      "task_id": "transfer-human-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2126.0,
+      "output_tokens": 516.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-09:2",
+    "task_id": "transfer-human-09",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00010889,
+    "known_cost": true,
+    "latency_seconds": 2.5435868780041346,
+    "score": {
+      "task_id": "transfer-human-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2126.0,
+      "output_tokens": 477.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-10:0",
+    "task_id": "transfer-human-10",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00011274,
+    "known_cost": true,
+    "latency_seconds": 2.5591403389989864,
+    "score": {
+      "task_id": "transfer-human-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2206.0,
+      "output_tokens": 490.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-10:1",
+    "task_id": "transfer-human-10",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00010854,
+    "known_cost": true,
+    "latency_seconds": 2.1044619719905313,
+    "score": {
+      "task_id": "transfer-human-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2206.0,
+      "output_tokens": 406.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-10:2",
+    "task_id": "transfer-human-10",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00010884,
+    "known_cost": true,
+    "latency_seconds": 2.4970815389970085,
+    "score": {
+      "task_id": "transfer-human-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2206.0,
+      "output_tokens": 412.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-11:0",
+    "task_id": "transfer-human-11",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00010876,
+    "known_cost": true,
+    "latency_seconds": 6.669254645006731,
+    "score": {
+      "task_id": "transfer-human-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2199.0,
+      "output_tokens": 416.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-11:1",
+    "task_id": "transfer-human-11",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00011836,
+    "known_cost": true,
+    "latency_seconds": 2.832528820988955,
+    "score": {
+      "task_id": "transfer-human-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2199.0,
+      "output_tokens": 608.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-11:2",
+    "task_id": "transfer-human-11",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00011311,
+    "known_cost": true,
+    "latency_seconds": 2.5337818089901702,
+    "score": {
+      "task_id": "transfer-human-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2199.0,
+      "output_tokens": 503.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-12:0",
+    "task_id": "transfer-human-12",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00011394,
+    "known_cost": true,
+    "latency_seconds": 3.0455687479989138,
+    "score": {
+      "task_id": "transfer-human-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 518.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-12:1",
+    "task_id": "transfer-human-12",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00011154,
+    "known_cost": true,
+    "latency_seconds": 2.608252037985949,
+    "score": {
+      "task_id": "transfer-human-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 470.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-12:2",
+    "task_id": "transfer-human-12",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00011184,
+    "known_cost": true,
+    "latency_seconds": 2.5614169829932507,
+    "score": {
+      "task_id": "transfer-human-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 476.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-13:0",
+    "task_id": "transfer-human-13",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00011268,
+    "known_cost": true,
+    "latency_seconds": 2.6162935469910735,
+    "score": {
+      "task_id": "transfer-human-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2172.0,
+      "output_tokens": 516.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-13:1",
+    "task_id": "transfer-human-13",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00010563,
+    "known_cost": true,
+    "latency_seconds": 1.9795940269978018,
+    "score": {
+      "task_id": "transfer-human-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2172.0,
+      "output_tokens": 375.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-13:2",
+    "task_id": "transfer-human-13",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00010838,
+    "known_cost": true,
+    "latency_seconds": 2.5920544500113465,
+    "score": {
+      "task_id": "transfer-human-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2172.0,
+      "output_tokens": 430.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-14:0",
+    "task_id": "transfer-human-14",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 0.00010279,
+    "known_cost": true,
+    "latency_seconds": 2.008098064994556,
+    "score": {
+      "task_id": "transfer-human-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 295.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-14:1",
+    "task_id": "transfer-human-14",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00011314,
+    "known_cost": true,
+    "latency_seconds": 2.5737918430095306,
+    "score": {
+      "task_id": "transfer-human-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 502.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-14:2",
+    "task_id": "transfer-human-14",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00011619,
+    "known_cost": true,
+    "latency_seconds": 3.0453252279985463,
+    "score": {
+      "task_id": "transfer-human-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2201.0,
+      "output_tokens": 563.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-15:0",
+    "task_id": "transfer-human-15",
+    "tier": 3,
+    "rollout": 0,
+    "cost_usd": 9.85e-05,
+    "known_cost": true,
+    "latency_seconds": 1.53038272599224,
+    "score": {
+      "task_id": "transfer-human-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2225.0,
+      "output_tokens": 190.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-15:1",
+    "task_id": "transfer-human-15",
+    "tier": 3,
+    "rollout": 1,
+    "cost_usd": 0.00010125,
+    "known_cost": true,
+    "latency_seconds": 1.5480894719948992,
+    "score": {
+      "task_id": "transfer-human-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2225.0,
+      "output_tokens": 245.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  },
+  {
+    "event": "finished",
+    "id": "transfer-human-15:2",
+    "task_id": "transfer-human-15",
+    "tier": 3,
+    "rollout": 2,
+    "cost_usd": 0.00010495,
+    "known_cost": true,
+    "latency_seconds": 2.0412857290066313,
+    "score": {
+      "task_id": "transfer-human-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "error": null,
+    "retries": 0,
+    "token_usage": {
+      "input_tokens": 2225.0,
+      "output_tokens": 319.0
+    },
+    "tool_calls": null,
+    "tool_errors": null,
+    "truncated": false
+  }
+]

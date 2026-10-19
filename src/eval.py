@@ -112,7 +112,11 @@ def save_summary(directory, events):
 
 async def evaluate(args):
     settings = json.loads(args.config.read_text())
-    prices = catalog_prices(request_json(settings["catalog_url"]), [args.model])
+    catalog = request_json(settings["catalog_url"])
+    # Routing may pick any provider, so reserve at the highest price any of them lists.
+    endpoints = request_json(f"{settings['catalog_url']}/{args.model}/endpoints")["data"]["endpoints"]
+    catalog["data"] += [{"id": args.model, "pricing": endpoint["pricing"]} for endpoint in endpoints]
+    prices = catalog_prices(catalog, [args.model])
     env = load_environment(mode=args.mode, tasks_path=args.tasks, calculator=not args.no_calculator)
     rows = env.get_dataset().to_list()
     if args.limit is not None and args.limit <= 0:
@@ -239,7 +243,7 @@ def main():
     parser.add_argument("--rollouts", type=int, default=3)
     parser.add_argument("--config", type=Path, default=Path("configs/openrouter-models.json"))
     parser.add_argument("--env-file", type=Path, default=Path.home() / ".env")
-    parser.add_argument("--output", type=Path, default=Path("results/tool-pilot"))
+    parser.add_argument("--output", type=Path, default=Path("results/run"))
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--max-cost", type=float, default=LIMIT)
     parser.add_argument("--provider-default-temperature", action="store_true")

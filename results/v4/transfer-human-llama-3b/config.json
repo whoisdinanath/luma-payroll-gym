@@ -1,0 +1,39 @@
+{
+  "model": "meta-llama/llama-3.2-3b-instruct",
+  "mode": "single",
+  "rollouts": 3,
+  "temperature": 0.7,
+  "base_url": "https://openrouter.ai/api/v1",
+  "price": {
+    "input": 5.09e-08,
+    "output": 3.35e-07
+  },
+  "rubric_version": "8",
+  "ruleset_version": "3",
+  "judge_model": "z-ai/glm-5.3-flash",
+  "judge_prompt_sha256": "96ba07448df144b3399ff386a66dcefe6cc1d1a3cce7e7a18367d31e9f7a2bc6",
+  "taskset_sha256": "38fa3139fde74ada721260fadf524a097a2ab67caa43f4299f6ff5bab0e288b6",
+  "rules_sha256": "5a87c8929e3b51c929e8e4b48138835d0ce96fb57477b891d31be7784b0a5cee",
+  "prompts_sha256": "859a6740ded07aaf235674d41d71385165b5eee807c9547820b9e3e1204bae9c",
+  "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "task_ids": [
+    "transfer-human-01",
+    "transfer-human-02",
+    "transfer-human-03",
+    "transfer-human-04",
+    "transfer-human-05",
+    "transfer-human-06",
+    "transfer-human-07",
+    "transfer-human-08",
+    "transfer-human-09",
+    "transfer-human-10",
+    "transfer-human-11",
+    "transfer-human-12",
+    "transfer-human-13",
+    "transfer-human-14",
+    "transfer-human-15"
+  ],
+  "generator_seeds": [],
+  "completion_token_ceiling": 8192,
+  "max_cost": 25.0
+}
