@@ -122,7 +122,7 @@ def generate_with_demos(args):
 
     torch.set_num_threads(4)
     tasks = [Task.from_dict(item) for item in json.loads(args.tasks.read_text())][:args.limit]
-    demos = [Task.from_dict(item) for item in json.loads(args.demos.read_text())]
+    demos = [] if args.zero_shot else [Task.from_dict(item) for item in json.loads(args.demos.read_text())]
     validate_taskset(tasks)
     rules = Path("rules/payroll.md").read_text()
     tokenizer = load_tokenizer()
@@ -130,7 +130,7 @@ def generate_with_demos(args):
     calculator = args.mode in ("calculator", "tools")
     tools = TOOLS if calculator else []
     if tool_mode:
-        from luma_gym.documents import CaseDocuments, tool_definitions, tool_prompt
+        from luma_gym.documents import CaseDocuments, tool_definitions, tool_demo_messages, tool_prompt
 
         tools = [{"type": "function", "function": definition} for definition in tool_definitions()]
     config = {
@@ -150,7 +150,13 @@ def generate_with_demos(args):
         config["adapter_sha256"] = hashlib.sha256((args.adapter / "adapter_model.safetensors").read_bytes()).hexdigest()
     if args.base:
         config["base"] = json.loads((args.base / "provenance.json").read_text())
-    if tool_mode:
+    if args.zero_shot:
+        config["prompt"] = "no demonstrations"
+        del config["demos_sha256"]
+    elif tool_mode and args.tool_demos:
+        config["prompt"] = ("the hosted tool-mode prompt and tools from the environment, with the demonstrations as "
+                            "reference tool-call trajectories")
+    elif tool_mode:
         config["prompt"] = "the hosted tool-mode prompt and tools from the environment, with no demonstrations"
         del config["demos_sha256"]
     args.output.mkdir(parents=True, exist_ok=True)
@@ -171,7 +177,12 @@ def generate_with_demos(args):
         for task_index, task in enumerate(tasks):
             if task.id in done:
                 continue
-            messages = tool_prompt(task, rules) if tool_mode else task_messages(task, rules, demos, calculator)
+            if tool_mode:
+                messages = tool_prompt(task, rules)
+                if args.tool_demos:
+                    messages[1:1] = tool_demo_messages(demos)
+            else:
+                messages = task_messages(task, rules, demos, calculator)
             prompt = prompt_ids(tokenizer, messages, calculator, tools if tool_mode else None)
             if tool_mode:
                 settings["cases"] = [CaseDocuments(task)] * args.rollouts
@@ -214,10 +225,14 @@ def main():
     parser.add_argument("--adapter", type=Path)
     parser.add_argument("--demos", type=Path, help="Demonstration tasks; enables --mode, --max-turns, and --base")
     parser.add_argument("--mode", choices=["single", "calculator", "tools"], default="single")
+    parser.add_argument("--zero-shot", action="store_true", help="Leave the demonstrations out of the prompt")
+    parser.add_argument("--tool-demos", action="store_true", help="In tool mode, show the demonstrations as tool calls")
     parser.add_argument("--max-turns", type=int, default=4)
     parser.add_argument("--base", type=Path, help="Merged supervised checkpoint to start from")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
+    if args.tool_demos and (args.mode != "tools" or args.zero_shot):
+        parser.error("--tool-demos needs --mode tools and the demonstrations")
     if args.demos:
         return generate_with_demos(args)
     if min(args.limit, args.rollouts, args.max_new_tokens) <= 0:

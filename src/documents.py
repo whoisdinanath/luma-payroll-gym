@@ -48,6 +48,30 @@ def tool_prompt(task, rules, calculator=True):
     return prompt
 
 
+def tool_demo_messages(demos):
+    # Each demonstration as the tool-call trajectory the reference would take, one call per turn.
+    from luma_gym.reference import reference_name
+    from luma_gym.rollout import EXPLANATIONS, program_for
+
+    messages = []
+    for task in demos:
+        case = CaseDocuments(task)
+        messages.append({"role": "user", "content": tool_prompt(task, "")[1]["content"]})
+        calls = [("list_documents", {})] + [("read_document", {"document_id": key}) for key in case.documents]
+        answer = dict(task.ground_truth)
+        if answer["decision"] == "calculate":
+            calls += [("lookup_reference", {"reference": reference_name(task.record["payroll_month"])}),
+                      ("calculate", {"program": program_for(task.record)})]
+        else:
+            answer["explanation"] = EXPLANATIONS[answer["reason_code"]]
+        for name, arguments in calls:
+            messages.append({"role": "assistant", "content": "", "tool_calls": [
+                {"type": "function", "function": {"name": name, "arguments": arguments}}]})
+            messages.append({"role": "tool", "content": tool_reply(case, name, arguments)})
+        messages.append({"role": "assistant", "content": json.dumps(answer)})
+    return messages
+
+
 def tool_reply(case, name, arguments):
     methods = {"list_documents": case.list_documents, "read_document": case.read_document,
                "lookup_reference": case.lookup_reference, "calculate": case.calculate}

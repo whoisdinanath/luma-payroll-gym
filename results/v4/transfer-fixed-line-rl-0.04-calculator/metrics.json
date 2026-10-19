@@ -1,0 +1,17 @@
+{
+  "rollouts": 60,
+  "tasks": "data/transfer-fixed-line.json",
+  "generator_seeds": [],
+  "mean_reward": 0.22666666666666666,
+  "sd_reward": 0.754392036432496,
+  "passed": 29,
+  "truncated": 0,
+  "judge_cost_usd": 0.0017745720000000003,
+  "local_inference_api_cost_usd": 0,
+  "total_generation_seconds": 227.89279592099996,
+  "statuses": {
+    "wrong_decision": 2,
+    "scored": 38,
+    "wrong_clarification": 20
+  }
+}

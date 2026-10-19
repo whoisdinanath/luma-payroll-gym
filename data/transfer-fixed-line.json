@@ -1,0 +1,648 @@
+[
+  {
+    "id": "transfer-fixed-line-01",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6217.50",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "350.00",
+      "contract_gross_pay": "5900.00",
+      "amendment": {
+        "gross_pay": "6217.50",
+        "effective_month": "2026-09",
+        "approved": true
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "6217.50",
+      "employee_contribution": "270.00",
+      "allowed_deduction": "350.00",
+      "taxable_pay": "5597.50",
+      "income_tax": "769.45",
+      "net_pay": "4828.05",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-01"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-02",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4000.00",
+      "payroll_month": "2026-06",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "4000.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "300.00",
+          "free": "1000.00",
+          "upper": "3800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "350.00",
+          "free": "1100.00",
+          "upper": "4230.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4000.00",
+      "employee_contribution": "200.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3800.00",
+      "income_tax": "280.00",
+      "net_pay": "3520.00",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-02"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-03",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4500.00",
+      "payroll_month": "2026-07",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "4500.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "300.00",
+          "free": "1000.00",
+          "upper": "3800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "350.00",
+          "free": "1100.00",
+          "upper": "4230.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4500.00",
+      "employee_contribution": "270.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "4230.00",
+      "income_tax": "375.60",
+      "net_pay": "3854.40",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-03"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-04",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "3800.00",
+      "payroll_month": "2026-03",
+      "allowed_deduction": "200.00",
+      "contract_gross_pay": "3800.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "300.00",
+          "free": "1000.00",
+          "upper": "3800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "350.00",
+          "free": "1100.00",
+          "upper": "4230.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "3800.00",
+      "employee_contribution": "190.00",
+      "allowed_deduction": "200.00",
+      "taxable_pay": "3410.00",
+      "income_tax": "241.00",
+      "net_pay": "3169.00",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-04"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-05",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4200.00",
+      "payroll_month": "2026-09",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "4200.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "300.00",
+          "free": "1000.00",
+          "upper": "3800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "350.00",
+          "free": "1100.00",
+          "upper": "4230.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4200.00",
+      "employee_contribution": "252.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3948.00",
+      "income_tax": "341.76",
+      "net_pay": "3606.24",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-05"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-06",
+    "slice": "monthly_payroll",
+    "difficulty": 2,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4050.00",
+      "payroll_month": "2026-04",
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "4050.00",
+      "reference_tables": {
+        "first-half": {
+          "rate": "0.05",
+          "cap": "4000.00",
+          "deduction": "300.00",
+          "free": "1000.00",
+          "upper": "3800.00",
+          "middle_rate": "0.10",
+          "upper_rate": "0.20"
+        },
+        "second-half": {
+          "rate": "0.06",
+          "cap": "4500.00",
+          "deduction": "350.00",
+          "free": "1100.00",
+          "upper": "4230.00",
+          "middle_rate": "0.12",
+          "upper_rate": "0.22"
+        }
+      }
+    },
+    "ground_truth": {
+      "decision": "calculate",
+      "currency": "LCR",
+      "gross_pay": "4050.00",
+      "employee_contribution": "200.00",
+      "allowed_deduction": "0.00",
+      "taxable_pay": "3850.00",
+      "income_tax": "290.00",
+      "net_pay": "3560.00",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-06"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-07",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "payroll_month": "2026-07",
+      "allowed_deduction": "250.00",
+      "contract_gross_pay": "4700.00",
+      "amendment": {
+        "gross_pay": "4850.00",
+        "effective_month": "2026-07",
+        "approved": true
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-07"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-08",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4999.99",
+      "allowed_deduction": "299.99",
+      "contract_gross_pay": "4999.99"
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-08"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-09",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5500.00",
+      "payroll_month": "2027-01",
+      "allowed_deduction": "300.00",
+      "contract_gross_pay": "5500.00"
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-09"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-10",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "4800.00",
+      "payroll_month": "2026-10",
+      "allowed_deduction": "350.00",
+      "contract_gross_pay": "4500.00",
+      "amendment": {
+        "gross_pay": "4799.99",
+        "effective_month": "2026-09",
+        "approved": true
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-10"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-11",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5300.00",
+      "payroll_month": "2026-11",
+      "allowed_deduction": "350.00",
+      "contract_gross_pay": "5000.00",
+      "amendment": {
+        "gross_pay": "5300.00",
+        "effective_month": "2026-11",
+        "approved": false
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-11"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-12",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "6400.00",
+      "payroll_month": "2026-02",
+      "allowed_deduction": "300.00",
+      "contract_gross_pay": "6100.00",
+      "amendment": {
+        "gross_pay": "6400.00",
+        "effective_month": "2026-03",
+        "approved": true
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "CONFLICTING_GROSS_PAY",
+      "clauses": [
+        "R7",
+        "R9"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-12"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-13",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "allowed_deduction": "0.00",
+      "contract_gross_pay": "5100.00",
+      "amendment": {
+        "gross_pay": "5200.00",
+        "effective_month": "2026-07",
+        "approved": true
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_GROSS_PAY",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-13"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-14",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5600.00",
+      "allowed_deduction": "300.00",
+      "contract_gross_pay": "5400.00",
+      "amendment": {
+        "gross_pay": "5600.00",
+        "effective_month": "2026-07",
+        "approved": true
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "MISSING_PAYROLL_MONTH",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-14"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  },
+  {
+    "id": "transfer-fixed-line-15",
+    "slice": "monthly_payroll",
+    "difficulty": 3,
+    "prompt": "Process this monthly payroll record under the supplied rulebook. Return the R6 or R7 JSON answer.",
+    "record": {
+      "gross_pay": "5100.00",
+      "payroll_month": "2025-12",
+      "allowed_deduction": "300.00",
+      "contract_gross_pay": "5000.00",
+      "amendment": {
+        "gross_pay": "5150.00",
+        "effective_month": "2026-01",
+        "approved": false
+      }
+    },
+    "ground_truth": {
+      "decision": "clarify",
+      "reason_code": "NO_APPLICABLE_REFERENCE",
+      "clauses": [
+        "R1",
+        "R7"
+      ]
+    },
+    "verifier": "payroll",
+    "tags": [
+      "transfer",
+      "fixed-line",
+      "paired-with:transfer-human-15"
+    ],
+    "schema_version": "1.0",
+    "ruleset_version": "3",
+    "seed": null,
+    "retrieval_field": null
+  }
+]

@@ -1,0 +1,3342 @@
+[
+  {
+    "id": "transfer-human-01:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 9.69318853075
+  },
+  {
+    "id": "transfer-human-01:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 9.69318853075
+  },
+  {
+    "id": "transfer-human-01:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 9.69318853075
+  },
+  {
+    "id": "transfer-human-01:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 9.69318853075
+  },
+  {
+    "id": "transfer-human-02:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 8.584603587249998
+  },
+  {
+    "id": "transfer-human-02:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 8.584603587249998
+  },
+  {
+    "id": "transfer-human-02:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 8.584603587249998
+  },
+  {
+    "id": "transfer-human-02:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 8.584603587249998
+  },
+  {
+    "id": "transfer-human-03:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 8.576507716000002
+  },
+  {
+    "id": "transfer-human-03:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 8.576507716000002
+  },
+  {
+    "id": "transfer-human-03:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 8.576507716000002
+  },
+  {
+    "id": "transfer-human-03:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 8.576507716000002
+  },
+  {
+    "id": "transfer-human-04:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 9.154241067500003
+  },
+  {
+    "id": "transfer-human-04:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 9.154241067500003
+  },
+  {
+    "id": "transfer-human-04:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 9.154241067500003
+  },
+  {
+    "id": "transfer-human-04:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 9.154241067500003
+  },
+  {
+    "id": "transfer-human-05:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 31.030816766
+  },
+  {
+    "id": "transfer-human-05:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 31.030816766
+  },
+  {
+    "id": "transfer-human-05:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 31.030816766
+  },
+  {
+    "id": "transfer-human-05:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 31.030816766
+  },
+  {
+    "id": "transfer-human-06:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 9.362954967500002
+  },
+  {
+    "id": "transfer-human-06:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 9.362954967500002
+  },
+  {
+    "id": "transfer-human-06:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 9.362954967500002
+  },
+  {
+    "id": "transfer-human-06:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-human-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 9.362954967500002
+  },
+  {
+    "id": "transfer-human-07:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.6313356339999956
+  },
+  {
+    "id": "transfer-human-07:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.6313356339999956
+  },
+  {
+    "id": "transfer-human-07:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.6313356339999956
+  },
+  {
+    "id": "transfer-human-07:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.6313356339999956
+  },
+  {
+    "id": "transfer-human-08:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.575755920500001
+  },
+  {
+    "id": "transfer-human-08:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.575755920500001
+  },
+  {
+    "id": "transfer-human-08:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.575755920500001
+  },
+  {
+    "id": "transfer-human-08:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.575755920500001
+  },
+  {
+    "id": "transfer-human-09:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.741907775999991
+  },
+  {
+    "id": "transfer-human-09:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.741907775999991
+  },
+  {
+    "id": "transfer-human-09:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.741907775999991
+  },
+  {
+    "id": "transfer-human-09:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.741907775999991
+  },
+  {
+    "id": "transfer-human-10:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.076950860500006
+  },
+  {
+    "id": "transfer-human-10:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.076950860500006
+  },
+  {
+    "id": "transfer-human-10:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.076950860500006
+  },
+  {
+    "id": "transfer-human-10:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.076950860500006
+  },
+  {
+    "id": "transfer-human-11:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.273653208000013
+  },
+  {
+    "id": "transfer-human-11:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.273653208000013
+  },
+  {
+    "id": "transfer-human-11:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.273653208000013
+  },
+  {
+    "id": "transfer-human-11:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.273653208000013
+  },
+  {
+    "id": "transfer-human-12:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 13.041059876249989
+  },
+  {
+    "id": "transfer-human-12:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 13.041059876249989
+  },
+  {
+    "id": "transfer-human-12:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 13.041059876249989
+  },
+  {
+    "id": "transfer-human-12:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 13.041059876249989
+  },
+  {
+    "id": "transfer-human-13:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 14.030499512749998
+  },
+  {
+    "id": "transfer-human-13:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.030499512749998
+  },
+  {
+    "id": "transfer-human-13:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.030499512749998
+  },
+  {
+    "id": "transfer-human-13:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.030499512749998
+  },
+  {
+    "id": "transfer-human-14:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 11.190280550250009
+  },
+  {
+    "id": "transfer-human-14:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 11.190280550250009
+  },
+  {
+    "id": "transfer-human-14:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 11.190280550250009
+  },
+  {
+    "id": "transfer-human-14:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 11.190280550250009
+  },
+  {
+    "id": "transfer-human-15:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.8957539339999983
+  },
+  {
+    "id": "transfer-human-15:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.8957539339999983
+  },
+  {
+    "id": "transfer-human-15:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.8957539339999983
+  },
+  {
+    "id": "transfer-human-15:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-human-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 2.8957539339999983
+  }
+]

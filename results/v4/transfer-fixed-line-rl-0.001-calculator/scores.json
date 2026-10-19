@@ -1,0 +1,4858 @@
+[
+  {
+    "id": "transfer-fixed-line-01:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_decision",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.049309187249996
+  },
+  {
+    "id": "transfer-fixed-line-01:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_decision",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.049309187249996
+  },
+  {
+    "id": "transfer-fixed-line-01:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.4,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.5,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.049309187249996
+  },
+  {
+    "id": "transfer-fixed-line-01:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_decision",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.049309187249996
+  },
+  {
+    "id": "transfer-fixed-line-02:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.148268433999988
+  },
+  {
+    "id": "transfer-fixed-line-02:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.148268433999988
+  },
+  {
+    "id": "transfer-fixed-line-02:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.148268433999988
+  },
+  {
+    "id": "transfer-fixed-line-02:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.148268433999988
+  },
+  {
+    "id": "transfer-fixed-line-03:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.131372751249998
+  },
+  {
+    "id": "transfer-fixed-line-03:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.131372751249998
+  },
+  {
+    "id": "transfer-fixed-line-03:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.131372751249998
+  },
+  {
+    "id": "transfer-fixed-line-03:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.131372751249998
+  },
+  {
+    "id": "transfer-fixed-line-04:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086819025500006
+  },
+  {
+    "id": "transfer-fixed-line-04:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086819025500006
+  },
+  {
+    "id": "transfer-fixed-line-04:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086819025500006
+  },
+  {
+    "id": "transfer-fixed-line-04:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086819025500006
+  },
+  {
+    "id": "transfer-fixed-line-05:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 5.999906762750001
+  },
+  {
+    "id": "transfer-fixed-line-05:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 5.999906762750001
+  },
+  {
+    "id": "transfer-fixed-line-05:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 5.999906762750001
+  },
+  {
+    "id": "transfer-fixed-line-05:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 5.999906762750001
+  },
+  {
+    "id": "transfer-fixed-line-06:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086075582500001
+  },
+  {
+    "id": "transfer-fixed-line-06:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086075582500001
+  },
+  {
+    "id": "transfer-fixed-line-06:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086075582500001
+  },
+  {
+    "id": "transfer-fixed-line-06:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 6.086075582500001
+  },
+  {
+    "id": "transfer-fixed-line-07:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8732370282499886
+  },
+  {
+    "id": "transfer-fixed-line-07:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8732370282499886
+  },
+  {
+    "id": "transfer-fixed-line-07:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8732370282499886
+  },
+  {
+    "id": "transfer-fixed-line-07:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8732370282499886
+  },
+  {
+    "id": "transfer-fixed-line-08:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8396319242499999
+  },
+  {
+    "id": "transfer-fixed-line-08:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8396319242499999
+  },
+  {
+    "id": "transfer-fixed-line-08:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8396319242499999
+  },
+  {
+    "id": "transfer-fixed-line-08:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8396319242499999
+  },
+  {
+    "id": "transfer-fixed-line-09:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.739297036250008
+  },
+  {
+    "id": "transfer-fixed-line-09:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.739297036250008
+  },
+  {
+    "id": "transfer-fixed-line-09:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.739297036250008
+  },
+  {
+    "id": "transfer-fixed-line-09:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.739297036250008
+  },
+  {
+    "id": "transfer-fixed-line-10:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "requests_resolution": true,
+            "identifies_blocker": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9444668667500054
+  },
+  {
+    "id": "transfer-fixed-line-10:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "requests_resolution": true,
+            "identifies_blocker": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9444668667500054
+  },
+  {
+    "id": "transfer-fixed-line-10:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "requests_resolution": true,
+            "identifies_blocker": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9444668667500054
+  },
+  {
+    "id": "transfer-fixed-line-10:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "requests_resolution": true,
+            "identifies_blocker": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9444668667500054
+  },
+  {
+    "id": "transfer-fixed-line-11:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8503373187500074
+  },
+  {
+    "id": "transfer-fixed-line-11:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8503373187500074
+  },
+  {
+    "id": "transfer-fixed-line-11:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "avoids_unsupported_answer": true,
+            "identifies_blocker": true,
+            "requests_resolution": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8503373187500074
+  },
+  {
+    "id": "transfer-fixed-line-11:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8503373187500074
+  },
+  {
+    "id": "transfer-fixed-line-12:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9981686765000006
+  },
+  {
+    "id": "transfer-fixed-line-12:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9981686765000006
+  },
+  {
+    "id": "transfer-fixed-line-12:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9981686765000006
+  },
+  {
+    "id": "transfer-fixed-line-12:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9981686765000006
+  },
+  {
+    "id": "transfer-fixed-line-13:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 2.026981653749999
+  },
+  {
+    "id": "transfer-fixed-line-13:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 2.026981653749999
+  },
+  {
+    "id": "transfer-fixed-line-13:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 2.026981653749999
+  },
+  {
+    "id": "transfer-fixed-line-13:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 2.026981653749999
+  },
+  {
+    "id": "transfer-fixed-line-14:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8939270567500017
+  },
+  {
+    "id": "transfer-fixed-line-14:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8939270567500017
+  },
+  {
+    "id": "transfer-fixed-line-14:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8939270567500017
+  },
+  {
+    "id": "transfer-fixed-line-14:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.8939270567500017
+  },
+  {
+    "id": "transfer-fixed-line-15:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9485240887499913
+  },
+  {
+    "id": "transfer-fixed-line-15:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9485240887499913
+  },
+  {
+    "id": "transfer-fixed-line-15:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9485240887499913
+  },
+  {
+    "id": "transfer-fixed-line-15:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_clarification",
+      "breakdown": {
+        "decision": {
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": true
+      },
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
+    },
+    "truncated": false,
+    "seconds": 1.9485240887499913
+  }
+]

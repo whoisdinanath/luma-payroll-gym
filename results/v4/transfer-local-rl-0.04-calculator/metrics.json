@@ -1,0 +1,17 @@
+{
+  "rollouts": 60,
+  "tasks": "data/transfer-human.json",
+  "generator_seeds": [],
+  "mean_reward": -0.0005555499999999991,
+  "sd_reward": 0.7122942946675529,
+  "passed": 19,
+  "truncated": 0,
+  "judge_cost_usd": 0.0014404851999999997,
+  "local_inference_api_cost_usd": 0,
+  "total_generation_seconds": 147.75242245398113,
+  "statuses": {
+    "wrong_decision": 24,
+    "wrong_clarification": 14,
+    "scored": 22
+  }
+}
