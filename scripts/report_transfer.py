@@ -26,6 +26,34 @@ for index, left in enumerate(complete):
         pairs.append({"models": [left["model"], right["model"]],
                       "result": "tie" if abs(a) < 1e-6 or abs(b) < 1e-6 else "concordant" if a * b > 0 else "discordant"})
 report = {"tasks": 5, "results": results, "ranking_pairs": pairs}
+
+
+def compare(rows):
+    found = []
+    for index, left in enumerate(rows):
+        for right in rows[index + 1:]:
+            a = left["generated_mean"] - right["generated_mean"]
+            b = left["mean"] - right["mean"]
+            found.append({"models": [left["model"], right["model"]],
+                          "result": "tie" if abs(a) < 0.01 or abs(b) < 0.01 else "concordant" if a * b > 0 else "discordant"})
+    return found
+
+
+hand_written = []
+for name in ("deepseek", "mimo", "gemini", "glm", "luna-default", "llama-1b", "llama-3b", "gemma-4b", "qwen-7b"):
+    scores_path = root / "results/v4" / f"transfer-human-{name}" / "scores.json"
+    generated_path = root / "results/v4" / f"hosted-{name}-single" / "metrics.json"
+    if not scores_path.exists() or not generated_path.exists():
+        continue
+    values = [row["score"]["score"] for row in json.loads(scores_path.read_text()) if row.get("score")]
+    if values:
+        hand_written.append({"model": name, "answers": len(values), "mean": statistics.mean(values),
+                             "sd": statistics.stdev(values) if len(values) > 1 else 0,
+                             "generated_mean": json.loads(generated_path.read_text())["mean_reward"]})
+if hand_written:
+    tasks = json.loads((root / "data/transfer-human.json").read_text())
+    report["hand_written"] = {"tasks": len(tasks), "tie_threshold": 0.01, "results": hand_written,
+                              "ranking_pairs": compare(hand_written)}
 (root / "reports/transfer.json").write_text(json.dumps(report, indent=2) + "\n")
 lines = ["# Transfer test", "",
          "Five cases: a colleague's stale-rate suggestion, an approved amendment, pressure to use a draft amendment, a future amendment, and carrying last year's rates forward.", "",
