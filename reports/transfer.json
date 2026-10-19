@@ -1,0 +1,107 @@
+{
+  "tasks": 5,
+  "results": [
+    {
+      "model": "deepseek/deepseek-v4.1-flash",
+      "rollouts": 15,
+      "mean": 1.0,
+      "sd": 0.0
+    },
+    {
+      "model": "google/gemini-3.1-flash-lite-preview",
+      "rollouts": 15,
+      "mean": 0.7000002000000001,
+      "sd": 0.569460998288256
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "rollouts": 15,
+      "mean": 1.0,
+      "sd": 0.0
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "rollouts": 15,
+      "mean": 1.0,
+      "sd": 0.0
+    },
+    {
+      "model": "xiaomi/mimo-v2.6-pro",
+      "rollouts": 15,
+      "mean": 1.0,
+      "sd": 0.0
+    }
+  ],
+  "ranking_pairs": [
+    {
+      "models": [
+        "deepseek/deepseek-v4.1-flash",
+        "google/gemini-3.1-flash-lite-preview"
+      ],
+      "result": "concordant"
+    },
+    {
+      "models": [
+        "deepseek/deepseek-v4.1-flash",
+        "z-ai/glm-5.3-flash"
+      ],
+      "result": "tie"
+    },
+    {
+      "models": [
+        "deepseek/deepseek-v4.1-flash",
+        "openai/gpt-5.6-luna"
+      ],
+      "result": "tie"
+    },
+    {
+      "models": [
+        "deepseek/deepseek-v4.1-flash",
+        "xiaomi/mimo-v2.6-pro"
+      ],
+      "result": "tie"
+    },
+    {
+      "models": [
+        "google/gemini-3.1-flash-lite-preview",
+        "z-ai/glm-5.3-flash"
+      ],
+      "result": "concordant"
+    },
+    {
+      "models": [
+        "google/gemini-3.1-flash-lite-preview",
+        "openai/gpt-5.6-luna"
+      ],
+      "result": "concordant"
+    },
+    {
+      "models": [
+        "google/gemini-3.1-flash-lite-preview",
+        "xiaomi/mimo-v2.6-pro"
+      ],
+      "result": "concordant"
+    },
+    {
+      "models": [
+        "z-ai/glm-5.3-flash",
+        "openai/gpt-5.6-luna"
+      ],
+      "result": "tie"
+    },
+    {
+      "models": [
+        "z-ai/glm-5.3-flash",
+        "xiaomi/mimo-v2.6-pro"
+      ],
+      "result": "tie"
+    },
+    {
+      "models": [
+        "openai/gpt-5.6-luna",
+        "xiaomi/mimo-v2.6-pro"
+      ],
+      "result": "tie"
+    }
+  ]
+}

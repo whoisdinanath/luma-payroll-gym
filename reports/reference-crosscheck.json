@@ -1,0 +1,197 @@
+{
+  "method": "integer-cent arithmetic",
+  "checked": 10,
+  "divergence_rate": 0.0,
+  "results": [
+    {
+      "task_id": "generated-41-00001",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 20000,
+        "allowed_deduction": 27502,
+        "taxable_pay": 771655,
+        "income_tax": 114298,
+        "net_pay": 657357
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00004",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 0,
+        "allowed_deduction": 0,
+        "taxable_pay": 0,
+        "income_tax": 0,
+        "net_pay": 0
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00007",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 28000,
+        "allowed_deduction": 24393,
+        "taxable_pay": 347608,
+        "income_tax": 33769,
+        "net_pay": 313839
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00010",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 31500,
+        "allowed_deduction": 19700,
+        "taxable_pay": 587442,
+        "income_tax": 72688,
+        "net_pay": 514754
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00013",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 20000,
+        "allowed_deduction": 0,
+        "taxable_pay": 827159,
+        "income_tax": 147518,
+        "net_pay": 679641
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00016",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 16000,
+        "allowed_deduction": 0,
+        "taxable_pay": 383998,
+        "income_tax": 38880,
+        "net_pay": 345118
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00018",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 24000,
+        "allowed_deduction": 4700,
+        "taxable_pay": 935774,
+        "income_tax": 169386,
+        "net_pay": 766388
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00019",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 35000,
+        "allowed_deduction": 29694,
+        "taxable_pay": 650117,
+        "income_tax": 78023,
+        "net_pay": 572094
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00022",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 20000,
+        "allowed_deduction": 0,
+        "taxable_pay": 380001,
+        "income_tax": 48600,
+        "net_pay": 331401
+      },
+      "mismatches": []
+    },
+    {
+      "task_id": "generated-41-00024",
+      "clauses": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "integer_cent_calculation": {
+        "employee_contribution": 8421,
+        "allowed_deduction": 0,
+        "taxable_pay": 96841,
+        "income_tax": 0,
+        "net_pay": 96841
+      },
+      "mismatches": []
+    }
+  ]
+}

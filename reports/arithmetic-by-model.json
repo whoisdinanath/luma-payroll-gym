@@ -1,0 +1,132 @@
+{
+  "llama-1b": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 36,
+    "all_four_right": 0,
+    "fields_right": {
+      "employee_contribution": 0,
+      "taxable_pay": 0,
+      "income_tax": 3,
+      "net_pay": 0
+    },
+    "own_taxable_consistent": 0
+  },
+  "llama-3b": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 85,
+    "all_four_right": 0,
+    "fields_right": {
+      "employee_contribution": 0,
+      "taxable_pay": 0,
+      "income_tax": 0,
+      "net_pay": 0
+    },
+    "own_taxable_consistent": 13
+  },
+  "gemma-4b": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 141,
+    "all_four_right": 0,
+    "fields_right": {
+      "employee_contribution": 13,
+      "taxable_pay": 3,
+      "income_tax": 3,
+      "net_pay": 0
+    },
+    "own_taxable_consistent": 33
+  },
+  "qwen-7b": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 113,
+    "all_four_right": 0,
+    "fields_right": {
+      "employee_contribution": 59,
+      "taxable_pay": 37,
+      "income_tax": 0,
+      "net_pay": 0
+    },
+    "own_taxable_consistent": 61
+  },
+  "gemini": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 141,
+    "all_four_right": 75,
+    "fields_right": {
+      "employee_contribution": 141,
+      "taxable_pay": 138,
+      "income_tax": 78,
+      "net_pay": 76
+    },
+    "own_taxable_consistent": 138
+  },
+  "glm": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 144,
+    "all_four_right": 132,
+    "fields_right": {
+      "employee_contribution": 144,
+      "taxable_pay": 142,
+      "income_tax": 140,
+      "net_pay": 132
+    },
+    "own_taxable_consistent": 142
+  },
+  "mimo": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 144,
+    "all_four_right": 143,
+    "fields_right": {
+      "employee_contribution": 144,
+      "taxable_pay": 144,
+      "income_tax": 143,
+      "net_pay": 143
+    },
+    "own_taxable_consistent": 144
+  },
+  "luna-default": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 144,
+    "all_four_right": 142,
+    "fields_right": {
+      "employee_contribution": 144,
+      "taxable_pay": 142,
+      "income_tax": 144,
+      "net_pay": 142
+    },
+    "own_taxable_consistent": 142
+  },
+  "deepseek": {
+    "parser": "lenient",
+    "payslip_answers": 144,
+    "attempted": 144,
+    "all_four_right": 144,
+    "fields_right": {
+      "employee_contribution": 144,
+      "taxable_pay": 144,
+      "income_tax": 144,
+      "net_pay": 144
+    },
+    "own_taxable_consistent": 144
+  },
+  "minicpm-1b (local, test set)": {
+    "parser": "lenient",
+    "payslip_answers": 384,
+    "attempted": 202,
+    "all_four_right": 0,
+    "fields_right": {
+      "employee_contribution": 2,
+      "taxable_pay": 1,
+      "income_tax": 7,
+      "net_pay": 0
+    },
+    "own_taxable_consistent": 3
+  }
+}

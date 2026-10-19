@@ -1,0 +1,1066 @@
+{
+  "created_at_utc": "2026-10-17T18:25:43.563281+00:00",
+  "datasets": {
+    "train": {
+      "tasks": 100,
+      "tiers": {
+        "2": 51,
+        "3": 49
+      },
+      "trap_reasons": {
+        "NO_APPLICABLE_REFERENCE": 7,
+        "MISSING_PAYROLL_MONTH": 8,
+        "MISSING_GROSS_PAY": 8,
+        "CONFLICTING_GROSS_PAY": 26
+      },
+      "trap_tags": {
+        "uncovered_month": 7,
+        "missing_month": 8,
+        "missing_gross": 8,
+        "conflict": 4,
+        "future_amendment": 10,
+        "draft_amendment": 12
+      },
+      "zero_gross_calculations": 2,
+      "zero_tax_calculations": 15,
+      "boundary_tagged_calculations": 24,
+      "boundary_tagged_within_5_cents_of_actual_zero_cap_or_tax_threshold": 3,
+      "reference_replay_disagreements": 0,
+      "unique_signatures": 100,
+      "file_sha256": "cafc6eaf489eae9f5c278677cebc64ac9c88900518975b23ec8fcf6b304a62f5"
+    },
+    "development": {
+      "tasks": 100,
+      "tiers": {
+        "2": 52,
+        "3": 48
+      },
+      "trap_reasons": {
+        "NO_APPLICABLE_REFERENCE": 8,
+        "CONFLICTING_GROSS_PAY": 24,
+        "MISSING_PAYROLL_MONTH": 10,
+        "MISSING_GROSS_PAY": 6
+      },
+      "trap_tags": {
+        "uncovered_month": 8,
+        "draft_amendment": 8,
+        "missing_month": 10,
+        "conflict": 7,
+        "missing_gross": 6,
+        "future_amendment": 9
+      },
+      "zero_gross_calculations": 2,
+      "zero_tax_calculations": 10,
+      "boundary_tagged_calculations": 22,
+      "boundary_tagged_within_5_cents_of_actual_zero_cap_or_tax_threshold": 7,
+      "reference_replay_disagreements": 0,
+      "unique_signatures": 100,
+      "file_sha256": "0ed4c7d59e9c26884932ad13d0ddd2082279ff55edf692f605d8b76b66085a06"
+    },
+    "held_out": {
+      "tasks": 100,
+      "tiers": {
+        "2": 48,
+        "3": 52
+      },
+      "trap_reasons": {
+        "CONFLICTING_GROSS_PAY": 31,
+        "NO_APPLICABLE_REFERENCE": 7,
+        "MISSING_GROSS_PAY": 2,
+        "MISSING_PAYROLL_MONTH": 12
+      },
+      "trap_tags": {
+        "future_amendment": 7,
+        "uncovered_month": 7,
+        "missing_gross": 2,
+        "conflict": 10,
+        "draft_amendment": 14,
+        "missing_month": 12
+      },
+      "zero_gross_calculations": 2,
+      "zero_tax_calculations": 13,
+      "boundary_tagged_calculations": 22,
+      "boundary_tagged_within_5_cents_of_actual_zero_cap_or_tax_threshold": 9,
+      "reference_replay_disagreements": 0,
+      "unique_signatures": 100,
+      "file_sha256": "ddda21caf21f4bb9ba37da4a4e484db7234ef1cfbae29fae9fe0cd2823edb49e"
+    },
+    "cross_split_overlap": {
+      "train/development": 0,
+      "train/held_out": 0,
+      "development/held_out": 0
+    }
+  },
+  "training": {
+    "rl-beta-0.001": {
+      "steps": 100,
+      "planned": 100,
+      "rubric": "5",
+      "complete_training": true,
+      "superseded": null,
+      "sampled_completions": 1600,
+      "unique_tasks": 100,
+      "hours": 1.5380833333333335,
+      "last_10": {
+        "reward": 0.0365625,
+        "kl": 0.030314407806196268,
+        "entropy": 0.04216895537372782
+      },
+      "by_tier": {
+        "2": {
+          "completions": 816,
+          "unique_tasks": 51,
+          "groups": 204,
+          "logged_reward_counts": {
+            "0.0": 49,
+            "0.0875": 201,
+            "0.05": 536,
+            "0.1625": 1,
+            "1.0": 27,
+            "0.125": 1,
+            "0.2": 1
+          },
+          "groups_with_reward_variance": 29,
+          "groups_with_positive_reward": 203,
+          "decision_counts": {
+            "null": 816
+          },
+          "exact_under_current_rubric": 27,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 28,
+              "denominator": 767
+            },
+            "taxable_pay": {
+              "correct": 29,
+              "denominator": 767
+            },
+            "income_tax": {
+              "correct": 231,
+              "denominator": 767
+            },
+            "net_pay": {
+              "correct": 30,
+              "denominator": 767
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 4
+        },
+        "3": {
+          "completions": 784,
+          "unique_tasks": 49,
+          "groups": 196,
+          "logged_reward_counts": {
+            "0.0": 783,
+            "0.05": 1
+          },
+          "groups_with_reward_variance": 1,
+          "groups_with_positive_reward": 1,
+          "decision_counts": {
+            "null": 784
+          }
+        }
+      }
+    },
+    "rl-beta-0.04": {
+      "steps": 100,
+      "planned": 100,
+      "rubric": "5",
+      "complete_training": true,
+      "superseded": null,
+      "sampled_completions": 1600,
+      "unique_tasks": 100,
+      "hours": 1.593888888888889,
+      "last_10": {
+        "reward": 0.03640625,
+        "kl": 0.00859820104573426,
+        "entropy": 0.06505137972873024
+      },
+      "by_tier": {
+        "2": {
+          "completions": 816,
+          "unique_tasks": 51,
+          "groups": 204,
+          "logged_reward_counts": {
+            "0.0": 58,
+            "0.0875": 204,
+            "0.05": 526,
+            "0.1625": 2,
+            "1.0": 24,
+            "0.125": 1,
+            "0.95": 1
+          },
+          "groups_with_reward_variance": 39,
+          "groups_with_positive_reward": 203,
+          "decision_counts": {
+            "null": 816
+          },
+          "exact_under_current_rubric": 25,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 25,
+              "denominator": 758
+            },
+            "taxable_pay": {
+              "correct": 27,
+              "denominator": 758
+            },
+            "income_tax": {
+              "correct": 232,
+              "denominator": 758
+            },
+            "net_pay": {
+              "correct": 28,
+              "denominator": 758
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 7
+        },
+        "3": {
+          "completions": 784,
+          "unique_tasks": 49,
+          "groups": 196,
+          "logged_reward_counts": {
+            "0.0": 783,
+            "0.05": 1
+          },
+          "groups_with_reward_variance": 1,
+          "groups_with_positive_reward": 1,
+          "decision_counts": {
+            "null": 784
+          }
+        }
+      }
+    },
+    "rl-rubric-3-beta-0.04": {
+      "steps": 14,
+      "planned": 100,
+      "rubric": null,
+      "complete_training": false,
+      "superseded": null,
+      "sampled_completions": 224,
+      "unique_tasks": 56,
+      "hours": 0.22672222222222224,
+      "last_10": {
+        "reward": 0.0383928375,
+        "kl": 0.008980258967230672,
+        "entropy": 0.09480982186592299
+      },
+      "by_tier": {
+        "2": {
+          "completions": 120,
+          "unique_tasks": 30,
+          "groups": 30,
+          "logged_reward_counts": {
+            "0.0": 38,
+            "0.104762": 37,
+            "0.128571": 15,
+            "0.080952": 13,
+            "0.071429": 7,
+            "0.047619": 3,
+            "0.095238": 7
+          },
+          "groups_with_reward_variance": 24,
+          "groups_with_positive_reward": 29,
+          "decision_counts": {
+            "null": 120
+          },
+          "exact_under_current_rubric": 0,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 0,
+              "denominator": 82
+            },
+            "taxable_pay": {
+              "correct": 0,
+              "denominator": 82
+            },
+            "income_tax": {
+              "correct": 36,
+              "denominator": 82
+            },
+            "net_pay": {
+              "correct": 0,
+              "denominator": 82
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 0
+        },
+        "3": {
+          "completions": 104,
+          "unique_tasks": 26,
+          "groups": 26,
+          "logged_reward_counts": {
+            "0.0": 104
+          },
+          "groups_with_reward_variance": 0,
+          "groups_with_positive_reward": 0,
+          "decision_counts": {
+            "null": 104
+          }
+        }
+      }
+    },
+    "rl-rubric-4-beta-0.04": {
+      "steps": 14,
+      "planned": 100,
+      "rubric": "4",
+      "complete_training": false,
+      "superseded": null,
+      "sampled_completions": 224,
+      "unique_tasks": 56,
+      "hours": 0.22508333333333333,
+      "last_10": {
+        "reward": 0.0034375,
+        "kl": 0.0018723264534426783,
+        "entropy": 0.13761977228789357
+      },
+      "by_tier": {
+        "2": {
+          "completions": 120,
+          "unique_tasks": 30,
+          "groups": 30,
+          "logged_reward_counts": {
+            "0.0": 103,
+            "0.05": 17
+          },
+          "groups_with_reward_variance": 4,
+          "groups_with_positive_reward": 7,
+          "decision_counts": {
+            "null": 120
+          },
+          "exact_under_current_rubric": 0,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 0,
+              "denominator": 45
+            },
+            "taxable_pay": {
+              "correct": 0,
+              "denominator": 45
+            },
+            "income_tax": {
+              "correct": 17,
+              "denominator": 45
+            },
+            "net_pay": {
+              "correct": 0,
+              "denominator": 45
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 0
+        },
+        "3": {
+          "completions": 104,
+          "unique_tasks": 26,
+          "groups": 26,
+          "logged_reward_counts": {
+            "0.0": 104
+          },
+          "groups_with_reward_variance": 0,
+          "groups_with_positive_reward": 0,
+          "decision_counts": {
+            "null": 104
+          }
+        }
+      }
+    },
+    "rl-rubric-6-beta-0.04": {
+      "steps": 23,
+      "planned": 80,
+      "rubric": "6",
+      "complete_training": false,
+      "superseded": null,
+      "sampled_completions": 716,
+      "unique_tasks": 81,
+      "hours": 1.046361111111111,
+      "last_10": {
+        "reward": 0.13604166875,
+        "kl": 0.041754170350640496,
+        "entropy": 0.10976844401315619,
+        "false_clarification": 0.9625,
+        "correct_clarification": 0.275
+      },
+      "by_tier": {
+        "2": {
+          "completions": 184,
+          "unique_tasks": 46,
+          "groups": 46,
+          "logged_reward_counts": {
+            "0.0": 184
+          },
+          "groups_with_reward_variance": 0,
+          "groups_with_positive_reward": 0,
+          "decision_counts": {
+            "retrieve": 17,
+            "calculate": 51,
+            "clarify": 108,
+            "invalid": 8
+          },
+          "exact_under_current_rubric": 0,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 0,
+              "denominator": 48
+            },
+            "taxable_pay": {
+              "correct": 1,
+              "denominator": 48
+            },
+            "income_tax": {
+              "correct": 2,
+              "denominator": 48
+            },
+            "net_pay": {
+              "correct": 2,
+              "denominator": 48
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 1
+        },
+        "3": {
+          "completions": 532,
+          "unique_tasks": 35,
+          "groups": 46,
+          "logged_reward_counts": {
+            "0.0": 472,
+            "0.933333": 5,
+            "1.0": 51,
+            "0.966667": 4
+          },
+          "groups_with_reward_variance": 30,
+          "groups_with_positive_reward": 30,
+          "decision_counts": {
+            "calculate": 170,
+            "clarify": 281,
+            "retrieve": 51,
+            "invalid": 29,
+            "other": 1
+          }
+        }
+      }
+    },
+    "rl-rubric-7-beta-0.001": {
+      "steps": 60,
+      "planned": 60,
+      "rubric": "7",
+      "complete_training": true,
+      "superseded": null,
+      "sampled_completions": 2496,
+      "unique_tasks": 98,
+      "hours": 4.929749999999999,
+      "last_10": {
+        "reward": 0.14666666875,
+        "kl": 0.05952228587434871,
+        "entropy": 0.14033485234007037,
+        "false_clarification": 0.0375,
+        "correct_clarification": 0.45
+      },
+      "by_tier": {
+        "2": {
+          "completions": 1092,
+          "unique_tasks": 49,
+          "groups": 120,
+          "logged_reward_counts": {
+            "-0.5": 252,
+            "0.0": 840
+          },
+          "groups_with_reward_variance": 106,
+          "groups_with_positive_reward": 0,
+          "decision_counts": {
+            "retrieve": 18,
+            "calculate": 887,
+            "clarify": 148,
+            "invalid": 38,
+            "other": 1
+          },
+          "exact_under_current_rubric": 0,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 0,
+              "denominator": 840
+            },
+            "taxable_pay": {
+              "correct": 2,
+              "denominator": 840
+            },
+            "income_tax": {
+              "correct": 5,
+              "denominator": 840
+            },
+            "net_pay": {
+              "correct": 3,
+              "denominator": 840
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 2
+        },
+        "3": {
+          "completions": 1404,
+          "unique_tasks": 49,
+          "groups": 120,
+          "logged_reward_counts": {
+            "-0.5": 785,
+            "0.0": 404,
+            "1.0": 188,
+            "0.933333": 13,
+            "None": 4,
+            "0.966667": 10
+          },
+          "groups_with_reward_variance": 112,
+          "groups_with_positive_reward": 70,
+          "decision_counts": {
+            "calculate": 695,
+            "clarify": 622,
+            "retrieve": 37,
+            "invalid": 49,
+            "clear": 1
+          }
+        }
+      }
+    },
+    "rl-rubric-7-beta-0.04": {
+      "steps": 60,
+      "planned": 60,
+      "rubric": "7",
+      "complete_training": true,
+      "superseded": null,
+      "sampled_completions": 2424,
+      "unique_tasks": 98,
+      "hours": 5.09825,
+      "last_10": {
+        "reward": 0.08916666875000001,
+        "kl": 0.036930094701324696,
+        "entropy": 0.19442474262793497,
+        "false_clarification": 0.0625,
+        "correct_clarification": 0.4125
+      },
+      "by_tier": {
+        "2": {
+          "completions": 1008,
+          "unique_tasks": 49,
+          "groups": 120,
+          "logged_reward_counts": {
+            "-0.5": 262,
+            "0.0": 746
+          },
+          "groups_with_reward_variance": 117,
+          "groups_with_positive_reward": 0,
+          "decision_counts": {
+            "retrieve": 19,
+            "calculate": 807,
+            "clarify": 139,
+            "invalid": 41,
+            "other": 1,
+            "clear": 1
+          },
+          "exact_under_current_rubric": 0,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 1,
+              "denominator": 746
+            },
+            "taxable_pay": {
+              "correct": 2,
+              "denominator": 746
+            },
+            "income_tax": {
+              "correct": 11,
+              "denominator": 746
+            },
+            "net_pay": {
+              "correct": 3,
+              "denominator": 746
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 7
+        },
+        "3": {
+          "completions": 1416,
+          "unique_tasks": 49,
+          "groups": 120,
+          "logged_reward_counts": {
+            "-0.5": 951,
+            "0.0": 300,
+            "0.933333": 10,
+            "1.0": 147,
+            "0.966667": 8
+          },
+          "groups_with_reward_variance": 115,
+          "groups_with_positive_reward": 78,
+          "decision_counts": {
+            "calculate": 850,
+            "clarify": 469,
+            "retrieve": 39,
+            "invalid": 58
+          }
+        }
+      }
+    },
+    "rl-rubric-7-sample-weighted-beta-0.04": {
+      "steps": 16,
+      "planned": 80,
+      "rubric": "7",
+      "complete_training": false,
+      "superseded": "Stopped at step 16: the loss weighted every answer equally, so trap groups (up to 16 answers) outweighed calculation groups (4 answers) about 4.6 to 1 and the policy drifted to clarifying everywhere; see decision 028",
+      "sampled_completions": 532,
+      "unique_tasks": 63,
+      "hours": 0.9791666666666666,
+      "last_10": {
+        "reward": -0.17833333125,
+        "kl": 0.02240427348500396,
+        "entropy": 0.1445109033187984,
+        "false_clarification": 0.625,
+        "correct_clarification": 0.15
+      },
+      "by_tier": {
+        "2": {
+          "completions": 128,
+          "unique_tasks": 32,
+          "groups": 32,
+          "logged_reward_counts": {
+            "-0.5": 79,
+            "0.0": 49
+          },
+          "groups_with_reward_variance": 19,
+          "groups_with_positive_reward": 0,
+          "decision_counts": {
+            "retrieve": 10,
+            "calculate": 53,
+            "clarify": 58,
+            "invalid": 7
+          },
+          "exact_under_current_rubric": 0,
+          "exact_nonzero_under_current_rubric": 0,
+          "derived_correct_counts_conditional_on_valid_calculate": {
+            "employee_contribution": {
+              "correct": 0,
+              "denominator": 49
+            },
+            "taxable_pay": {
+              "correct": 1,
+              "denominator": 49
+            },
+            "income_tax": {
+              "correct": 2,
+              "denominator": 49
+            },
+            "net_pay": {
+              "correct": 2,
+              "denominator": 49
+            }
+          },
+          "counterfactual_field_signal_not_used_in_training": 1
+        },
+        "3": {
+          "completions": 404,
+          "unique_tasks": 31,
+          "groups": 32,
+          "logged_reward_counts": {
+            "-0.5": 229,
+            "0.0": 139,
+            "0.933333": 6,
+            "1.0": 28,
+            "0.966667": 2
+          },
+          "groups_with_reward_variance": 28,
+          "groups_with_positive_reward": 17,
+          "decision_counts": {
+            "calculate": 169,
+            "clarify": 176,
+            "retrieve": 37,
+            "invalid": 21,
+            "other": 1
+          }
+        }
+      }
+    }
+  },
+  "evaluations": {
+    "minicpm-development-control": {
+      "answers": 400,
+      "exact_calculation": 0,
+      "exact_calculation_answers": 200,
+      "zero_pay_calculation": 0.375,
+      "zero_pay_calculation_answers": 8,
+      "correct_clarification": 0.020833333333333332,
+      "correct_clarification_answers": 192,
+      "false_calculation": 0.6354166666666666,
+      "false_calculation_answers": 192,
+      "false_clarification": 0.07692307692307693,
+      "false_clarification_answers": 208,
+      "invalid": 0.195,
+      "invalid_answers": 400,
+      "reward": -0.2827083325,
+      "reward_answers": 400,
+      "scored": true,
+      "complete_400_answers": true,
+      "calculation_status_counts": {
+        "scored": 133,
+        "invalid_format": 36,
+        "wrong_decision": 39
+      },
+      "nonzero_calculation_derived_fields_unconditional": {
+        "employee_contribution": {
+          "correct": 0,
+          "denominator": 200
+        },
+        "taxable_pay": {
+          "correct": 1,
+          "denominator": 200
+        },
+        "income_tax": {
+          "correct": 1,
+          "denominator": 200
+        },
+        "net_pay": {
+          "correct": 1,
+          "denominator": 200
+        }
+      },
+      "generation_wall_seconds_sum": 1539.1046012800034,
+      "mean_input_tokens": 2628.16,
+      "mean_output_tokens": 120.8325,
+      "derived_fields_conditional_on_valid_calculate": {
+        "employee_contribution": {
+          "correct": 4,
+          "denominator": 133
+        },
+        "taxable_pay": {
+          "correct": 4,
+          "denominator": 133
+        },
+        "income_tax": {
+          "correct": 4,
+          "denominator": 133
+        },
+        "net_pay": {
+          "correct": 4,
+          "denominator": 133
+        }
+      }
+    },
+    "minicpm-development-rubric-7-beta-0.04": {
+      "answers": 400,
+      "exact_calculation": 0,
+      "exact_calculation_answers": 200,
+      "zero_pay_calculation": 0.5,
+      "zero_pay_calculation_answers": 8,
+      "correct_clarification": 0.2760416666666667,
+      "correct_clarification_answers": 192,
+      "false_calculation": 0.21875,
+      "false_calculation_answers": 192,
+      "false_clarification": 0.18269230769230768,
+      "false_clarification_answers": 208,
+      "invalid": 0.0275,
+      "invalid_answers": 400,
+      "reward": 0.030833335,
+      "reward_answers": 400,
+      "scored": true,
+      "complete_400_answers": true,
+      "calculation_status_counts": {
+        "wrong_decision": 38,
+        "scored": 162,
+        "invalid_format": 8
+      },
+      "nonzero_calculation_derived_fields_unconditional": {
+        "employee_contribution": {
+          "correct": 1,
+          "denominator": 200
+        },
+        "taxable_pay": {
+          "correct": 0,
+          "denominator": 200
+        },
+        "income_tax": {
+          "correct": 0,
+          "denominator": 200
+        },
+        "net_pay": {
+          "correct": 0,
+          "denominator": 200
+        }
+      },
+      "generation_wall_seconds_sum": 1363.582284166041,
+      "mean_input_tokens": 2628.16,
+      "mean_output_tokens": 84.1525,
+      "derived_fields_conditional_on_valid_calculate": {
+        "employee_contribution": {
+          "correct": 5,
+          "denominator": 162
+        },
+        "taxable_pay": {
+          "correct": 4,
+          "denominator": 162
+        },
+        "income_tax": {
+          "correct": 4,
+          "denominator": 162
+        },
+        "net_pay": {
+          "correct": 4,
+          "denominator": 162
+        }
+      }
+    },
+    "minicpm-development-rubric-7-beta-0.001": {
+      "answers": 400,
+      "exact_calculation": 0,
+      "exact_calculation_answers": 200,
+      "zero_pay_calculation": 0.75,
+      "zero_pay_calculation_answers": 8,
+      "correct_clarification": 0.5729166666666666,
+      "correct_clarification_answers": 192,
+      "false_calculation": 0.1875,
+      "false_calculation_answers": 192,
+      "false_clarification": 0.038461538461538464,
+      "false_clarification_answers": 208,
+      "invalid": 0.01,
+      "invalid_answers": 400,
+      "reward": 0.2306666675,
+      "reward_answers": 400,
+      "scored": true,
+      "complete_400_answers": true,
+      "calculation_status_counts": {
+        "wrong_decision": 8,
+        "scored": 198,
+        "invalid_format": 2
+      },
+      "nonzero_calculation_derived_fields_unconditional": {
+        "employee_contribution": {
+          "correct": 0,
+          "denominator": 200
+        },
+        "taxable_pay": {
+          "correct": 0,
+          "denominator": 200
+        },
+        "income_tax": {
+          "correct": 0,
+          "denominator": 200
+        },
+        "net_pay": {
+          "correct": 0,
+          "denominator": 200
+        }
+      },
+      "generation_wall_seconds_sum": 1346.8575877479452,
+      "mean_input_tokens": 2628.16,
+      "mean_output_tokens": 88.0325,
+      "derived_fields_conditional_on_valid_calculate": {
+        "employee_contribution": {
+          "correct": 6,
+          "denominator": 198
+        },
+        "taxable_pay": {
+          "correct": 6,
+          "denominator": 198
+        },
+        "income_tax": {
+          "correct": 6,
+          "denominator": 198
+        },
+        "net_pay": {
+          "correct": 6,
+          "denominator": 198
+        }
+      }
+    },
+    "minicpm-heldout-control": {
+      "answers": 400,
+      "exact_calculation": 0,
+      "exact_calculation_answers": 184,
+      "zero_pay_calculation": 0.5,
+      "zero_pay_calculation_answers": 8,
+      "correct_clarification": 0.019230769230769232,
+      "correct_clarification_answers": 208,
+      "false_calculation": 0.625,
+      "false_calculation_answers": 208,
+      "false_clarification": 0.0625,
+      "false_clarification_answers": 192,
+      "invalid": 0.22,
+      "invalid_answers": 400,
+      "reward": -0.2988333325,
+      "reward_answers": 400,
+      "scored": true,
+      "complete_400_answers": true,
+      "calculation_status_counts": {
+        "scored": 115,
+        "invalid_format": 43,
+        "wrong_decision": 34
+      },
+      "nonzero_calculation_derived_fields_unconditional": {
+        "employee_contribution": {
+          "correct": 2,
+          "denominator": 184
+        },
+        "taxable_pay": {
+          "correct": 2,
+          "denominator": 184
+        },
+        "income_tax": {
+          "correct": 4,
+          "denominator": 184
+        },
+        "net_pay": {
+          "correct": 2,
+          "denominator": 184
+        }
+      },
+      "generation_wall_seconds_sum": 1241.1758187629985,
+      "mean_input_tokens": 2631.09,
+      "mean_output_tokens": 123.155,
+      "derived_fields_conditional_on_valid_calculate": {
+        "employee_contribution": {
+          "correct": 6,
+          "denominator": 115
+        },
+        "taxable_pay": {
+          "correct": 6,
+          "denominator": 115
+        },
+        "income_tax": {
+          "correct": 8,
+          "denominator": 115
+        },
+        "net_pay": {
+          "correct": 6,
+          "denominator": 115
+        }
+      }
+    },
+    "minicpm-heldout-rubric-7-beta-0.04": {
+      "answers": 400,
+      "exact_calculation": 0,
+      "exact_calculation_answers": 184,
+      "zero_pay_calculation": 0.625,
+      "zero_pay_calculation_answers": 8,
+      "correct_clarification": 0.2644230769230769,
+      "correct_clarification_answers": 208,
+      "false_calculation": 0.22115384615384615,
+      "false_calculation_answers": 208,
+      "false_clarification": 0.24479166666666666,
+      "false_clarification_answers": 192,
+      "invalid": 0.035,
+      "invalid_answers": 400,
+      "reward": 0.0155125025,
+      "reward_answers": 400,
+      "scored": true,
+      "complete_400_answers": true,
+      "calculation_status_counts": {
+        "scored": 132,
+        "wrong_decision": 47,
+        "invalid_format": 13
+      },
+      "nonzero_calculation_derived_fields_unconditional": {
+        "employee_contribution": {
+          "correct": 0,
+          "denominator": 184
+        },
+        "taxable_pay": {
+          "correct": 0,
+          "denominator": 184
+        },
+        "income_tax": {
+          "correct": 0,
+          "denominator": 184
+        },
+        "net_pay": {
+          "correct": 0,
+          "denominator": 184
+        }
+      },
+      "generation_wall_seconds_sum": 1346.4125801771152,
+      "mean_input_tokens": 2631.09,
+      "mean_output_tokens": 86.43,
+      "derived_fields_conditional_on_valid_calculate": {
+        "employee_contribution": {
+          "correct": 5,
+          "denominator": 132
+        },
+        "taxable_pay": {
+          "correct": 5,
+          "denominator": 132
+        },
+        "income_tax": {
+          "correct": 5,
+          "denominator": 132
+        },
+        "net_pay": {
+          "correct": 5,
+          "denominator": 132
+        }
+      }
+    },
+    "minicpm-heldout-rubric-7-beta-0.001": {
+      "answers": 400,
+      "exact_calculation": 0,
+      "exact_calculation_answers": 184,
+      "zero_pay_calculation": 0.875,
+      "zero_pay_calculation_answers": 8,
+      "correct_clarification": 0.5769230769230769,
+      "correct_clarification_answers": 208,
+      "false_calculation": 0.18269230769230768,
+      "false_calculation_answers": 208,
+      "false_clarification": 0.041666666666666664,
+      "false_clarification_answers": 192,
+      "invalid": 0.0175,
+      "invalid_answers": 400,
+      "reward": 0.251083335,
+      "reward_answers": 400,
+      "scored": true,
+      "complete_400_answers": true,
+      "calculation_status_counts": {
+        "scored": 177,
+        "invalid_format": 7,
+        "wrong_decision": 8
+      },
+      "nonzero_calculation_derived_fields_unconditional": {
+        "employee_contribution": {
+          "correct": 0,
+          "denominator": 184
+        },
+        "taxable_pay": {
+          "correct": 3,
+          "denominator": 184
+        },
+        "income_tax": {
+          "correct": 1,
+          "denominator": 184
+        },
+        "net_pay": {
+          "correct": 2,
+          "denominator": 184
+        }
+      },
+      "generation_wall_seconds_sum": 1311.8770138010586,
+      "mean_input_tokens": 2631.09,
+      "mean_output_tokens": 89.705,
+      "derived_fields_conditional_on_valid_calculate": {
+        "employee_contribution": {
+          "correct": 7,
+          "denominator": 177
+        },
+        "taxable_pay": {
+          "correct": 10,
+          "denominator": 177
+        },
+        "income_tax": {
+          "correct": 8,
+          "denominator": 177
+        },
+        "net_pay": {
+          "correct": 9,
+          "denominator": 177
+        }
+      }
+    }
+  }
+}

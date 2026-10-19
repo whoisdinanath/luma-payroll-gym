@@ -1,0 +1,9 @@
+{
+  "tasks": 100,
+  "semantic_unique": 100,
+  "semantic_duplicate_instances": 0,
+  "retrieval_instances": 6,
+  "retrieval_skills": 3,
+  "prompt_leak_candidates": [],
+  "calculation_and_trap_share_prompt": true
+}

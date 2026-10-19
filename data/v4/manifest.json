@@ -1,0 +1,381 @@
+{
+  "case_generator": "4",
+  "sets": {
+    "train": {
+      "seed": 4001,
+      "tasks": 384,
+      "sha256": "16510d79c5d7be56f4035df33839e184d1f1270bab2dd20660df6fd4509c33ca",
+      "file_sha256": "4c0db35f7a9eb184cfb8da4718f74b762b4bb3d0e1e8a94943615a5ab77aad10",
+      "semantic_duplicates": 0,
+      "prompt_leaks": 0,
+      "overlap_with_earlier_datasets": 0,
+      "coverage": {
+        "tiers": {
+          "3": 192,
+          "2": 192
+        },
+        "strata": {
+          "bracket_middle": 24,
+          "cap_binding": 24,
+          "boundary_upper": 24,
+          "boundary_free": 24,
+          "bracket_upper": 24,
+          "rounding_tie": 24,
+          "boundary_cap": 24,
+          "bracket_zero": 24
+        },
+        "brackets": {
+          "middle": 72,
+          "upper": 81,
+          "zero": 39
+        },
+        "cap": {
+          "open": 156,
+          "binding": 36
+        },
+        "boundaries": {
+          "upper": 24,
+          "free": 24,
+          "cap": 24
+        },
+        "contracts": {
+          "none": 96,
+          "amendment": 48,
+          "matching": 48
+        },
+        "rounding_ties": 25,
+        "with_deduction": 132,
+        "halves": {
+          "second": 90,
+          "first": 102
+        },
+        "trap_reasons": {
+          "MISSING_GROSS_PAY": 48,
+          "CONFLICTING_GROSS_PAY": 48,
+          "NO_APPLICABLE_REFERENCE": 48,
+          "MISSING_PAYROLL_MONTH": 48
+        },
+        "conflict_variants": {
+          "future_amendment": 12,
+          "plain": 12,
+          "draft_amendment": 12,
+          "amount_mismatch": 12
+        },
+        "retrieval_fields": {}
+      }
+    },
+    "development": {
+      "seed": 4002,
+      "tasks": 96,
+      "sha256": "7738c46a85a2e10d007283946ef56625f5f8a739ac75fd626d8cef1f9bbf9109",
+      "file_sha256": "dd59d75776d4eb7fda91b6221b46e9c195b3fef30623c02dc82c963bfbe669ed",
+      "semantic_duplicates": 0,
+      "prompt_leaks": 0,
+      "overlap_with_earlier_datasets": 0,
+      "coverage": {
+        "tiers": {
+          "2": 48,
+          "3": 48
+        },
+        "strata": {
+          "bracket_upper": 6,
+          "rounding_tie": 6,
+          "bracket_zero": 6,
+          "boundary_upper": 6,
+          "boundary_free": 6,
+          "boundary_cap": 6,
+          "bracket_middle": 6,
+          "cap_binding": 6
+        },
+        "brackets": {
+          "upper": 21,
+          "middle": 17,
+          "zero": 10
+        },
+        "cap": {
+          "open": 39,
+          "binding": 9
+        },
+        "boundaries": {
+          "upper": 6,
+          "free": 6,
+          "cap": 6
+        },
+        "contracts": {
+          "amendment": 8,
+          "none": 24,
+          "matching": 16
+        },
+        "rounding_ties": 7,
+        "with_deduction": 37,
+        "halves": {
+          "second": 26,
+          "first": 22
+        },
+        "trap_reasons": {
+          "MISSING_GROSS_PAY": 12,
+          "CONFLICTING_GROSS_PAY": 12,
+          "MISSING_PAYROLL_MONTH": 12,
+          "NO_APPLICABLE_REFERENCE": 12
+        },
+        "conflict_variants": {
+          "amount_mismatch": 3,
+          "draft_amendment": 3,
+          "plain": 3,
+          "future_amendment": 3
+        },
+        "retrieval_fields": {}
+      }
+    },
+    "test": {
+      "seed": 4003,
+      "tasks": 192,
+      "sha256": "68ec516adb7cebd0dca496d33c6173e630a512d27391d6d0b08647f427d95989",
+      "file_sha256": "daf6386073418517a00c5724e214d0f13d42888ca023e08a391f0257bd99a6fa",
+      "semantic_duplicates": 0,
+      "prompt_leaks": 0,
+      "overlap_with_earlier_datasets": 0,
+      "coverage": {
+        "tiers": {
+          "2": 96,
+          "3": 96
+        },
+        "strata": {
+          "bracket_zero": 12,
+          "rounding_tie": 12,
+          "bracket_upper": 12,
+          "boundary_upper": 12,
+          "boundary_cap": 12,
+          "boundary_free": 12,
+          "cap_binding": 12,
+          "bracket_middle": 12
+        },
+        "brackets": {
+          "zero": 18,
+          "middle": 32,
+          "upper": 46
+        },
+        "cap": {
+          "open": 79,
+          "binding": 17
+        },
+        "boundaries": {
+          "upper": 12,
+          "cap": 12,
+          "free": 12
+        },
+        "contracts": {
+          "none": 48,
+          "amendment": 24,
+          "matching": 24
+        },
+        "rounding_ties": 15,
+        "with_deduction": 64,
+        "halves": {
+          "second": 45,
+          "first": 51
+        },
+        "trap_reasons": {
+          "MISSING_PAYROLL_MONTH": 24,
+          "CONFLICTING_GROSS_PAY": 24,
+          "NO_APPLICABLE_REFERENCE": 24,
+          "MISSING_GROSS_PAY": 24
+        },
+        "conflict_variants": {
+          "future_amendment": 6,
+          "draft_amendment": 6,
+          "plain": 6,
+          "amount_mismatch": 6
+        },
+        "retrieval_fields": {}
+      }
+    },
+    "eval": {
+      "seed": 4041,
+      "tasks": 108,
+      "sha256": "8896bb55fbfe520cdc498e5c368be88d432b002eed3bbea17e1736a6981f7ad3",
+      "file_sha256": "e23621a216dadf108225a5ca190de0b2ea18f09c6787d0df7d0eb6dcf059d733",
+      "semantic_duplicates": 0,
+      "prompt_leaks": 0,
+      "overlap_with_earlier_datasets": 0,
+      "coverage": {
+        "tiers": {
+          "2": 48,
+          "3": 48,
+          "1": 12
+        },
+        "strata": {
+          "bracket_zero": 6,
+          "boundary_cap": 6,
+          "boundary_upper": 6,
+          "bracket_upper": 6,
+          "cap_binding": 6,
+          "rounding_tie": 6,
+          "bracket_middle": 6,
+          "boundary_free": 6
+        },
+        "brackets": {
+          "zero": 11,
+          "upper": 21,
+          "middle": 16
+        },
+        "cap": {
+          "open": 40,
+          "binding": 8
+        },
+        "boundaries": {
+          "cap": 6,
+          "upper": 6,
+          "free": 6
+        },
+        "contracts": {
+          "matching": 16,
+          "none": 24,
+          "amendment": 8
+        },
+        "rounding_ties": 8,
+        "with_deduction": 36,
+        "halves": {
+          "first": 25,
+          "second": 23
+        },
+        "trap_reasons": {
+          "NO_APPLICABLE_REFERENCE": 12,
+          "MISSING_PAYROLL_MONTH": 12,
+          "MISSING_GROSS_PAY": 12,
+          "CONFLICTING_GROSS_PAY": 12
+        },
+        "conflict_variants": {
+          "future_amendment": 3,
+          "amount_mismatch": 3,
+          "plain": 3,
+          "draft_amendment": 3
+        },
+        "retrieval_fields": {
+          "contribution_rate": 4,
+          "contribution_cap": 4,
+          "deduction_cap": 4
+        }
+      }
+    },
+    "sft": {
+      "seed": 4004,
+      "tasks": 256,
+      "sha256": "91d7c7d64bea28d1cbbd9c12c3473219bd259a7743dd476213211170d4b9d8a4",
+      "file_sha256": "b0923bc9d924fce1215124fd2d804c285ec3cc93b3b43fafbbc5132ca968e202",
+      "semantic_duplicates": 0,
+      "prompt_leaks": 0,
+      "overlap_with_earlier_datasets": 0,
+      "coverage": {
+        "tiers": {
+          "3": 128,
+          "2": 128
+        },
+        "strata": {
+          "cap_binding": 16,
+          "bracket_middle": 16,
+          "bracket_upper": 16,
+          "boundary_upper": 16,
+          "boundary_cap": 16,
+          "boundary_free": 16,
+          "bracket_zero": 16,
+          "rounding_tie": 16
+        },
+        "brackets": {
+          "upper": 58,
+          "middle": 44,
+          "zero": 26
+        },
+        "cap": {
+          "binding": 18,
+          "open": 110
+        },
+        "boundaries": {
+          "upper": 16,
+          "cap": 16,
+          "free": 16
+        },
+        "contracts": {
+          "none": 64,
+          "matching": 32,
+          "amendment": 32
+        },
+        "rounding_ties": 16,
+        "with_deduction": 95,
+        "halves": {
+          "first": 63,
+          "second": 65
+        },
+        "trap_reasons": {
+          "CONFLICTING_GROSS_PAY": 32,
+          "NO_APPLICABLE_REFERENCE": 32,
+          "MISSING_PAYROLL_MONTH": 32,
+          "MISSING_GROSS_PAY": 32
+        },
+        "conflict_variants": {
+          "future_amendment": 8,
+          "amount_mismatch": 8,
+          "plain": 8,
+          "draft_amendment": 8
+        },
+        "retrieval_fields": {}
+      }
+    },
+    "demos": {
+      "seed": 4099,
+      "tasks": 6,
+      "sha256": "2add5df2483499419eb9bf12c2e231d27d7134d08e1e4f8b089af544c1dd89de",
+      "file_sha256": "ac9759c5a659b97859c52b112b1c265553c8d064404c1332948d712e3784b320",
+      "semantic_duplicates": 0,
+      "prompt_leaks": 0,
+      "overlap_with_earlier_datasets": 0,
+      "coverage": {
+        "tiers": {
+          "2": 2,
+          "3": 4
+        },
+        "strata": {
+          "bracket_middle": 1,
+          "cap_binding": 1
+        },
+        "brackets": {
+          "middle": 1,
+          "upper": 1
+        },
+        "cap": {
+          "open": 1,
+          "binding": 1
+        },
+        "boundaries": {},
+        "contracts": {
+          "none": 1,
+          "amendment": 1
+        },
+        "rounding_ties": 0,
+        "with_deduction": 1,
+        "halves": {
+          "first": 1,
+          "second": 1
+        },
+        "trap_reasons": {
+          "MISSING_GROSS_PAY": 1,
+          "CONFLICTING_GROSS_PAY": 1,
+          "MISSING_PAYROLL_MONTH": 1,
+          "NO_APPLICABLE_REFERENCE": 1
+        },
+        "conflict_variants": {
+          "plain": 1
+        },
+        "retrieval_fields": {}
+      }
+    }
+  },
+  "demos": [
+    "demo4-4099-00001",
+    "demo4-4099-00008",
+    "demo4-4099-00036",
+    "demo4-4099-00038",
+    "demo4-4099-00010",
+    "demo4-4099-00007"
+  ]
+}

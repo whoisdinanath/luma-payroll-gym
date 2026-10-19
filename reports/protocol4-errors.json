@@ -1,0 +1,748 @@
+{
+  "dev": {
+    "raw-calculator": {
+      "refused": 133,
+      "malformed or other decision": 36,
+      "calculated without the tool": 23
+    },
+    "sft-calculator": {
+      "exact": 102,
+      "used the other half-year row": 41,
+      "refused": 35,
+      "wrong program line: tax": 9,
+      "wrong program line: contribution, tax": 4,
+      "wrong program line: contribution": 1
+    },
+    "rl-0.001-calculator": {
+      "exact": 122,
+      "used the other half-year row": 53,
+      "wrong program line: contribution, tax": 7,
+      "wrong program line: tax": 6,
+      "refused": 3,
+      "wrong program line: contribution": 1
+    },
+    "rl-0.04-calculator": {
+      "exact": 119,
+      "used the other half-year row": 57,
+      "wrong program line: contribution, tax": 9,
+      "wrong program line: tax": 7
+    },
+    "rl-10-calculator": {
+      "exact": 104,
+      "used the other half-year row": 42,
+      "refused": 32,
+      "wrong program line: tax": 9,
+      "wrong program line: contribution, tax": 4,
+      "wrong program line: contribution": 1
+    },
+    "rl-100-calculator": {
+      "exact": 106,
+      "used the other half-year row": 42,
+      "refused": 30,
+      "wrong program line: tax": 9,
+      "wrong program line: contribution, tax": 4,
+      "wrong program line: contribution": 1
+    },
+    "rl-0.04-balanced-calculator": {
+      "exact": 113,
+      "used the other half-year row": 58,
+      "wrong program line: contribution, tax": 10,
+      "wrong program line: tax": 9,
+      "refused": 1,
+      "wrong program line: contribution": 1
+    }
+  },
+  "test": {
+    "raw-calculator": {
+      "refused": 235,
+      "malformed or other decision": 86,
+      "calculated without the tool": 63
+    },
+    "sft-calculator": {
+      "exact": 174,
+      "used the other half-year row": 106,
+      "refused": 73,
+      "wrong program line: contribution, tax": 24,
+      "wrong program line: tax": 5,
+      "wrong program line: contribution": 1,
+      "wrong program line: taxable": 1
+    },
+    "rl-0.001-calculator": {
+      "exact": 259,
+      "used the other half-year row": 92,
+      "wrong program line: contribution, tax": 22,
+      "refused": 4,
+      "wrong program line: tax": 4,
+      "wrong program line: contribution": 3
+    },
+    "rl-0.04-calculator": {
+      "exact": 265,
+      "used the other half-year row": 92,
+      "wrong program line: contribution, tax": 19,
+      "wrong program line: contribution": 4,
+      "wrong program line: tax": 4
+    },
+    "rl-10-calculator": {
+      "exact": 182,
+      "used the other half-year row": 97,
+      "refused": 77,
+      "wrong program line: contribution, tax": 22,
+      "wrong program line: tax": 5,
+      "wrong program line: contribution": 1
+    },
+    "rl-100-calculator": {
+      "exact": 177,
+      "used the other half-year row": 106,
+      "refused": 72,
+      "wrong program line: contribution, tax": 23,
+      "wrong program line: tax": 5,
+      "wrong program line: contribution": 1
+    },
+    "rl-0.04-balanced-calculator": {
+      "exact": 265,
+      "used the other half-year row": 90,
+      "wrong program line: contribution, tax": 24,
+      "wrong program line: tax": 3,
+      "wrong program line: contribution": 1,
+      "refused": 1
+    }
+  },
+  "other_row_by_half": {
+    "dev": {
+      "raw-calculator": {
+        "first-half": [
+          0,
+          88
+        ],
+        "second-half": [
+          0,
+          104
+        ]
+      },
+      "sft-calculator": {
+        "first-half": [
+          25,
+          88
+        ],
+        "second-half": [
+          16,
+          104
+        ]
+      },
+      "rl-0.001-calculator": {
+        "first-half": [
+          22,
+          88
+        ],
+        "second-half": [
+          31,
+          104
+        ]
+      },
+      "rl-0.04-calculator": {
+        "first-half": [
+          22,
+          88
+        ],
+        "second-half": [
+          35,
+          104
+        ]
+      },
+      "rl-10-calculator": {
+        "first-half": [
+          25,
+          88
+        ],
+        "second-half": [
+          17,
+          104
+        ]
+      },
+      "rl-100-calculator": {
+        "first-half": [
+          24,
+          88
+        ],
+        "second-half": [
+          18,
+          104
+        ]
+      },
+      "rl-0.04-balanced-calculator": {
+        "first-half": [
+          28,
+          88
+        ],
+        "second-half": [
+          30,
+          104
+        ]
+      }
+    },
+    "test": {
+      "raw-calculator": {
+        "first-half": [
+          0,
+          204
+        ],
+        "second-half": [
+          0,
+          180
+        ]
+      },
+      "sft-calculator": {
+        "first-half": [
+          67,
+          204
+        ],
+        "second-half": [
+          39,
+          180
+        ]
+      },
+      "rl-0.001-calculator": {
+        "first-half": [
+          30,
+          204
+        ],
+        "second-half": [
+          62,
+          180
+        ]
+      },
+      "rl-0.04-calculator": {
+        "first-half": [
+          28,
+          204
+        ],
+        "second-half": [
+          64,
+          180
+        ]
+      },
+      "rl-10-calculator": {
+        "first-half": [
+          59,
+          204
+        ],
+        "second-half": [
+          38,
+          180
+        ]
+      },
+      "rl-100-calculator": {
+        "first-half": [
+          68,
+          204
+        ],
+        "second-half": [
+          38,
+          180
+        ]
+      },
+      "rl-0.04-balanced-calculator": {
+        "first-half": [
+          52,
+          204
+        ],
+        "second-half": [
+          38,
+          180
+        ]
+      }
+    }
+  },
+  "train_payslips_other_row_same_answer": {
+    "first-half": [
+      8,
+      102
+    ],
+    "second-half": [
+      4,
+      90
+    ]
+  },
+  "training": {
+    "rl-0.001": {
+      "steps 1-20, first-half": {
+        "answers": 64,
+        "prompts": 16,
+        "other half-year row": 20,
+        "exact": 36,
+        "refused": 1
+      },
+      "steps 1-20, second-half": {
+        "answers": 96,
+        "prompts": 24,
+        "exact": 61,
+        "refused": 9,
+        "other half-year row": 14
+      },
+      "steps 21-40, first-half": {
+        "answers": 100,
+        "prompts": 25,
+        "exact": 71,
+        "other half-year row": 25
+      },
+      "steps 21-40, second-half": {
+        "answers": 60,
+        "prompts": 15,
+        "exact": 42,
+        "other half-year row": 13
+      },
+      "steps 41-60, first-half": {
+        "answers": 104,
+        "prompts": 26,
+        "other half-year row": 19,
+        "refused": 5,
+        "exact": 79
+      },
+      "steps 41-60, second-half": {
+        "answers": 56,
+        "prompts": 14,
+        "other half-year row": 26,
+        "exact": 29
+      }
+    },
+    "rl-0.04": {
+      "steps 1-20, first-half": {
+        "answers": 64,
+        "prompts": 16,
+        "other half-year row": 20,
+        "exact": 34,
+        "refused": 2
+      },
+      "steps 1-20, second-half": {
+        "answers": 96,
+        "prompts": 24,
+        "exact": 59,
+        "refused": 9,
+        "other half-year row": 14
+      },
+      "steps 21-40, first-half": {
+        "answers": 100,
+        "prompts": 25,
+        "exact": 62,
+        "other half-year row": 32,
+        "refused": 1
+      },
+      "steps 21-40, second-half": {
+        "answers": 60,
+        "prompts": 15,
+        "exact": 45,
+        "other half-year row": 11
+      },
+      "steps 41-60, first-half": {
+        "answers": 104,
+        "prompts": 26,
+        "other half-year row": 21,
+        "exact": 80,
+        "refused": 2
+      },
+      "steps 41-60, second-half": {
+        "answers": 56,
+        "prompts": 14,
+        "other half-year row": 25,
+        "exact": 30
+      }
+    },
+    "rl-10": {
+      "steps 1-20, first-half": {
+        "answers": 64,
+        "prompts": 16,
+        "other half-year row": 18,
+        "exact": 33,
+        "refused": 5
+      },
+      "steps 1-20, second-half": {
+        "answers": 96,
+        "prompts": 24,
+        "exact": 53,
+        "refused": 22,
+        "other half-year row": 10
+      },
+      "steps 21-40, first-half": {
+        "answers": 100,
+        "prompts": 25,
+        "exact": 40,
+        "other half-year row": 34,
+        "refused": 21
+      },
+      "steps 21-40, second-half": {
+        "answers": 60,
+        "prompts": 15,
+        "exact": 35,
+        "refused": 12,
+        "other half-year row": 9
+      },
+      "steps 41-60, first-half": {
+        "answers": 104,
+        "prompts": 26,
+        "refused": 14,
+        "other half-year row": 35,
+        "exact": 48
+      },
+      "steps 41-60, second-half": {
+        "answers": 56,
+        "prompts": 14,
+        "other half-year row": 9,
+        "exact": 45,
+        "refused": 1
+      }
+    },
+    "rl-100": {
+      "steps 1-20, first-half": {
+        "answers": 64,
+        "prompts": 16,
+        "other half-year row": 18,
+        "exact": 32,
+        "refused": 6
+      },
+      "steps 1-20, second-half": {
+        "answers": 96,
+        "prompts": 24,
+        "exact": 50,
+        "refused": 25,
+        "other half-year row": 10
+      },
+      "steps 21-40, first-half": {
+        "answers": 100,
+        "prompts": 25,
+        "exact": 43,
+        "other half-year row": 32,
+        "refused": 22
+      },
+      "steps 21-40, second-half": {
+        "answers": 60,
+        "prompts": 15,
+        "refused": 14,
+        "exact": 33,
+        "other half-year row": 9
+      },
+      "steps 41-60, first-half": {
+        "answers": 104,
+        "prompts": 26,
+        "refused": 16,
+        "other half-year row": 35,
+        "exact": 49
+      },
+      "steps 41-60, second-half": {
+        "answers": 56,
+        "prompts": 14,
+        "other half-year row": 7,
+        "exact": 47,
+        "refused": 1
+      }
+    },
+    "rl-0.04-balanced": {
+      "steps 1-20, first-half": {
+        "answers": 80,
+        "prompts": 20,
+        "refused": 2,
+        "exact": 47,
+        "other half-year row": 25
+      },
+      "steps 1-20, second-half": {
+        "answers": 80,
+        "prompts": 20,
+        "exact": 57,
+        "refused": 2,
+        "other half-year row": 21
+      },
+      "steps 21-40, first-half": {
+        "answers": 80,
+        "prompts": 20,
+        "exact": 45,
+        "other half-year row": 25,
+        "refused": 2
+      },
+      "steps 21-40, second-half": {
+        "answers": 80,
+        "prompts": 20,
+        "exact": 49,
+        "other half-year row": 23
+      },
+      "steps 41-60, first-half": {
+        "answers": 80,
+        "prompts": 20,
+        "exact": 54,
+        "other half-year row": 20,
+        "refused": 2
+      },
+      "steps 41-60, second-half": {
+        "answers": 80,
+        "prompts": 20,
+        "exact": 40,
+        "other half-year row": 28,
+        "refused": 5
+      }
+    }
+  },
+  "checks": {
+    "dev": {
+      "raw-calculator": {
+        "truncated": 12,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 9,
+        "trap answers": 192,
+        "calculator called on a trap": 1,
+        "template explanation": 80,
+        "template from another reason": 1
+      },
+      "sft-calculator": {
+        "truncated": 0,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 192,
+        "calculator called on a trap": 0,
+        "template explanation": 192,
+        "template from another reason": 0
+      },
+      "rl-0.001-calculator": {
+        "truncated": 0,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 192,
+        "calculator called on a trap": 0,
+        "template explanation": 192,
+        "template from another reason": 0
+      },
+      "rl-0.04-calculator": {
+        "truncated": 0,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 192,
+        "calculator called on a trap": 0,
+        "template explanation": 192,
+        "template from another reason": 0
+      },
+      "rl-10-calculator": {
+        "truncated": 0,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 192,
+        "calculator called on a trap": 0,
+        "template explanation": 192,
+        "template from another reason": 0
+      },
+      "rl-100-calculator": {
+        "truncated": 0,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 192,
+        "calculator called on a trap": 0,
+        "template explanation": 192,
+        "template from another reason": 0
+      },
+      "rl-0.04-balanced-calculator": {
+        "truncated": 0,
+        "payslip answers": 192,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 192,
+        "calculator called on a trap": 1,
+        "template explanation": 191,
+        "template from another reason": 0
+      }
+    },
+    "test": {
+      "raw-calculator": {
+        "truncated": 20,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 15,
+        "trap answers": 384,
+        "calculator called on a trap": 3,
+        "template explanation": 206,
+        "template from another reason": 8
+      },
+      "sft-calculator": {
+        "truncated": 0,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 384,
+        "calculator called on a trap": 0,
+        "template explanation": 384,
+        "template from another reason": 0
+      },
+      "rl-0.001-calculator": {
+        "truncated": 0,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 384,
+        "calculator called on a trap": 0,
+        "template explanation": 384,
+        "template from another reason": 0
+      },
+      "rl-0.04-calculator": {
+        "truncated": 1,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 384,
+        "calculator called on a trap": 2,
+        "template explanation": 382,
+        "template from another reason": 0
+      },
+      "rl-10-calculator": {
+        "truncated": 0,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 384,
+        "calculator called on a trap": 0,
+        "template explanation": 384,
+        "template from another reason": 0
+      },
+      "rl-100-calculator": {
+        "truncated": 0,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 384,
+        "calculator called on a trap": 0,
+        "template explanation": 384,
+        "template from another reason": 0
+      },
+      "rl-0.04-balanced-calculator": {
+        "truncated": 1,
+        "payslip answers": 384,
+        "wrong value copied from a demonstration": 0,
+        "trap answers": 384,
+        "calculator called on a trap": 4,
+        "template explanation": 380,
+        "template from another reason": 0
+      }
+    }
+  },
+  "row_choice": {
+    "sft-calculator": {
+      "wrong_row_share": 0.3141025641025641,
+      "attempts": 468,
+      "wrong_row_january_june": 0.4,
+      "wrong_row_july_december": 0.23109243697478993,
+      "month_use": 0.36890756302521005,
+      "lean_toward_july_december_row": 0.1689075630252101,
+      "wrong_row_by_month": {
+        "01": 0.2903225806451613,
+        "02": 0.59375,
+        "03": 0.5952380952380952,
+        "04": 0.2564102564102564,
+        "05": 0.30434782608695654,
+        "06": 0.375,
+        "07": 0.08163265306122448,
+        "08": 0.22857142857142856,
+        "09": 0.4,
+        "10": 0.08888888888888889,
+        "11": 0.17857142857142858,
+        "12": 0.4444444444444444
+      }
+    },
+    "rl-0.001-calculator": {
+      "wrong_row_share": 0.2548330404217926,
+      "attempts": 569,
+      "wrong_row_january_june": 0.17993079584775087,
+      "wrong_row_july_december": 0.33214285714285713,
+      "month_use": 0.487926347009392,
+      "lean_toward_july_december_row": -0.15221206129510625,
+      "wrong_row_by_month": {
+        "01": 0.05128205128205128,
+        "02": 0.06818181818181818,
+        "03": 0.4791666666666667,
+        "04": 0.10416666666666667,
+        "05": 0.06779661016949153,
+        "06": 0.29411764705882354,
+        "07": 0.10714285714285714,
+        "08": 0.3617021276595745,
+        "09": 0.509090909090909,
+        "10": 0.2,
+        "11": 0.375,
+        "12": 0.5
+      }
+    },
+    "rl-0.04-calculator": {
+      "wrong_row_share": 0.2586805555555556,
+      "attempts": 576,
+      "wrong_row_january_june": 0.17123287671232876,
+      "wrong_row_july_december": 0.3485915492957746,
+      "month_use": 0.4801755739918966,
+      "lean_toward_july_december_row": -0.17735867258344587,
+      "wrong_row_by_month": {
+        "01": 0.05,
+        "02": 0.06818181818181818,
+        "03": 0.4791666666666667,
+        "04": 0.0625,
+        "05": 0.06666666666666667,
+        "06": 0.28846153846153844,
+        "07": 0.10714285714285714,
+        "08": 0.4166666666666667,
+        "09": 0.5357142857142857,
+        "10": 0.19230769230769232,
+        "11": 0.40625,
+        "12": 0.5
+      }
+    },
+    "rl-0.04-balanced-calculator": {
+      "wrong_row_share": 0.2578397212543554,
+      "attempts": 574,
+      "wrong_row_january_june": 0.273972602739726,
+      "wrong_row_july_december": 0.24113475177304963,
+      "month_use": 0.4848926454872243,
+      "lean_toward_july_december_row": 0.03283785096667638,
+      "wrong_row_by_month": {
+        "01": 0.15,
+        "02": 0.18181818181818182,
+        "03": 0.5416666666666666,
+        "04": 0.22916666666666666,
+        "05": 0.16666666666666666,
+        "06": 0.36538461538461536,
+        "07": 0.05357142857142857,
+        "08": 0.3125,
+        "09": 0.4909090909090909,
+        "10": 0.11764705882352941,
+        "11": 0.1875,
+        "12": 0.275
+      }
+    },
+    "rl-10-calculator": {
+      "wrong_row_share": 0.29764453961456105,
+      "attempts": 467,
+      "wrong_row_january_june": 0.36681222707423583,
+      "wrong_row_july_december": 0.23109243697478993,
+      "month_use": 0.4020953359509743,
+      "lean_toward_july_december_row": 0.1357197900994459,
+      "wrong_row_by_month": {
+        "01": 0.1935483870967742,
+        "02": 0.5483870967741935,
+        "03": 0.5952380952380952,
+        "04": 0.2564102564102564,
+        "05": 0.22916666666666666,
+        "06": 0.39473684210526316,
+        "07": 0.08163265306122448,
+        "08": 0.25,
+        "09": 0.4222222222222222,
+        "10": 0.08888888888888889,
+        "11": 0.14285714285714285,
+        "12": 0.42857142857142855
+      }
+    },
+    "rl-100-calculator": {
+      "wrong_row_share": 0.31223628691983124,
+      "attempts": 474,
+      "wrong_row_january_june": 0.39655172413793105,
+      "wrong_row_july_december": 0.23140495867768596,
+      "month_use": 0.372043317184383,
+      "lean_toward_july_december_row": 0.1651467654602451,
+      "wrong_row_by_month": {
+        "01": 0.25806451612903225,
+        "02": 0.6129032258064516,
+        "03": 0.5714285714285714,
+        "04": 0.2631578947368421,
+        "05": 0.32,
+        "06": 0.375,
+        "07": 0.08163265306122448,
+        "08": 0.23684210526315788,
+        "09": 0.4222222222222222,
+        "10": 0.08888888888888889,
+        "11": 0.16666666666666666,
+        "12": 0.42857142857142855
+      }
+    }
+  }
+}
