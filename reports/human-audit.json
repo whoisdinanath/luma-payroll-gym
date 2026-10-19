@@ -1,0 +1,261 @@
+[
+    {
+        "task_id": "case4-4041-00000",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "561.74",
+            "employee_contribution": "28.09",
+            "allowed_deduction": "46.96",
+            "taxable_pay": "486.69",
+            "income_tax": "0.00",
+            "net_pay": "486.69",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00001",
+        "answer": {
+            "decision": "clarify",
+            "reason_code": "NO_APPLICABLE_REFERENCE",
+            "clauses": ["R1", "R7"],
+            "explanation": "The available schedules cover 2026, but payroll is for September 2027. Please provide a schedule covering September 2027."
+        }
+    },
+    {
+        "task_id": "case4-4041-00002",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "5000.02",
+            "employee_contribution": "300.00",
+            "allowed_deduction": "0.00",
+            "taxable_pay": "4700.02",
+            "income_tax": "472.00",
+            "net_pay": "4228.02",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00003",
+        "answer": {
+            "decision": "retrieve",
+            "field": "contribution_rate",
+            "value": "0.05",
+            "clauses": ["R1", "R3"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00004",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "3043.49",
+            "employee_contribution": "243.48",
+            "allowed_deduction": "0.00",
+            "taxable_pay": "2800.01",
+            "income_tax": "192.00",
+            "net_pay": "2608.01",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00005",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "3468.15",
+            "employee_contribution": "138.73",
+            "allowed_deduction": "47.85",
+            "taxable_pay": "3281.57",
+            "income_tax": "329.95",
+            "net_pay": "2951.62",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00006",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "8370.45",
+            "employee_contribution": "200.00",
+            "allowed_deduction": "370.62",
+            "taxable_pay": "7799.83",
+            "income_tax": "1267.96",
+            "net_pay": "6531.87",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00007",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "1778.50",
+            "employee_contribution": "124.50",
+            "allowed_deduction": "0.00",
+            "taxable_pay": "1654.00",
+            "income_tax": "77.56",
+            "net_pay": "1576.44",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6", "R9"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00008",
+        "answer": {
+            "decision": "retrieve",
+            "field": "contribution_cap",
+            "value": "3500.00",
+            "clauses": ["R1", "R3"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00009",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "1978.24",
+            "employee_contribution": "79.13",
+            "allowed_deduction": "82.86",
+            "taxable_pay": "1816.25",
+            "income_tax": "61.63",
+            "net_pay": "1754.62",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00010",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "2440.78",
+            "employee_contribution": "146.45",
+            "allowed_deduction": "205.03",
+            "taxable_pay": "2089.30",
+            "income_tax": "95.14",
+            "net_pay": "1994.16",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00011",
+        "answer": {
+            "decision": "clarify",
+            "reason_code": "MISSING_PAYROLL_MONTH",
+            "clauses": ["R1", "R7"],
+            "explanation": "The payroll month is missing. Please provide it so the applicable reference schedule can be selected."
+        }
+    },
+    {
+        "task_id": "case4-4041-00012",
+        "answer": {
+            "decision": "clarify",
+            "reason_code": "MISSING_GROSS_PAY",
+            "clauses": ["R1", "R7"],
+            "explanation": "Gross pay is missing. Please provide the monthly gross pay before payroll is calculated."
+        }
+    },
+    {
+        "task_id": "case4-4041-00013",
+        "answer": {
+            "decision": "clarify",
+            "reason_code": "MISSING_GROSS_PAY",
+            "clauses": ["R1", "R7"],
+            "explanation": "Gross pay is missing. Please provide the monthly gross pay before payroll is calculated."
+        }
+    },
+    {
+        "task_id": "case4-4041-00014",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "3872.25",
+            "employee_contribution": "232.34",
+            "allowed_deduction": "61.98",
+            "taxable_pay": "3577.93",
+            "income_tax": "388.70",
+            "net_pay": "3189.23",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00015",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "309.75",
+            "employee_contribution": "15.49",
+            "allowed_deduction": "90.90",
+            "taxable_pay": "203.36",
+            "income_tax": "0.00",
+            "net_pay": "203.36",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00016",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "1430.25",
+            "employee_contribution": "114.42",
+            "allowed_deduction": "115.82",
+            "taxable_pay": "1200.01",
+            "income_tax": "0.00",
+            "net_pay": "1200.01",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00017",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "2978.74",
+            "employee_contribution": "178.72",
+            "allowed_deduction": "0.00",
+            "taxable_pay": "2800.02",
+            "income_tax": "224.00",
+            "net_pay": "2576.02",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00018",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "4326.01",
+            "employee_contribution": "302.82",
+            "allowed_deduction": "386.64",
+            "taxable_pay": "3636.55",
+            "income_tax": "198.58",
+            "net_pay": "3437.97",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00019",
+        "answer": {
+            "decision": "calculate",
+            "currency": "LCR",
+            "gross_pay": "3307.71",
+            "employee_contribution": "231.54",
+            "allowed_deduction": "76.18",
+            "taxable_pay": "2999.99",
+            "income_tax": "252.00",
+            "net_pay": "2747.99",
+            "clauses": ["R1", "R2", "R3", "R4", "R5", "R6", "R9"]
+        }
+    },
+    {
+        "task_id": "case4-4041-00041",
+        "answer": {
+            "decision": "clarify",
+            "reason_code": "CONFLICTING_GROSS_PAY",
+            "clauses": ["R7", "R9"],
+            "explanation": "Payroll lists gross pay of 9728.06 LCR, while the contract lists 9703.06 LCR. No amendment resolves the difference. Please reconcile the records or provide an approved amendment effective no later than February 2026 that supports the payroll amount."
+        }
+    }
+]

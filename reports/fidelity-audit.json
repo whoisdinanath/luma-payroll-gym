@@ -1,0 +1,393 @@
+{
+  "checked": 21,
+  "tiers": [
+    1,
+    2,
+    3
+  ],
+  "agreed": 21,
+  "disagreed": 0,
+  "reference_wrong": 0,
+  "divergence_rate": 0.0,
+  "unresolved": [],
+  "rows": [
+    {
+      "id": "case4-4041-00000",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00000",
+        "decision": "calculate",
+        "employee_contribution": "28.09",
+        "taxable_pay": "486.69",
+        "income_tax": "0.00",
+        "net_pay": "486.69"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "28.09",
+        "taxable_pay": "486.69",
+        "income_tax": "0.00",
+        "net_pay": "486.69"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00001",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00001",
+        "decision": "clarify",
+        "reason_code": "NO_APPLICABLE_REFERENCE"
+      },
+      "reference": {
+        "decision": "clarify",
+        "reason_code": "NO_APPLICABLE_REFERENCE"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00002",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00002",
+        "decision": "calculate",
+        "employee_contribution": "300.00",
+        "taxable_pay": "4700.02",
+        "income_tax": "472.00",
+        "net_pay": "4228.02"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "300.00",
+        "taxable_pay": "4700.02",
+        "income_tax": "472.00",
+        "net_pay": "4228.02"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00003",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00003",
+        "decision": "retrieve",
+        "value": "0.05"
+      },
+      "reference": {
+        "decision": "retrieve",
+        "value": "0.05"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00004",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00004",
+        "decision": "calculate",
+        "employee_contribution": "243.48",
+        "taxable_pay": "2800.01",
+        "income_tax": "192.00",
+        "net_pay": "2608.01"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "243.48",
+        "taxable_pay": "2800.01",
+        "income_tax": "192.00",
+        "net_pay": "2608.01"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00005",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00005",
+        "decision": "calculate",
+        "employee_contribution": "138.73",
+        "taxable_pay": "3281.57",
+        "income_tax": "329.95",
+        "net_pay": "2951.62"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "138.73",
+        "taxable_pay": "3281.57",
+        "income_tax": "329.95",
+        "net_pay": "2951.62"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00006",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00006",
+        "decision": "calculate",
+        "employee_contribution": "200.00",
+        "taxable_pay": "7799.83",
+        "income_tax": "1267.96",
+        "net_pay": "6531.87"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "200.00",
+        "taxable_pay": "7799.83",
+        "income_tax": "1267.96",
+        "net_pay": "6531.87"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00007",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00007",
+        "decision": "calculate",
+        "employee_contribution": "124.50",
+        "taxable_pay": "1654.00",
+        "income_tax": "77.56",
+        "net_pay": "1576.44"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "124.50",
+        "taxable_pay": "1654.00",
+        "income_tax": "77.56",
+        "net_pay": "1576.44"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00008",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00008",
+        "decision": "retrieve",
+        "value": "3500.00"
+      },
+      "reference": {
+        "decision": "retrieve",
+        "value": "3500.00"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00009",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00009",
+        "decision": "calculate",
+        "employee_contribution": "79.13",
+        "taxable_pay": "1816.25",
+        "income_tax": "61.63",
+        "net_pay": "1754.62"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "79.13",
+        "taxable_pay": "1816.25",
+        "income_tax": "61.63",
+        "net_pay": "1754.62"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00010",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00010",
+        "decision": "calculate",
+        "employee_contribution": "146.45",
+        "taxable_pay": "2089.30",
+        "income_tax": "95.14",
+        "net_pay": "1994.16"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "146.45",
+        "taxable_pay": "2089.30",
+        "income_tax": "95.14",
+        "net_pay": "1994.16"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00011",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00011",
+        "decision": "clarify",
+        "reason_code": "MISSING_PAYROLL_MONTH"
+      },
+      "reference": {
+        "decision": "clarify",
+        "reason_code": "MISSING_PAYROLL_MONTH"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00012",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00012",
+        "decision": "clarify",
+        "reason_code": "MISSING_GROSS_PAY"
+      },
+      "reference": {
+        "decision": "clarify",
+        "reason_code": "MISSING_GROSS_PAY"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00013",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00013",
+        "decision": "clarify",
+        "reason_code": "MISSING_GROSS_PAY"
+      },
+      "reference": {
+        "decision": "clarify",
+        "reason_code": "MISSING_GROSS_PAY"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00014",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00014",
+        "decision": "calculate",
+        "employee_contribution": "232.34",
+        "taxable_pay": "3577.93",
+        "income_tax": "388.70",
+        "net_pay": "3189.23"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "232.34",
+        "taxable_pay": "3577.93",
+        "income_tax": "388.70",
+        "net_pay": "3189.23"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00015",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00015",
+        "decision": "calculate",
+        "employee_contribution": "15.49",
+        "taxable_pay": "203.36",
+        "income_tax": "0.00",
+        "net_pay": "203.36"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "15.49",
+        "taxable_pay": "203.36",
+        "income_tax": "0.00",
+        "net_pay": "203.36"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00016",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00016",
+        "decision": "calculate",
+        "employee_contribution": "114.42",
+        "taxable_pay": "1200.01",
+        "income_tax": "0.00",
+        "net_pay": "1200.01"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "114.42",
+        "taxable_pay": "1200.01",
+        "income_tax": "0.00",
+        "net_pay": "1200.01"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00017",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00017",
+        "decision": "calculate",
+        "employee_contribution": "178.72",
+        "taxable_pay": "2800.02",
+        "income_tax": "224.00",
+        "net_pay": "2576.02"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "178.72",
+        "taxable_pay": "2800.02",
+        "income_tax": "224.00",
+        "net_pay": "2576.02"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00018",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00018",
+        "decision": "calculate",
+        "employee_contribution": "302.82",
+        "taxable_pay": "3636.55",
+        "income_tax": "198.58",
+        "net_pay": "3437.97"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "302.82",
+        "taxable_pay": "3636.55",
+        "income_tax": "198.58",
+        "net_pay": "3437.97"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00019",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00019",
+        "decision": "calculate",
+        "employee_contribution": "231.54",
+        "taxable_pay": "2999.99",
+        "income_tax": "252.00",
+        "net_pay": "2747.99"
+      },
+      "reference": {
+        "decision": "calculate",
+        "employee_contribution": "231.54",
+        "taxable_pay": "2999.99",
+        "income_tax": "252.00",
+        "net_pay": "2747.99"
+      },
+      "resolution": null
+    },
+    {
+      "id": "case4-4041-00041",
+      "agree": true,
+      "human": {
+        "id": "case4-4041-00041",
+        "decision": "clarify",
+        "reason_code": "CONFLICTING_GROSS_PAY"
+      },
+      "reference": {
+        "decision": "clarify",
+        "reason_code": "CONFLICTING_GROSS_PAY"
+      },
+      "resolution": null
+    }
+  ]
+}
