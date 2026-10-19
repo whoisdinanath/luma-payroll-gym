@@ -9,7 +9,7 @@ from luma_gym.hosted import load_key
 
 root = Path(__file__).resolve().parents[1]
 deploy = root / "deploy"
-shutil.copytree(root / "src/luma_gym", deploy / "luma_gym", dirs_exist_ok=True,
+shutil.copytree(root / "src", deploy / "luma_gym", dirs_exist_ok=True,
                 ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
 for name in ("payroll.md", "judge.md"):
     shutil.copyfile(root / "rules" / name, deploy / name)

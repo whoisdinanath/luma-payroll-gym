@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling>=1.27,<2"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "luma-payroll-gym"
@@ -26,10 +26,7 @@ explicit = true
 [project.scripts]
 luma-gym = "luma_gym.cli:main"
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/luma_gym"]
-
-[tool.hatch.build.targets.wheel.force-include]
-"rules/payroll.md" = "luma_gym/payroll.md"
-"rules/judge.md" = "luma_gym/judge.md"
-"templates" = "luma_gym/templates"
+[tool.setuptools]
+packages = ["luma_gym", "luma_gym.rules", "luma_gym.templates"]
+package-dir = {luma_gym = "src", "luma_gym.rules" = "rules", "luma_gym.templates" = "templates"}
+package-data = {"luma_gym.rules" = ["payroll.md", "judge.md"], "luma_gym.templates" = ["*.html"]}

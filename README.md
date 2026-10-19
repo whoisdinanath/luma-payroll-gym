@@ -12,22 +12,24 @@ Python 3.12 with uv. `verifiers` 0.1.11 for the environment. OpenRouter for host
 
 ## Architecture
 
+The code is in `src/` and installs as the `luma_gym` package.
+
 ```text
 rules/payroll.md        rule set, version 3, written before the code
   reference.py          Decimal reference; each step cites its clause (R1 to R9)
   cases.py              generator 4: seed -> tasks, ground truth from reference.py, never from a model
-  data/v4/              train, development, test, hosted evaluation, warm-start, and demonstration sets
+  data/v4/              train, development, test, hosted evaluation, SFT, and demonstration sets
 environment.py          load_environment(): single-turn or tool mode (verifiers)
 scoring.py, judge.py    rubric 8, one grader shared by every path below
   eval.py               hosted runs -> results/<run>/config.json, transcript.jsonl, metrics.json, scores.json
-  sft.py, train.py      warm start and GRPO; local.py evaluates the local model
+  sft.py, train.py      SFT and GRPO; local.py evaluates the local model
   server.py, deploy/    sandbox API (Cloudflare Worker and D1)
   dashboard.py          reads saved results; scripts/export_site.py builds the static site
 ```
 
 ## Task schema
 
-Every task is a JSON object validated on load (`luma_gym/tasks.py`): `id`, `slice`, `difficulty` (1 retrieval, 2 calculation, 3 trap), `prompt`, `record` (payroll record, contract, amendment, and the case's reference schedule), `ground_truth`, `verifier`, `tags`, `schema_version`, `ruleset_version`, `seed`, and `retrieval_field` for retrieval tasks. Unknown rule or schema versions are rejected. Ground truth is a payslip with two-decimal money strings, one retrieved value, or a clarification reason code, each with its governing clauses.
+Every task is a JSON object validated on load (`src/tasks.py`): `id`, `slice`, `difficulty` (1 retrieval, 2 calculation, 3 trap), `prompt`, `record` (payroll record, contract, amendment, and the case's reference schedule), `ground_truth`, `verifier`, `tags`, `schema_version`, `ruleset_version`, `seed`, and `retrieval_field` for retrieval tasks. Unknown rule or schema versions are rejected. Ground truth is a payslip with two-decimal money strings, one retrieved value, or a clarification reason code, each with its governing clauses.
 
 ## Rules and ground truth
 
