@@ -25,14 +25,15 @@
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      font: 15px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-feature-settings: "cv11", "ss01";
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--ink); text-decoration: none; }
     a:hover { color: var(--blue); }
     h1, h2, h3, h4, p, figure, dl, dd { margin: 0; }
     code, pre, .mono {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 13px;
     }
     pre {
@@ -44,14 +45,17 @@
       border: 1px solid var(--border);
       white-space: pre-wrap;
       overflow-wrap: anywhere;
-      line-height: 1.55;
+      line-height: 1.6;
     }
+    .prose pre { white-space: pre; overflow-wrap: normal; overflow-x: auto; }
     code {
       background: var(--subtle);
-      padding: 2px 6px;
-      border-radius: 5px;
-      font-size: 12.5px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 0.86em;
     }
+    .math.block { margin: 14px 0; overflow-x: auto; overflow-y: hidden; }
+    .katex { font-size: 1.05em; }
     pre code { background: none; padding: 0; }
 
     .topbar {
@@ -187,7 +191,7 @@
     }
     .card-title {
       font-size: 16px;
-      font-weight: 650;
+      font-weight: 600;
       color: var(--ink);
       letter-spacing: -0.2px;
     }
@@ -259,7 +263,7 @@
       padding: 2px 8px;
       border-radius: 6px;
       font-size: 12.5px;
-      font-weight: 550;
+      font-weight: 500;
       text-align: center;
       min-width: 48px;
     }
@@ -299,7 +303,7 @@
 
     svg { display: block; max-width: 100%; height: auto; }
     svg text {
-      font: 11.5px -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      font: 11.5px "Inter", system-ui, sans-serif;
       fill: var(--muted);
     }
     svg .strong { fill: var(--ink); font-weight: 600; font-size: 12px; }
@@ -369,7 +373,7 @@
     }
     .compare th, .compare td { padding: 7px 10px; border: 0; }
     .compare td {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
       font-size: 13px;
       border-radius: 6px;
       overflow-wrap: anywhere;
@@ -415,7 +419,8 @@
     #training .shift-item .pill { white-space: nowrap; }
     #training > .grid-2:last-child { gap: 20px; }
     .table-wrap table { table-layout: fixed; }
-    .table-wrap td, .table-wrap th { white-space: normal; overflow-wrap: anywhere; }
+    .table-wrap td, .table-wrap th { white-space: normal; overflow-wrap: break-word; hyphens: manual; }
+    .table-wrap th { overflow-wrap: normal; word-break: keep-all; }
     .table-wrap td:first-child, .table-wrap th:first-child { width: 25%; }
     #leaderboard > .card table th:first-child,
     #leaderboard > .card table td:first-child { width: 3%; }
@@ -500,6 +505,18 @@
       .stack-row { grid-template-columns: 82px minmax(0, 1fr) 56px; gap: 8px; }
     }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".math").forEach((node) => {
+        katex.render(node.textContent, node, {displayMode: node.classList.contains("block"), throwOnError: false});
+      });
+    });
+  </script>
 </head>
 <body>
 <header class="topbar">

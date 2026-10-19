@@ -96,7 +96,7 @@ STAGES = [("raw-single", "Frozen, single-turn", "#a1a1aa"), ("raw-calculator", "
           ("rl-0.001-calculator", "SFT + RL, β 0.001", "#e11d48"), ("rl-1-calculator", "SFT + RL, β 1", "#65a30d"),
           ("rl-10-calculator", "SFT + RL, β 10", "#0891b2"), ("rl-100-calculator", "SFT + RL, β 100", "#4f46e5"),
           ("rl-0.04-balanced-calculator", "SFT + RL, β 0.04, balanced", "#d97706"),
-          ("rl-0.04-signal-calculator", "SFT + RL, β 0.04, more signal", "#c026d3")]
+          ("rl-0.04-signal-calculator", "SFT + RL, β 0.04, more payslips", "#c026d3")]
 HALF_LABELS = {"first-half": "January to June", "second-half": "July to December"}
 STAGE_METRICS = [("exact_calculation", "Exact payslips", True), ("correct_clarification", "Correct clarifications", True),
                  ("false_clarification", "Refuses good payslips", False), ("false_calculation", "Calculates through traps", False),
@@ -134,38 +134,38 @@ SKILL_METRICS = [
 EPISODES = [
     {
         "run": "rl-rubric-3-beta-0.04",
-        "rule": "Rubric 3: field and clause credit",
-        "exploit": "Copied demo values (50.00 / 950.00) on 39/40 traps",
+        "rule": "Rubric 3: credit for every field and the clauses",
+        "exploit": "Calculated 39 of 40 traps with the worked example's values (50.00, 950.00)",
         "evidence": {"min_step": 11, "tier": 3, "decision": "calculate", "contains": "950.00"},
-        "fix": "Rubric 4: derived fields only",
+        "fix": "Rubric 4: credit only for computed values",
     },
     {
         "run": "rl-rubric-4-beta-0.04",
-        "rule": "Rubric 4: derived fields only",
-        "exploit": "All groups tied at 0.0 on 11 of 14 steps",
+        "rule": "Rubric 4: credit only for computed values",
+        "exploit": "Every group tied at 0 in 11 of 14 steps",
         "evidence": {"min_step": 1, "tier": 2, "decision": "retrieve"},
-        "fix": "Rubric 5: +0.05 decision credit",
+        "fix": "Rubric 5: 0.05 for the right decision",
     },
     {
         "run": "rl-beta-0.04",
-        "rule": "Rubric 5: +0.05 decision credit",
+        "rule": "Rubric 5: 0.05 for the right decision",
         "exploit": "Calculated on 99.5% of held-out traps",
         "evidence": {"min_step": 95, "tier": 3, "decision": "calculate"},
-        "fix": "Rubric 6 and a balanced 6-example prompt",
+        "fix": "Rubric 6: only exact answers score; six worked examples",
     },
     {
         "run": "rl-rubric-6-beta-0.04",
-        "rule": "Rubric 6: 0.0 on wrong decision",
+        "rule": "Rubric 6: only exact answers score",
         "exploit": "Refused 99.0% of held-out payslips",
         "evidence": {"min_step": 18, "tier": 2, "decision": "clarify"},
-        "fix": "Rubric 7: -0.5 wrong-decision penalty",
+        "fix": "Rubric 7: wrong decisions cost -0.5 both ways",
     },
     {
         "run": "rl-rubric-7-sample-weighted-beta-0.04",
-        "rule": "Rubric 7: per-sample loss",
-        "exploit": "16-sample trap groups outweighed payslip groups 4.6:1",
+        "rule": "Rubric 7, loss weighted per answer",
+        "exploit": "Trap groups of 16 answers outweighed payslip groups 4.6 to 1",
         "evidence": {"min_step": 14, "tier": 2, "decision": "clarify"},
-        "fix": "Equal weight per prompt group",
+        "fix": "Every group weighted equally",
     },
 ]
 
@@ -285,15 +285,9 @@ def load_tasks():
                 detail += ", resolved amendment"
         tasks[item["id"]] = {"id": item["id"], "number": index + 1, "tier": item["difficulty"], "detail": detail,
                              "truth": item["ground_truth"], "record": item["record"]}
-    for index, item in enumerate(read_json(ROOT / "data/transfer.json", [])):
-        tasks[item["id"]] = {
-            "id": item["id"],
-            "number": index + 1,
-            "tier": item["difficulty"],
-            "detail": "transfer",
-            "truth": item["ground_truth"],
-            "record": item["record"],
-        }
+    for index, item in enumerate(read_json(ROOT / "data/transfer-human.json", [])):
+        tasks[item["id"]] = {"id": item["id"], "number": index + 1, "tier": item["difficulty"],
+                             "detail": "hand-written transfer", "truth": item["ground_truth"], "record": item["record"]}
     return tasks
 
 
@@ -388,7 +382,7 @@ def load_models():
     for name in HOSTED:
         for mode, key in (("single", "single"), ("tools", "tools"), ("tools-nocalc", "nocalc")):
             sources.append((V4 / f"hosted-{name}-{mode}", f"v4-hosted-{name}-{mode}", key))
-        sources.append((RESULTS / f"transfer-{name}", f"transfer-{name}", "transfer"))
+        sources.append((V4 / f"transfer-human-{name}", f"v4-transfer-human-{name}", "transfer"))
     for directory, run_id, key in sources:
         run = load_run(directory, run_id) if directory.is_dir() else None
         if not run:
@@ -796,6 +790,38 @@ def line_chart(series, title, kind, steps, window=10):
     }
 
 
+def skill_checks():
+    def count(name, tier):
+        scores = read_json(V4 / name / "scores.json", [])
+        rows = [row for row in scores if row["tier"] == tier]
+        if not rows:
+            return None
+        exact = sum(row["score"]["breakdown"]["exact"]["score"] == 1.0 for row in rows)
+        return f"{exact} of {len(rows)}"
+
+    def share(name, tier):
+        scores = read_json(V4 / name / "scores.json", [])
+        rows = [row for row in scores if row["tier"] == tier]
+        if not rows:
+            return None
+        return f"{sum(row['score']['breakdown']['exact']['score'] == 1.0 for row in rows) / len(rows):.1%}"
+
+    models = (("raw", "Frozen"), ("sft", "SFT"), ("rl-0.04", "SFT + RL, β 0.04"))
+    conditions = [
+        ("Test set, six worked examples", "exact payslips", lambda run: share(f"test-{run}-calculator", 2)),
+        ("Test set, no worked examples", "exact payslips", lambda run: share(f"test-{run}-calculator-noexamples", 2)),
+        ("Hand-written requests", "exact payslips", lambda run: count(f"transfer-local-{run}-calculator", 2)),
+        ("Hand-written requests", "traps right", lambda run: count(f"transfer-local-{run}-calculator", 3)),
+        ("Same records, training instruction", "exact payslips", lambda run: count(f"transfer-fixed-line-{run}-calculator", 2)),
+        ("Same records, training instruction", "traps right", lambda run: count(f"transfer-fixed-line-{run}-calculator", 3)),
+        ("Hosted tool mode, no worked examples", "exact payslips", lambda run: count(f"eval-{run}-tools", 2)),
+        ("Hosted tool mode, worked examples as tool calls", "exact payslips", lambda run: count(f"eval-{run}-tools-examples", 2)),
+    ]
+    rows = [{"condition": condition, "measure": measure, "cells": [value(run) for run, _ in models]}
+            for condition, measure, value in conditions]
+    return {"models": [label for _, label in models], "rows": rows}
+
+
 def learning_curve():
     found = read_json(ROOT / "reports/protocol4-summary.json", {}).get("checkpoints", {})
     names = {key[:-len("-calculator")]: (color, label) for key, label, color in STAGES if key.startswith("rl-")}
@@ -838,7 +864,7 @@ def load_training():
         rows = [steps[step] for step in sorted(steps)]
         current = config.get("protocol") == "4"
         more = config.get("calc_prompts", 2) != 2 or config.get("lr", 1e-5) != 1e-5
-        label = (f"β {config['beta']:g}" + (", more signal" if more else ", balanced" if "calc_sampling" in config else "")
+        label = (f"β {config['beta']:g}" + (", more payslips" if more else ", balanced" if "calc_sampling" in config else "")
                  + (f", seed {config['seed']}" if config.get("seed", 7) != 7 else ""))
         runs.append({
             "id": ("v4-" if directory.parent == V4 else "") + directory.name,
@@ -1104,6 +1130,7 @@ def gym_facts(tasks):
     manifest = read_json(ROOT / "data/v4/manifest.json", {})
     original = read_json(ROOT / "reports/task-audit-original.json", {})
     crosscheck = read_json(ROOT / "reports/reference-crosscheck.json", {})
+    hand = read_json(ROOT / "reports/fidelity-audit.json", {})
     judge_high = read_json(RESULTS / "judge-reliability-high-effort/metrics.json", {})
     transfer = read_json(ROOT / "reports/transfer.json", {})
     pairs = [pair["result"] for pair in (transfer.get("hand_written") or transfer).get("ranking_pairs", [])]
@@ -1122,6 +1149,8 @@ def gym_facts(tasks):
         "original_duplicates": original.get("semantic_duplicate_instances"),
         "crosscheck": crosscheck.get("divergence_rate"),
         "crosscheck_tasks": crosscheck.get("checked"),
+        "hand_checked": hand.get("checked"),
+        "hand_agreed": hand.get("agreed"),
         "judge_controlled": read_json(RESULTS / "judge-reliability-structured/metrics.json", {}),
         "judge_actual": read_json(RESULTS / "judge-actual-reliability/metrics.json", {}),
         "judge_high": judge_high,
@@ -1157,17 +1186,15 @@ def load_home():
     eval_groups = evaluations(runs)
     stages = protocol_four()
     by_key = {stage["key"]: stage for stage in stages["stages"]}
-    development = read_json(ROOT / "reports/protocol4-summary.json", {}).get("splits", {}).get("dev", {}).get("summaries", {})
-    trained = [stage for key, stage in by_key.items() if key.startswith("rl-") and key in development]
-    best = (max(trained, key=lambda stage: development[stage["key"]]["reward"]) if trained
-            else by_key.get("sft-calculator"))
+    best = by_key.get("rl-0.04-calculator") or by_key.get("sft-calculator")
     leader = models[0] if models else None
     cheap = min((model for model in models if model["single"]["mean"] >= leader["single"]["mean"] - 0.01),
                 key=lambda model: model["single"]["cost_per_100"]) if leader else None
     tool_leader = max((model for model in models if "tools" in model), key=lambda model: model["tools"]["mean"], default=None)
     kpis = {
         "leader": leader, "cheap": cheap, "tool_leader": tool_leader, "best_stage": best,
-        "raw_exact": (by_key.get("raw-single") or {}).get("cells", [{}])[0].get("value"),
+        "raw_exact": (by_key.get("raw-calculator") or {}).get("cells", [{}])[0].get("value"),
+        "sft_exact": (by_key.get("sft-calculator") or {}).get("cells", [{}])[0].get("value"),
     }
     return {
         "kpis": kpis,
@@ -1187,6 +1214,7 @@ def load_home():
         "final": final,
         "curves": curves(final, FINAL_CURVE_SPECS),
         "learning_curve": learning_curve(),
+        "skill_checks": skill_checks(),
         "all_curves": curves(runs),
         "evaluations": eval_groups,
         "episodes": episodes(),
@@ -1295,10 +1323,10 @@ def field_state(score, field):
 
 
 def load_transcript(run, task_id):
-    directory = V4 / run[3:] if run.startswith("v4-hosted-") else RESULTS / run
-    parent = V4 if run.startswith("v4-hosted-") else RESULTS
+    directory = V4 / run[3:] if run.startswith("v4-") else RESULTS / run
+    parent = V4 if run.startswith("v4-") else RESULTS
     if (
-        not run.startswith(("comparison-", "transfer-", "v4-hosted-"))
+        not run.startswith(("comparison-", "v4-hosted-", "v4-transfer-human-"))
         or directory.parent.resolve() != parent.resolve()
         or not directory.is_dir()
     ):
@@ -1399,7 +1427,7 @@ def load_transcript(run, task_id):
         "model_name": name,
         "color": color,
         "default_sampling": config.get("temperature", 0) is None,
-        "mode": "Transfer" if run.startswith("transfer-") else "Tool use" if config.get("mode") == "tools" else "Single-turn",
+        "mode": "Transfer" if run.startswith("v4-transfer-") else "Tool use" if config.get("mode") == "tools" else "Single-turn",
         "mean": statistics.mean(rewards) if rewards else None,
         "comparison": comparison,
         "expected": expected is not None,
@@ -1411,8 +1439,9 @@ def load_transcript(run, task_id):
 
 def render_markdown(paths):
     from markdown_it import MarkdownIt
+    from mdit_py_plugins.dollarmath import dollarmath_plugin
 
-    renderer = MarkdownIt("commonmark").enable("table")
+    renderer = MarkdownIt("commonmark").enable("table").use(dollarmath_plugin, allow_space=False, allow_digits=False)
     sections, contents = [], []
     for path in paths:
         html = renderer.render(Path(path).read_text())

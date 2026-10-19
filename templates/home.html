@@ -72,9 +72,9 @@
     <small>{{ models|length }} models · {{ "{:,}".format(gym.total_tasks) }} v4 tasks</small>
   </div>
   <div class="kpi">
-    <span>MiniCPM5-1B with calculator, exact test payslips</span>
+    <span>MiniCPM5-1B, exact test payslips</span>
     <b>{{ k.best_stage.cells[0].value|pct(1) if k.best_stage else "-" }}</b>
-    <small>frozen {{ k.raw_exact|pct(0) }} · {{ k.best_stage.label if k.best_stage else "" }}</small>
+    <small>frozen {{ k.raw_exact|pct(0) }} · SFT {{ k.sft_exact|pct(1) }} · {{ k.best_stage.label if k.best_stage else "" }}</small>
   </div>
   <div class="kpi">
     <span>API spend</span>
@@ -545,10 +545,29 @@
   </div>
   {% endif %}
 
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-head">
+      <span class="card-title">How far the trained skill carries</span>
+      <span class="muted" style="font-size:12px">Calculator mode unless stated, 4 answers per task</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Condition</th><th>Measure</th>{% for model in skill_checks.models %}<th class="r">{{ model }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for row in skill_checks.rows %}
+          <tr><td>{{ row.condition }}</td><td class="muted">{{ row.measure }}</td>{% for cell in row.cells %}<td class="r">{{ cell if cell else "-" }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:10px">The six worked examples are in every training prompt. Without them, with a request worded differently, or behind the hosted document tools, most of the gain disappears.</p>
+  </div>
+
   <div class="grid-2">
     <div class="card">
       <div class="card-head">
         <span class="card-title">Earlier protocols: held-out checkpoints, no calculator</span>
+        <span class="muted" style="font-size:12px">Reward re-scored under rubric 8</span>
       </div>
       <div class="table-wrap">
         <table>
@@ -668,6 +687,7 @@
           <span class="muted" style="font-size:12px">Task audit</span>
           <div style="font-size:18px;font-weight:700;margin-top:3px">{{ gym.leaks }} leaks</div>
           <span class="muted" style="font-size:12px">{{ "{:,}".format(gym.total_tasks) }} tasks · {{ gym.crosscheck|pct(0) }} cross-check mismatch</span>
+          {% if gym.hand_checked %}<br><span class="muted" style="font-size:12px">{{ gym.hand_agreed }} of {{ gym.hand_checked }} match a hand audit</span>{% endif %}
         </div>
         <div style="padding:12px;background:#f8f9fa;border:1px solid #e5e7eb;border-radius:8px">
           <span class="muted" style="font-size:12px">Judge reliability</span>
@@ -681,9 +701,8 @@
         </div>
       </div>
       <details class="objective"><summary>Training objective</summary>
-      <pre>J = mean_groups [ mean_tokens (min(rho A, clip(rho, 0.8, 1.2) A) - beta k3) ]
-A = (reward - mean(reward)) / (std(reward) + 1e-4)
-k3 = pi_ref / pi_theta - log(pi_ref / pi_theta) - 1</pre></details>
+      <div class="math block">J(\theta) = \frac{1}{G}\sum_{i=1}^{G}\frac{1}{|o_i|}\sum_{t=1}^{|o_i|}\Big[\min\big(\rho_t A_i,\ \operatorname{clip}(\rho_t, 0.8, 1.2)\,A_i\big) - \beta\, k_{3,t}\Big]</div>
+      <div class="math block">\rho_t = \frac{\pi_\theta(o_{i,t})}{\pi_{\mathrm{old}}(o_{i,t})}, \qquad A_i = \frac{r_i - \operatorname{mean}(r)}{\operatorname{std}(r) + 10^{-4}}, \qquad k_{3,t} = \frac{\pi_{\mathrm{ref}}}{\pi_\theta} - \log\frac{\pi_{\mathrm{ref}}}{\pi_\theta} - 1</div></details>
     </div>
   </div>
 </section>

@@ -30,8 +30,9 @@ save(client, "/rules", "rules.html")
 runs = load_training()[0]
 for run in runs:
     save(client, f"/run/{run['id']}", f"run/{run['id']}.html")
-folders = [(directory, directory.name) for directory in sorted(RESULTS.glob("comparison-*-*")) + sorted(RESULTS.glob("transfer-*"))]
-folders += [(directory, f"v4-{directory.name}") for directory in sorted((RESULTS / "v4").glob("hosted-*-*")) if directory.is_dir()]
+folders = [(directory, directory.name) for directory in sorted(RESULTS.glob("comparison-*-*"))]
+folders += [(directory, f"v4-{directory.name}") for pattern in ("hosted-*-*", "transfer-human-*")
+            for directory in sorted((RESULTS / "v4").glob(pattern)) if directory.is_dir()]
 for directory, run in folders:
     if directory.is_dir() and (directory / "scores.json").exists():
         for task in sorted({row["task_id"] for row in json.loads((directory / "scores.json").read_text())}):
