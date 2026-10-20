@@ -20,7 +20,9 @@
       <polyline points="{{ path.raw }}" fill="none" stroke="{{ path.color }}" stroke-opacity="0.16" stroke-width="1.1"/>
       <polyline points="{{ path.smooth }}" fill="none" stroke="{{ path.color }}" stroke-width="2.2" stroke-linejoin="round"/>
       {% for dot in path.dots %}<circle cx="{{ dot.x }}" cy="{{ dot.y }}" r="3.2" fill="{{ path.color }}"/>{% endfor %}
-      <circle cx="{{ path.end_x }}" cy="{{ path.end_y }}" r="3.2" fill="{{ path.color }}"/>
+      <circle cx="{{ path.end_x }}" cy="{{ path.end_y }}" r="3.2" fill="{{ path.color }}">
+        <title>{{ path.label }} · last recorded step {{ path.last_step }} · {{ path.last_value }}</title>
+      </circle>
     {% endfor %}
   </svg>
 </div>
@@ -238,7 +240,7 @@
               </svg>
             </th>
             <th class="r">Mean</th>
-            <th class="r narrow-hide">±SD</th>
+            <th class="r" title="Standard deviation across answer rewards">SD</th>
             <th class="c">Retrieval</th>
             <th class="c">Calculation</th>
             <th class="c">Traps</th>
@@ -268,7 +270,7 @@
               </svg>
             </td>
             <td class="r"><b>{{ row.mean|pct(1) }}</b></td>
-            <td class="r narrow-hide muted">{{ "%.1f"|format(row.sd * 100) }}</td>
+            <td class="r muted">{{ "%.1f"|format(row.sd * 100) }}</td>
             {% for tier in (1, 2, 3) %}
               <td class="c">{% if tier in row.tiers %}<span class="pill" style="background:{{ row.tiers[tier]|soft_heat }};color:{{ row.tiers[tier]|text_heat }}">{{ row.tiers[tier]|pct(0) }}</span>{% endif %}</td>
             {% endfor %}
@@ -367,15 +369,14 @@
   </div>
 
   <div class="card">
-    <div class="card-head">
-      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <div class="card-head heatmap-head">
+      <div class="heatmap-heading">
         <span class="card-title">Task × model heatmap</span>
         <div class="legend">
           <span>-50%<i class="ramp"></i>100%</span>
-          <span id="hm-status">Select a cell to open its transcript</span>
         </div>
       </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <div class="heatmap-controls">
         <div class="tabs" id="hm-mode-tabs">
           <button type="button" class="tab active" data-hm-mode="single">Single-turn ({{ heatmap.shown }} failed)</button>
           <button type="button" class="tab" data-hm-mode="tools">Tools + calculator ({{ tool_heatmap.shown }} failed)</button>
@@ -387,6 +388,7 @@
           {% endfor %}
         </div>
       </div>
+      <div id="hm-status" class="heatmap-status muted">Select a cell to open its transcript</div>
     </div>
     <div id="hm-single-wrap" class="table-wrap">{{ heat_svg(heatmap, "Single-turn failure heatmap") }}</div>
     <div id="hm-tools-wrap" class="table-wrap" style="display:none">{{ heat_svg(tool_heatmap, "Tool-use failure heatmap") }}</div>
@@ -473,7 +475,7 @@
       {% endfor %}
     </div>
     <div class="card sweep-card">
-      <div class="card-head"><span class="card-title">KL coefficient sweep</span></div>
+      <div class="card-head"><span class="card-title">Controlled KL coefficient sweep</span></div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -487,10 +489,10 @@
               <td style="width:125px">
                 <div style="display:flex;align-items:center;gap:8px">
                   <div class="bar-track" style="flex:1"><div class="bar-fill" style="width:{{ row.kl_bar }}%;background:{{ row.color }}"></div></div>
-                  <span class="mono">{{ "%.4f"|format(row.kl) }}</span>
+                  <span class="mono">{{ "%.3g"|format(row.kl) }}</span>
                 </div>
               </td>
-              <td class="r mono">{{ "%.4f"|format(row.max_kl) }}</td>
+              <td class="r mono">{{ "%.3g"|format(row.max_kl) }}</td>
               <td class="r mono">{{ "%.3f"|format(row.entropy) }}</td>
               <td class="r"><b>{{ row.reward|pct(1) }}</b></td>
             </tr>
@@ -498,50 +500,73 @@
           </tbody>
         </table>
       </div>
+      <p class="muted" style="font-size:12.5px;margin-top:10px">Only beta changes in these four 60-step runs. Reward here is the last 10 training batches, not a held-out score. Earlier experiments and the payslip-focused follow-up are separate below.</p>
     </div>
   </div>
 
-  <div class="card" style="margin-bottom:20px">
+  {% for group in training_comparisons %}
+  <div class="card" id="training-{{ group.id }}" style="margin-bottom:20px">
     <div class="card-head">
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-        <span class="card-title">GRPO training curves, MiniCPM5-1B</span>
-        <div class="legend" id="legend-final">
-          {% for run in final %}
+        <span class="card-title">{{ group.title }}</span>
+        <div class="legend">
+          {% for run in group.runs %}
             <span><i class="dot" style="background:{{ run.color }}"></i><a href="/run/{{ run.id }}">{{ run.title }} ({{ run.done }}/{{ run.planned }})</a></span>
           {% endfor %}
         </div>
-        <div class="legend" id="legend-all" style="display:none">
-          {% for run in runs %}
-            <span><i class="dot" style="background:{{ run.color }}"></i><a href="/run/{{ run.id }}">{{ run.title }}</a></span>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="tabs">
-        <button type="button" class="tab active" data-curve-mode="final">Final protocol</button>
-        <button type="button" class="tab" data-curve-mode="all">All {{ runs|length }} runs</button>
       </div>
     </div>
-    <div id="curves-final-panel">
-      <div class="curves-grid">
-        {% for item in curves %}{{ curve_svg(item) }}{% endfor %}
-      </div>
-      <p class="muted" style="font-size:12.5px;margin-top:10px">Each point is one training step on tasks the policy had not seen. Thick lines average the last 10 steps.</p>
+    <div class="curves-grid">
+      {% for item in group.charts %}{{ curve_svg(item) }}{% endfor %}
     </div>
-    <div id="curves-all-panel" class="curves-grid" style="display:none">
-      {% for item in all_curves %}{{ curve_svg(item) }}{% endfor %}
-    </div>
+    <p style="margin-top:16px">{{ group.note }}</p>
+    <p class="muted" style="font-size:12.5px">Thin lines show training-batch values; thick lines show trailing 10-step means. Dots mark the last logged steps, not held-out evaluations.</p>
   </div>
+  {% endfor %}
+
+  <details class="card" style="margin-bottom:20px">
+    <summary>All saved training runs, including seed repeats and sampling checks</summary>
+    <div class="legend" style="margin-top:10px">
+      {% for run in runs %}<span><i class="dot" style="background:{{ run.color }}"></i><a href="/run/{{ run.id }}">{{ run.title }} ({{ run.done }}/{{ run.planned }} steps)</a></span>{% endfor %}
+    </div>
+  </details>
+
+  {% if fresh_confirmation %}
+  <div class="card" id="fresh-confirmation" style="margin-bottom:20px">
+    <div class="card-head"><span class="card-title">Fresh unseen-task confirmation</span></div>
+    <p class="muted">Seed {{ fresh_confirmation.seed }}: {{ fresh_confirmation.payslips }} payslips and {{ fresh_confirmation.traps }} traps, {{ fresh_confirmation.rollouts }} answers per task at temperature {{ fresh_confirmation.temperature }}. Same six demonstrations and calculator interface for every checkpoint. Seed and semantic overlap checked against all prior task files.</p>
+    {% if fresh_confirmation.status == "complete" %}
+    <div class="table-wrap"><table>
+      <thead><tr><th>Checkpoint</th><th class="r">Exact payslips</th><th class="r">Correct trap decisions</th><th class="r">Malformed</th><th class="r">Answers</th></tr></thead>
+      <tbody>
+      {% for key, row in fresh_confirmation.summaries.items() %}
+        <tr>
+          <td>{{ {"sft": "SFT", "rl-0.04": "Original RL, beta 0.04", "rl-0.04-signal": "Payslip-focused RL"}[key] }}</td>
+          <td class="r">{{ row.exact_payslips|pct(1) }}<div class="muted" style="font-size:11px">{{ row.exact_payslips_interval_95[0]|pct(1) }} to {{ row.exact_payslips_interval_95[1]|pct(1) }}</div></td>
+          <td class="r">{{ row.correct_trap_decisions|pct(1) }}<div class="muted" style="font-size:11px">{{ row.correct_trap_decisions_interval_95[0]|pct(1) }} to {{ row.correct_trap_decisions_interval_95[1]|pct(1) }}</div></td>
+          <td class="r">{{ row.malformed|pct(1) }}</td><td class="r">{{ row.answers }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table></div>
+    <p class="muted">Intervals are 95% task-level bootstrap intervals, not training-seed uncertainty. All-success trap conditions have degenerate bootstrap intervals; zero observed failures does not establish perfect population accuracy. Deterministic correctness, not full judge-weighted reward. No training or settings were changed after this set was frozen. One training seed per checkpoint; this is not a training-seed replication.</p>
+    <p class="muted">Summed L4 function runtime: {{ "%.2f"|format(fresh_confirmation.modal_runtime_seconds / 3600) }} hours. Execution-cost upper estimate: ${{ "%.2f"|format(fresh_confirmation.modal_runtime_cost_upper_estimate_usd) }}, using maximum CPU/RAM allocation; excludes build, startup, storage and transfer. Not an invoice-confirmed charge. Additional budget: $5; no explanation-judge calls.</p>
+    {% else %}
+    <p class="muted">Evaluation prepared or running. No fresh results are claimed until all three conditions are complete.</p>
+    {% endif %}
+  </div>
+  {% endif %}
 
   {% if learning_curve %}
   <div class="card" style="margin-bottom:20px">
     <div class="card-head">
-      <span class="card-title">Learning curve, development split</span>
-      <div class="legend">{% for run in learning_curve.runs %}<span><i class="dot" style="background:{{ run.color }}"></i>{{ run.label }}</span>{% endfor %}</div>
+      <span class="card-title">Checkpoint evaluations, development split</span>
+      <div class="legend">{% for run in learning_curve.runs %}<span><i class="dot" style="background:{{ run.color }}"></i><a href="/run/{{ run.id }}">{{ run.label }}</a> (steps {{ run.steps }})</span>{% endfor %}</div>
     </div>
     <div class="curves-grid">
       {% for item in learning_curve.charts %}{{ curve_svg(item) }}{% endfor %}
     </div>
-    <p class="muted" style="font-size:12.5px;margin-top:10px">96 development tasks × 4, scored at step 0 and at each saved checkpoint.</p>
+    <p style="margin-top:16px">These checkpoints use 96 fixed development tasks, four answers per task and the calculator. Step 0 is SFT; dots show measured checkpoints, joined without smoothing. The payslip-focused run has no checkpoint series here.</p>
   </div>
   {% endif %}
 
@@ -566,7 +591,7 @@
   <div class="grid-2">
     <div class="card">
       <div class="card-head">
-        <span class="card-title">Earlier protocols: held-out checkpoints, no calculator</span>
+        <span class="card-title">Earlier training: held-out checkpoints, no calculator</span>
         <span class="muted" style="font-size:12px">Reward re-scored under rubric 8</span>
       </div>
       <div class="table-wrap">
@@ -651,7 +676,10 @@
         <span class="card-title">Sandbox API</span>
         <button type="button" id="probe-btn" class="tab active" style="border:1px solid #e5e7eb">Try /health and /tasks</button>
       </div>
+      <p style="margin-bottom:12px">Fetch a task, let your agent answer, then submit its answer for a score. No sandbox API key is required.</p>
+      <p style="margin-bottom:12px"><a href="/sandbox-guide" style="color:#2563eb;font-weight:600">Read the full sandbox guide →</a> <span class="muted">Tiers, task data, answer formats, runnable example, rewards, and errors.</span></p>
       <pre style="margin-bottom:12px">uv run python scripts/quickstart.py</pre>
+      <p class="muted" style="font-size:13px;margin-bottom:12px"><code>tier=1</code>: look up a rule value · <code>tier=2</code>: calculate a payslip · <code>tier=3</code>: clarify missing or conflicting information · <code>tier=all</code>: mixed types. <code>n</code> is the total task count (1–10).</p>
       <pre id="probe-out" style="display:none;max-height:170px;overflow:auto;margin-bottom:12px"></pre>
       <div class="table-wrap">
         <table>
@@ -664,6 +692,7 @@
           </tbody>
         </table>
       </div>
+      <p class="muted" style="font-size:12.5px;margin-top:12px">Saved judge checks below: each structured clarification was correct. Useful text earned the 10% explanation credit; empty and injection text did not. These are check results, not API options or a general security guarantee.</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
         {% for check in sandbox %}
           <span class="pill {{ 'good' if check.result.mean_reward >= 0.99 else 'neutral' }}">
@@ -762,18 +791,6 @@
   document.querySelectorAll('[data-tip]').forEach(cell => {
     cell.addEventListener('mouseenter', () => {
       if (hmStatus) hmStatus.textContent = cell.getAttribute('data-tip');
-    });
-  });
-
-  document.querySelectorAll('[data-curve-mode]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const mode = btn.getAttribute('data-curve-mode');
-      document.querySelectorAll('[data-curve-mode]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('curves-final-panel').style.display = mode === 'final' ? '' : 'none';
-      document.getElementById('curves-all-panel').style.display = mode === 'all' ? '' : 'none';
-      document.getElementById('legend-final').style.display = mode === 'final' ? '' : 'none';
-      document.getElementById('legend-all').style.display = mode === 'all' ? '' : 'none';
     });
   });
 

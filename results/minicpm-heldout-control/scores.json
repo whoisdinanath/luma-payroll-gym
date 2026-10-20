@@ -3968,7 +3968,7 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "wrong_decision",
       "breakdown": {
         "decision": {
           "score": 0.0,
@@ -4000,7 +4000,7 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
+        "valid_format": true,
         "correct_decision": false
       },
       "fields": {}
@@ -8313,7 +8313,7 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "wrong_decision",
       "breakdown": {
         "decision": {
           "score": 0.0,
@@ -8361,7 +8361,7 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
+        "valid_format": true,
         "correct_decision": false
       },
       "fields": {}
@@ -10356,7 +10356,7 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "wrong_decision",
       "breakdown": {
         "decision": {
           "score": 0.0,
@@ -10388,7 +10388,7 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
+        "valid_format": true,
         "correct_decision": false
       },
       "fields": {}
@@ -17860,10 +17860,10 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -17896,7 +17896,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -17908,10 +17908,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": false,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": false,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": false,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": false,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "truncated": false,
     "seconds": 2.1139680140004202

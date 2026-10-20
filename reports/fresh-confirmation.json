@@ -1,0 +1,176 @@
+{
+  "status": "complete",
+  "seed": 51021,
+  "tasks": 96,
+  "payslips": 48,
+  "traps": 48,
+  "rollouts": 4,
+  "temperature": 0.7,
+  "sampling_seed": 17,
+  "task_file": "data/v4/confirmation.json",
+  "task_file_sha256": "ec3958748532352411fa004bf1cb453e0de187c1f4f1c844935cbd2723cfd9e9",
+  "conditions": [
+    "sft",
+    "rl-0.04",
+    "rl-0.04-signal"
+  ],
+  "overlap_checked_files": [
+    "data/case-pilot.json",
+    "data/cases.json",
+    "data/seed_tasks.json",
+    "data/training-splits/development.json",
+    "data/training-splits/held_out.json",
+    "data/training-splits/train.json",
+    "data/transfer-fixed-line.json",
+    "data/transfer-human.json",
+    "data/v4/demos.json",
+    "data/v4/development.json",
+    "data/v4/eval.json",
+    "data/v4/sft.json",
+    "data/v4/test.json",
+    "data/v4/train.json"
+  ],
+  "audit": {
+    "tasks": 96,
+    "semantic_unique": 96,
+    "semantic_duplicate_instances": 0,
+    "retrieval_instances": 0,
+    "retrieval_skills": 0,
+    "prompt_leak_candidates": [],
+    "calculation_and_trap_share_prompt": true
+  },
+  "budget_usd": 5,
+  "compute_reservation_usd": 4,
+  "judge_reservation_usd": 1,
+  "selection": "Fixed after original test inspection; no tuning on this fresh set.",
+  "demos_sha256": "ac9759c5a659b97859c52b112b1c265553c8d064404c1332948d712e3784b320",
+  "rules_sha256": "5a87c8929e3b51c929e8e4b48138835d0ce96fb57477b891d31be7784b0a5cee",
+  "summaries": {
+    "sft": {
+      "answers": 384,
+      "exact_payslips": 0.5520833333333334,
+      "exact_payslips_count": 106,
+      "payslip_answers": 192,
+      "correct_trap_decisions": 1,
+      "correct_trap_decisions_count": 192,
+      "trap_answers": 192,
+      "malformed": 0,
+      "exact_payslips_interval_95": [
+        0.4479166666666667,
+        0.6510416666666666
+      ],
+      "correct_trap_decisions_interval_95": [
+        1,
+        1
+      ],
+      "programmatic_reward_mean": 0.6665364583333333,
+      "programmatic_reward_sd": 0.6216555288731426,
+      "rubric_version": "8",
+      "reward_note": "Programmatic score only; explanation judge not included. Not the full rubric reward.",
+      "seconds": 705.0653545569998,
+      "modal": {
+        "seconds": 726.939355269,
+        "gpu": "L4",
+        "exit_code": 0,
+        "timed_out": false,
+        "timeout_seconds": 3000,
+        "automatic_retries": 0,
+        "compute_reservation_usd": 1.3333333333333333,
+        "cost_note": "Reservation, not an invoice-confirmed charge; CPU capped at 2 cores and memory at 8 GiB."
+      }
+    },
+    "rl-0.04": {
+      "answers": 384,
+      "exact_payslips": 0.703125,
+      "exact_payslips_count": 135,
+      "payslip_answers": 192,
+      "correct_trap_decisions": 1,
+      "correct_trap_decisions_count": 192,
+      "trap_answers": 192,
+      "malformed": 0,
+      "exact_payslips_interval_95": [
+        0.5885416666666666,
+        0.8020833333333334
+      ],
+      "correct_trap_decisions_interval_95": [
+        1,
+        1
+      ],
+      "programmatic_reward_mean": 0.7799479166666666,
+      "programmatic_reward_sd": 0.5275085510507671,
+      "rubric_version": "8",
+      "reward_note": "Programmatic score only; explanation judge not included. Not the full rubric reward.",
+      "seconds": 1527.058792865,
+      "modal": {
+        "seconds": 1552.7965873179999,
+        "gpu": "L4",
+        "exit_code": 0,
+        "timed_out": false,
+        "timeout_seconds": 3000,
+        "automatic_retries": 0,
+        "compute_reservation_usd": 1.3333333333333333,
+        "cost_note": "Reservation, not an invoice-confirmed charge; CPU capped at 2 cores and memory at 8 GiB."
+      }
+    },
+    "rl-0.04-signal": {
+      "answers": 384,
+      "exact_payslips": 0.953125,
+      "exact_payslips_count": 183,
+      "payslip_answers": 192,
+      "correct_trap_decisions": 0.9895833333333334,
+      "correct_trap_decisions_count": 190,
+      "trap_answers": 192,
+      "malformed": 0,
+      "exact_payslips_interval_95": [
+        0.9010416666666666,
+        0.9947916666666666
+      ],
+      "correct_trap_decisions_interval_95": [
+        0.9739583333333334,
+        1
+      ],
+      "programmatic_reward_mean": 0.9578125,
+      "programmatic_reward_sd": 0.2461004618785073,
+      "rubric_version": "8",
+      "reward_note": "Programmatic score only; explanation judge not included. Not the full rubric reward.",
+      "seconds": 1508.4470502199995,
+      "modal": {
+        "seconds": 1534.814394117,
+        "gpu": "L4",
+        "exit_code": 0,
+        "timed_out": false,
+        "timeout_seconds": 3000,
+        "automatic_retries": 0,
+        "compute_reservation_usd": 1.3333333333333333,
+        "cost_note": "Reservation, not an invoice-confirmed charge; CPU capped at 2 cores and memory at 8 GiB."
+      }
+    }
+  },
+  "paired_exact_payslips": {
+    "original_rl_minus_sft": {
+      "tasks": 48,
+      "difference": 0.15104166666666666,
+      "interval_95": [
+        0.041666666666666664,
+        0.24479166666666666
+      ]
+    },
+    "focused_rl_minus_original_rl": {
+      "tasks": 48,
+      "difference": 0.25,
+      "interval_95": [
+        0.15625,
+        0.3541666666666667
+      ]
+    }
+  },
+  "judge_cost_usd": 0,
+  "uncertainty": "95% task-level bootstrap intervals, 1000 resamples, seed 7; no training-seed replication.",
+  "scorer_sha256": "9ddc242344d691d313d33a8241b24f0990c5dc7f1ca4e8e3af766e7c660e0bc2",
+  "modal_runtime_seconds": 3814.5503367039996,
+  "modal_runtime_cost_upper_estimate_usd": 1.0145178075497958,
+  "modal_pricing_source": "https://modal.com/pricing",
+  "modal_pricing_checked": "2026-10-20",
+  "modal_estimate_note": "L4 runtime plus maximum 2 CPU cores and 8 GiB; excludes build, startup, storage and transfer. Not an invoice.",
+  "cost_note": "Deterministic correctness evaluation. Modal invoice cost not yet available; reservations are not charges."
+}

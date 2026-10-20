@@ -4,7 +4,7 @@ Rubric version: `8`
 
 ## Answer format
 
-Submit one JSON object using the fields specified by R6, R7, or R8. No Markdown fences or surrounding prose. All required fields must be present. Extra fields are rejected, except an optional string `explanation`. All monetary calculation fields must be non-negative decimal strings with exactly two decimal places. Retrieval values follow R8. Clauses must be a list of distinct identifiers from R1 through R9.
+Submit one JSON object using the fields specified by R6, R7, or R8. A single surrounding triple-backtick code fence, either unlabelled or labelled `json` (case-insensitive), is accepted as presentation formatting. Its opening and closing fences must be on separate lines; surrounding whitespace is accepted. Surrounding prose, multiple objects, multiple code blocks, and other code-block language labels are rejected. All required fields must be present. Extra fields are rejected, except an optional string `explanation`. All monetary calculation fields must be non-negative decimal strings with exactly two decimal places. Retrieval values follow R8. Clauses must be a list of distinct identifiers from R1 through R9.
 
 The parser rejects duplicate keys and non-standard JSON constants, and answers longer than 16,000 characters. Parser failures score -0.5, like every other rejected answer, and report a generic format failure without expected values.
 

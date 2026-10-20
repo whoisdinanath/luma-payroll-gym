@@ -13,9 +13,9 @@
       {
         "model": "mimo",
         "answers": 45,
-        "mean": 0.9,
-        "sd": 0.37839373433213475,
-        "generated_mean": 0.9906893024691358
+        "mean": 0.9333333333333333,
+        "sd": 0.3126136157099891,
+        "generated_mean": 0.9953189320987654
       },
       {
         "model": "gemini",
@@ -27,9 +27,9 @@
       {
         "model": "glm",
         "answers": 45,
-        "mean": 0.7134074222222222,
-        "sd": 0.5668840949776357,
-        "generated_mean": 0.842181074074074
+        "mean": 0.8134074222222222,
+        "sd": 0.465126243715788,
+        "generated_mean": 0.9486625555555556
       },
       {
         "model": "luna-default",
@@ -48,16 +48,16 @@
       {
         "model": "llama-3b",
         "answers": 45,
-        "mean": -0.5,
-        "sd": 0.0,
-        "generated_mean": -0.4573456790123457
+        "mean": -0.49777777777777776,
+        "sd": 0.014907119849998594,
+        "generated_mean": -0.35555555555555557
       },
       {
         "model": "gemma-4b",
         "answers": 45,
         "mean": -0.5,
         "sd": 0.0,
-        "generated_mean": -0.5
+        "generated_mean": -0.3873456790123457
       },
       {
         "model": "qwen-7b",
@@ -311,7 +311,7 @@
           "llama-3b",
           "qwen-7b"
         ],
-        "result": "concordant"
+        "result": "tie"
       },
       {
         "models": [

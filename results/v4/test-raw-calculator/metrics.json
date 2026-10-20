@@ -12,9 +12,10 @@
   "local_inference_api_cost_usd": 0,
   "total_generation_seconds": 1116.2612309440028,
   "statuses": {
-    "invalid_format": 144,
     "wrong_decision": 299,
-    "wrong_clarification": 196,
-    "scored": 129
-  }
+    "scored": 130,
+    "invalid_format": 143,
+    "wrong_clarification": 196
+  },
+  "rubric_version": "8"
 }

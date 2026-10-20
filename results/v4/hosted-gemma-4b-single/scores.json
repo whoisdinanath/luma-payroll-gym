@@ -2728,7 +2728,7 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "wrong_decision",
       "breakdown": {
         "decision": {
           "score": 0.0,
@@ -2760,7 +2760,7 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
+        "valid_format": true,
         "correct_decision": false
       },
       "fields": {}
@@ -6145,44 +6145,64 @@
       "task_id": "case4-4041-00028",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -6206,44 +6226,64 @@
       "task_id": "case4-4041-00028",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -7935,44 +7975,64 @@
       "task_id": "case4-4041-00037",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -8763,44 +8823,64 @@
       "task_id": "case4-4041-00041",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -8824,44 +8904,64 @@
       "task_id": "case4-4041-00041",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -9177,44 +9277,64 @@
       "task_id": "case4-4041-00043",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -9238,44 +9358,64 @@
       "task_id": "case4-4041-00043",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -10031,44 +10171,64 @@
       "task_id": "case4-4041-00048",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -13440,44 +13600,64 @@
       "task_id": "case4-4041-00064",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -14756,44 +14936,64 @@
       "task_id": "case4-4041-00071",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -14878,44 +15078,64 @@
       "task_id": "case4-4041-00071",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -14939,44 +15159,64 @@
       "task_id": "case4-4041-00072",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -15000,44 +15240,64 @@
       "task_id": "case4-4041-00072",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -15061,44 +15321,64 @@
       "task_id": "case4-4041-00072",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -16657,10 +16937,10 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R4"
@@ -16689,10 +16969,25 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "field": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R4"
+          ]
+        },
+        "value": {
+          "correct": false,
+          "clauses": [
+            "R1",
+            "R4"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -17387,44 +17682,64 @@
       "task_id": "case4-4041-00084",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -17448,44 +17763,64 @@
       "task_id": "case4-4041-00084",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -17509,44 +17844,64 @@
       "task_id": "case4-4041-00084",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -17814,44 +18169,64 @@
       "task_id": "case4-4041-00086",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -17875,44 +18250,64 @@
       "task_id": "case4-4041-00086",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -19374,44 +19769,64 @@
       "task_id": "case4-4041-00094",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -19435,44 +19850,64 @@
       "task_id": "case4-4041-00094",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -19788,26 +20223,26 @@
       "task_id": "case4-4041-00096",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.95,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R4"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R4"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R4"
@@ -19822,10 +20257,25 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "field": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R4"
+          ]
+        },
+        "value": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R4"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -19849,26 +20299,26 @@
       "task_id": "case4-4041-00096",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.95,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R4"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R4"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R4"
@@ -19883,10 +20333,25 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "field": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R4"
+          ]
+        },
+        "value": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R4"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -21809,44 +22274,64 @@
       "task_id": "case4-4041-00106",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -21870,44 +22355,64 @@
       "task_id": "case4-4041-00106",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -21931,44 +22436,64 @@
       "task_id": "case4-4041-00106",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
+      "score": 0.9,
       "passed": false,
-      "status": "invalid_format",
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "criteria": {
+            "identifies_blocker": false,
+            "requests_resolution": false,
+            "avoids_unsupported_answer": false
+          },
+          "source": "empty-explanation"
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {

@@ -1,0 +1,435 @@
+{
+  "gpu_hours": 71.29961359643698,
+  "hours_by_category": {
+    "rl": 43.07980555555556,
+    "sft": 0.5199444444444445,
+    "evaluation": 27.699863596436995
+  },
+  "sources": [
+    {
+      "path": "results/minicpm-development-before/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 668.0292693557276
+    },
+    {
+      "path": "results/minicpm-development-beta-0.001/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1447.3283502653649
+    },
+    {
+      "path": "results/minicpm-development-beta-0.04/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1428.7840357428358
+    },
+    {
+      "path": "results/minicpm-development-control/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1539.1046012800034
+    },
+    {
+      "path": "results/minicpm-development-rubric-7-beta-0.001/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1346.8575877479452
+    },
+    {
+      "path": "results/minicpm-development-rubric-7-beta-0.04/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1363.582284166041
+    },
+    {
+      "path": "results/minicpm-heldout-before/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 730.3308230839611
+    },
+    {
+      "path": "results/minicpm-heldout-beta-0.001/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1434.2213903908269
+    },
+    {
+      "path": "results/minicpm-heldout-beta-0.04/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1513.3332976001257
+    },
+    {
+      "path": "results/minicpm-heldout-control/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1241.1758187629985
+    },
+    {
+      "path": "results/minicpm-heldout-rubric-6-beta-0.04/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 952.453703632942
+    },
+    {
+      "path": "results/minicpm-heldout-rubric-7-beta-0.001/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1311.8770138010586
+    },
+    {
+      "path": "results/minicpm-heldout-rubric-7-beta-0.04/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1346.4125801771152
+    },
+    {
+      "path": "results/rl-beta-0.001/steps.jsonl",
+      "category": "rl",
+      "seconds": 5537.1
+    },
+    {
+      "path": "results/rl-beta-0.04/steps.jsonl",
+      "category": "rl",
+      "seconds": 5738.0
+    },
+    {
+      "path": "results/rl-rubric-3-beta-0.04/steps.jsonl",
+      "category": "rl",
+      "seconds": 816.2
+    },
+    {
+      "path": "results/rl-rubric-4-beta-0.04/steps.jsonl",
+      "category": "rl",
+      "seconds": 810.3000000000002
+    },
+    {
+      "path": "results/rl-rubric-6-beta-0.04/steps.jsonl",
+      "category": "rl",
+      "seconds": 3766.9
+    },
+    {
+      "path": "results/rl-rubric-7-beta-0.001/steps.jsonl",
+      "category": "rl",
+      "seconds": 17747.100000000002
+    },
+    {
+      "path": "results/rl-rubric-7-beta-0.04/steps.jsonl",
+      "category": "rl",
+      "seconds": 18353.699999999997
+    },
+    {
+      "path": "results/rl-rubric-7-sample-weighted-beta-0.04/steps.jsonl",
+      "category": "rl",
+      "seconds": 3524.9999999999995
+    },
+    {
+      "path": "results/v4/confirmation-rl-0.04-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1527.0587928650007
+    },
+    {
+      "path": "results/v4/confirmation-rl-0.04-signal-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1508.4470502199997
+    },
+    {
+      "path": "results/v4/confirmation-sft-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 705.0653545570001
+    },
+    {
+      "path": "results/v4/dev-raw-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 565.1340307079954
+    },
+    {
+      "path": "results/v4/dev-raw-single/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 451.0479197179375
+    },
+    {
+      "path": "results/v4/dev-rl-0.001-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1065.4616097040052
+    },
+    {
+      "path": "results/v4/dev-rl-0.001-seed8-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1074.951804618002
+    },
+    {
+      "path": "results/v4/dev-rl-0.001-seed9-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1133.1709266789403
+    },
+    {
+      "path": "results/v4/dev-rl-0.04-balanced-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1147.0330631650022
+    },
+    {
+      "path": "results/v4/dev-rl-0.04-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1074.9715270921006
+    },
+    {
+      "path": "results/v4/dev-rl-0.04-signal-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1112.3436944290152
+    },
+    {
+      "path": "results/v4/dev-rl-0.04-step20-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1133.896584106973
+    },
+    {
+      "path": "results/v4/dev-rl-0.04-step40-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1107.6203269619946
+    },
+    {
+      "path": "results/v4/dev-rl-10-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 998.6231968639877
+    },
+    {
+      "path": "results/v4/dev-rl-10-step20-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1036.650995061049
+    },
+    {
+      "path": "results/v4/dev-rl-10-step40-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 973.5717547990134
+    },
+    {
+      "path": "results/v4/dev-rl-100-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1061.7137854619941
+    },
+    {
+      "path": "results/v4/dev-sft-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 685.6317943281174
+    },
+    {
+      "path": "results/v4/eval-raw-tools/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2467.9755177869997
+    },
+    {
+      "path": "results/v4/eval-rl-0.04-signal-tools-examples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2753.253658184002
+    },
+    {
+      "path": "results/v4/eval-rl-0.04-signal-tools/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 4554.781425863005
+    },
+    {
+      "path": "results/v4/eval-rl-0.04-tools-examples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2570.1359416520017
+    },
+    {
+      "path": "results/v4/eval-rl-0.04-tools/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 3346.453010949989
+    },
+    {
+      "path": "results/v4/eval-sft-tools-examples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1152.0707513100006
+    },
+    {
+      "path": "results/v4/eval-sft-tools/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2645.174686024031
+    },
+    {
+      "path": "results/v4/rl-0.001-seed8/steps.jsonl",
+      "category": "rl",
+      "seconds": 12309.9
+    },
+    {
+      "path": "results/v4/rl-0.001-seed9/steps.jsonl",
+      "category": "rl",
+      "seconds": 11665.1
+    },
+    {
+      "path": "results/v4/rl-0.001/steps.jsonl",
+      "category": "rl",
+      "seconds": 11263.100000000002
+    },
+    {
+      "path": "results/v4/rl-0.04-balanced/steps.jsonl",
+      "category": "rl",
+      "seconds": 12727.900000000001
+    },
+    {
+      "path": "results/v4/rl-0.04-signal/steps.jsonl",
+      "category": "rl",
+      "seconds": 14288.800000000003
+    },
+    {
+      "path": "results/v4/rl-0.04/steps.jsonl",
+      "category": "rl",
+      "seconds": 11465.600000000002
+    },
+    {
+      "path": "results/v4/rl-10/steps.jsonl",
+      "category": "rl",
+      "seconds": 12268.2
+    },
+    {
+      "path": "results/v4/rl-100/steps.jsonl",
+      "category": "rl",
+      "seconds": 12804.399999999996
+    },
+    {
+      "path": "results/v4/sft/steps.jsonl",
+      "category": "sft",
+      "seconds": 1871.8000000000004
+    },
+    {
+      "path": "results/v4/test-raw-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1116.2612309440028
+    },
+    {
+      "path": "results/v4/test-raw-single/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 885.1831953999954
+    },
+    {
+      "path": "results/v4/test-rl-0.001-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2185.1187905320003
+    },
+    {
+      "path": "results/v4/test-rl-0.001-seed8-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2313.5866258329625
+    },
+    {
+      "path": "results/v4/test-rl-0.001-seed9-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2224.2386060580466
+    },
+    {
+      "path": "results/v4/test-rl-0.04-balanced-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2307.3184940819992
+    },
+    {
+      "path": "results/v4/test-rl-0.04-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 7636.27285252201
+    },
+    {
+      "path": "results/v4/test-rl-0.04-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2826.601743526975
+    },
+    {
+      "path": "results/v4/test-rl-0.04-signal-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 8642.42852162199
+    },
+    {
+      "path": "results/v4/test-rl-0.04-signal-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2220.4882367520186
+    },
+    {
+      "path": "results/v4/test-rl-10-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2046.4107039590235
+    },
+    {
+      "path": "results/v4/test-rl-100-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 2053.8988108110498
+    },
+    {
+      "path": "results/v4/test-sft-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 3006.6413386410077
+    },
+    {
+      "path": "results/v4/test-sft-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 1430.235790501998
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-raw-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 74.99667963500004
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-rl-0.001-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 214.465293573
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-rl-0.04-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 790.1955603330005
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-rl-0.04-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 227.89279592100002
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-rl-0.04-signal-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 611.897334061
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-rl-0.04-signal-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 231.707165663
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-sft-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 250.5626541489999
+    },
+    {
+      "path": "results/v4/transfer-fixed-line-sft-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 99.31099963999998
+    },
+    {
+      "path": "results/v4/transfer-local-raw-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 86.49803967101616
+    },
+    {
+      "path": "results/v4/transfer-local-rl-0.001-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 109.5621859599778
+    },
+    {
+      "path": "results/v4/transfer-local-rl-0.04-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 603.4380396290002
+    },
+    {
+      "path": "results/v4/transfer-local-rl-0.04-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 147.75242245398113
+    },
+    {
+      "path": "results/v4/transfer-local-rl-0.04-signal-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 621.6694907989993
+    },
+    {
+      "path": "results/v4/transfer-local-rl-0.04-signal-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 252.1411751029999
+    },
+    {
+      "path": "results/v4/transfer-local-sft-calculator-noexamples/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 257.45997691599996
+    },
+    {
+      "path": "results/v4/transfer-local-sft-calculator/generations.jsonl",
+      "category": "evaluation",
+      "seconds": 69.54423336601758
+    }
+  ]
+}

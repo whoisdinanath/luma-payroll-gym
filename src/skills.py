@@ -2,6 +2,8 @@ import json
 import random
 import statistics
 
+from luma_gym.scoring import unwrap_answer
+
 
 SKILLS = ["exact_calculation", "zero_pay_calculation", "correct_clarification", "false_calculation",
           "false_clarification", "invalid"]
@@ -9,7 +11,7 @@ SKILLS = ["exact_calculation", "zero_pay_calculation", "correct_clarification", 
 
 def chosen_decision(text):
     try:
-        value = json.loads(text)
+        value = json.loads(unwrap_answer(text))
     except (TypeError, ValueError):
         return None
     return value.get("decision") if isinstance(value, dict) else None
@@ -23,7 +25,7 @@ def used_other_row(task, text):
                                                                     "second-half": tables["first-half"]}))
     contribution = swapped["employee_contribution"]
     try:
-        answer = json.loads(text)
+        answer = json.loads(unwrap_answer(text))
     except (TypeError, ValueError):
         return False
     return (isinstance(answer, dict) and answer.get("decision") == "calculate"

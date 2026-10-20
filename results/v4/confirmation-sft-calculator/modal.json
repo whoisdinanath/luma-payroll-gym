@@ -1,0 +1,10 @@
+{
+  "seconds": 726.939355269,
+  "gpu": "L4",
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 3000,
+  "automatic_retries": 0,
+  "compute_reservation_usd": 1.3333333333333333,
+  "cost_note": "Reservation, not an invoice-confirmed charge; CPU capped at 2 cores and memory at 8 GiB."
+}

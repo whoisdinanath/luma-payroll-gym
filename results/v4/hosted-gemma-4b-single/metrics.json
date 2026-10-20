@@ -4,22 +4,23 @@
   "infrastructure_failures": 0,
   "recorded_cost_usd": 0.03289301,
   "unknown_cost_rollouts": 0,
-  "mean_reward": -0.5,
-  "sd_reward": 0.0,
-  "pass_rate": 0.0,
+  "mean_reward": -0.3873456790123457,
+  "sd_reward": 0.3819986436198449,
+  "pass_rate": 0,
   "tiers": {
     "1": {
-      "mean": -0.5,
-      "sd": 0.0
+      "mean": -0.41944444444444445,
+      "sd": 0.33685049201129863
     },
     "2": {
       "mean": -0.5,
       "sd": 0.0
     },
     "3": {
-      "mean": -0.5,
-      "sd": 0.0
+      "mean": -0.26666666666666666,
+      "sd": 0.523570314404736
     }
   },
-  "mean_latency_seconds": 3.446057196845731
+  "mean_latency_seconds": 3.446057196845731,
+  "rubric_version": "8"
 }

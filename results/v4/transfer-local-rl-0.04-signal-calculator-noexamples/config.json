@@ -1,0 +1,69 @@
+{
+  "protocol": "4",
+  "mode": "calculator",
+  "model": "openbmb/MiniCPM5-1B",
+  "revision": "87179e5c1f455ef22e6223592d2d61351b525bfc",
+  "quantization": "NF4 double quantization, bf16 compute",
+  "thinking": false,
+  "temperature": 0.7,
+  "top_p": 1.0,
+  "seed": 71,
+  "rollouts": 4,
+  "max_new_tokens_per_turn": 384,
+  "max_turns": 4,
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "calculate",
+        "description": "Exact decimal calculator. Send a program with one assignment per line, for example contribution = round(min(4210.55, 4500.00) * 0.06, 2). Use decimal numbers, names assigned on earlier lines, + - * /, parentheses, min(...), max(...), and round(x, 2), which rounds half up to the cent as R2 requires. Returns the value of every assigned name.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "program": {
+              "type": "string",
+              "description": "One assignment per line"
+            }
+          },
+          "required": [
+            "program"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "task_ids": [
+    "transfer-human-01",
+    "transfer-human-02",
+    "transfer-human-03",
+    "transfer-human-04",
+    "transfer-human-05",
+    "transfer-human-06",
+    "transfer-human-07",
+    "transfer-human-08",
+    "transfer-human-09",
+    "transfer-human-10",
+    "transfer-human-11",
+    "transfer-human-12",
+    "transfer-human-13",
+    "transfer-human-14",
+    "transfer-human-15"
+  ],
+  "taskset_sha256": "38fa3139fde74ada721260fadf524a097a2ab67caa43f4299f6ff5bab0e288b6",
+  "rules_sha256": "5a87c8929e3b51c929e8e4b48138835d0ce96fb57477b891d31be7784b0a5cee",
+  "torch": "2.14.0+cu130",
+  "transformers": "5.19.0",
+  "python_executable": "/usr/local/bin/python",
+  "gpu": "NVIDIA L4",
+  "adapter": "results/v4/rl-0.04-signal/checkpoints/step-40",
+  "adapter_sha256": "869c35a2c83fc906c833222524be9c5823e23f70b742d31604ff87d85a39cc15",
+  "base": {
+    "base": "openbmb/MiniCPM5-1B",
+    "revision": "87179e5c1f455ef22e6223592d2d61351b525bfc",
+    "adapter": "results/v4/sft/adapter",
+    "adapter_sha256": "7bba8761c371c5b9ce6e734fc104fec854addfc57f7b90e80a0830327d298249",
+    "merge": "bf16 base plus LoRA, merge_and_unload"
+  },
+  "prompt": "no demonstrations"
+}

@@ -13,8 +13,9 @@
   "total_generation_seconds": 565.1340307079954,
   "statuses": {
     "scored": 49,
-    "wrong_clarification": 98,
-    "invalid_format": 71,
-    "wrong_decision": 166
-  }
+    "wrong_decision": 166,
+    "wrong_clarification": 99,
+    "invalid_format": 70
+  },
+  "rubric_version": "8"
 }

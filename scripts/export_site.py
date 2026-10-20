@@ -25,8 +25,8 @@ if OUTPUT.exists():
     shutil.rmtree(OUTPUT)
 client = TestClient(app)
 save(client, "/", "index.html")
-save(client, "/report", "report.html")
 save(client, "/rules", "rules.html")
+save(client, "/sandbox-guide", "sandbox-guide.html")
 runs = load_training()[0]
 for run in runs:
     save(client, f"/run/{run['id']}", f"run/{run['id']}.html")

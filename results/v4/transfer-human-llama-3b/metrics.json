@@ -5,18 +5,19 @@
   "recorded_cost_usd": 0.0061028465,
   "unknown_cost_rollouts": 0,
   "retried_rollouts": 0,
-  "mean_reward": -0.5,
-  "sd_reward": 0.0,
-  "pass_rate": 0.0,
+  "mean_reward": -0.49777777777777776,
+  "sd_reward": 0.014907119849998594,
+  "pass_rate": 0,
   "tiers": {
     "2": {
-      "mean": -0.5,
-      "sd": 0.0
+      "mean": -0.49444444444444446,
+      "sd": 0.02357022603955158
     },
     "3": {
       "mean": -0.5,
       "sd": 0.0
     }
   },
-  "mean_latency_seconds": 0.9993846674449742
+  "mean_latency_seconds": 0.9993846674449742,
+  "rubric_version": "8"
 }

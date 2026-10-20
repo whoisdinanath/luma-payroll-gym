@@ -5855,7 +5855,7 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "wrong_decision",
       "breakdown": {
         "decision": {
           "score": 0.0,
@@ -5903,7 +5903,7 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
+        "valid_format": true,
         "correct_decision": false
       },
       "fields": {}

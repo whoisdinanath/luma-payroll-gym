@@ -1,0 +1,3342 @@
+[
+  {
+    "id": "transfer-fixed-line-01:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 11.429395833999997
+  },
+  {
+    "id": "transfer-fixed-line-01:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 11.429395833999997
+  },
+  {
+    "id": "transfer-fixed-line-01:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 11.429395833999997
+  },
+  {
+    "id": "transfer-fixed-line-01:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-01",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 11.429395833999997
+  },
+  {
+    "id": "transfer-fixed-line-02:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.253227194250002
+  },
+  {
+    "id": "transfer-fixed-line-02:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.253227194250002
+  },
+  {
+    "id": "transfer-fixed-line-02:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.253227194250002
+  },
+  {
+    "id": "transfer-fixed-line-02:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-02",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.253227194250002
+  },
+  {
+    "id": "transfer-fixed-line-03:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.170709958499998
+  },
+  {
+    "id": "transfer-fixed-line-03:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.170709958499998
+  },
+  {
+    "id": "transfer-fixed-line-03:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.170709958499998
+  },
+  {
+    "id": "transfer-fixed-line-03:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-03",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_decision",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.170709958499998
+  },
+  {
+    "id": "transfer-fixed-line-04:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.480122953999995
+  },
+  {
+    "id": "transfer-fixed-line-04:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.480122953999995
+  },
+  {
+    "id": "transfer-fixed-line-04:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.480122953999995
+  },
+  {
+    "id": "transfer-fixed-line-04:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-04",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.480122953999995
+  },
+  {
+    "id": "transfer-fixed-line-05:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 13.25818216975
+  },
+  {
+    "id": "transfer-fixed-line-05:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 13.25818216975
+  },
+  {
+    "id": "transfer-fixed-line-05:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 13.25818216975
+  },
+  {
+    "id": "transfer-fixed-line-05:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-05",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 13.25818216975
+  },
+  {
+    "id": "transfer-fixed-line-06:0",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "wrong_decision",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": true,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.461591709499999
+  },
+  {
+    "id": "transfer-fixed-line-06:1",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.461591709499999
+  },
+  {
+    "id": "transfer-fixed-line-06:2",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.461591709499999
+  },
+  {
+    "id": "transfer-fixed-line-06:3",
+    "tier": 2,
+    "score": {
+      "task_id": "transfer-fixed-line-06",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5",
+            "R6"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 5.461591709499999
+  },
+  {
+    "id": "transfer-fixed-line-07:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 12.647167117500004
+  },
+  {
+    "id": "transfer-fixed-line-07:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.647167117500004
+  },
+  {
+    "id": "transfer-fixed-line-07:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.647167117500004
+  },
+  {
+    "id": "transfer-fixed-line-07:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-07",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 12.647167117500004
+  },
+  {
+    "id": "transfer-fixed-line-08:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 4.374172069000011
+  },
+  {
+    "id": "transfer-fixed-line-08:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 4.374172069000011
+  },
+  {
+    "id": "transfer-fixed-line-08:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 4.374172069000011
+  },
+  {
+    "id": "transfer-fixed-line-08:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-08",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 4.374172069000011
+  },
+  {
+    "id": "transfer-fixed-line-09:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 12.744438329250002
+  },
+  {
+    "id": "transfer-fixed-line-09:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.744438329250002
+  },
+  {
+    "id": "transfer-fixed-line-09:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.744438329250002
+  },
+  {
+    "id": "transfer-fixed-line-09:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-09",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 12.744438329250002
+  },
+  {
+    "id": "transfer-fixed-line-10:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.496592638250007
+  },
+  {
+    "id": "transfer-fixed-line-10:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.496592638250007
+  },
+  {
+    "id": "transfer-fixed-line-10:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 14.496592638250007
+  },
+  {
+    "id": "transfer-fixed-line-10:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-10",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.496592638250007
+  },
+  {
+    "id": "transfer-fixed-line-11:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 21.124656387
+  },
+  {
+    "id": "transfer-fixed-line-11:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 21.124656387
+  },
+  {
+    "id": "transfer-fixed-line-11:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 21.124656387
+  },
+  {
+    "id": "transfer-fixed-line-11:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-11",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 21.124656387
+  },
+  {
+    "id": "transfer-fixed-line-12:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.317100825250009
+  },
+  {
+    "id": "transfer-fixed-line-12:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.317100825250009
+  },
+  {
+    "id": "transfer-fixed-line-12:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 14.317100825250009
+  },
+  {
+    "id": "transfer-fixed-line-12:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-12",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 14.317100825250009
+  },
+  {
+    "id": "transfer-fixed-line-13:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": true,
+    "seconds": 10.469240446499981
+  },
+  {
+    "id": "transfer-fixed-line-13:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.469240446499981
+  },
+  {
+    "id": "transfer-fixed-line-13:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.469240446499981
+  },
+  {
+    "id": "transfer-fixed-line-13:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-13",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 10.469240446499981
+  },
+  {
+    "id": "transfer-fixed-line-14:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.35487766624999
+  },
+  {
+    "id": "transfer-fixed-line-14:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.35487766624999
+  },
+  {
+    "id": "transfer-fixed-line-14:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.35487766624999
+  },
+  {
+    "id": "transfer-fixed-line-14:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-14",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 6.35487766624999
+  },
+  {
+    "id": "transfer-fixed-line-15:0",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 3.392858216250005
+  },
+  {
+    "id": "transfer-fixed-line-15:1",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 3.392858216250005
+  },
+  {
+    "id": "transfer-fixed-line-15:2",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 3.392858216250005
+  },
+  {
+    "id": "transfer-fixed-line-15:3",
+    "tier": 3,
+    "score": {
+      "task_id": "transfer-fixed-line-15",
+      "ruleset_version": "3",
+      "rubric_version": "8",
+      "score": -0.5,
+      "passed": false,
+      "status": "invalid_format",
+      "breakdown": {
+        "decision": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "exact": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "field_accuracy": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        },
+        "citations": {
+          "score": 0.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ]
+        }
+      },
+      "diagnostics": {
+        "valid_format": false,
+        "correct_decision": false
+      },
+      "fields": {}
+    },
+    "truncated": false,
+    "seconds": 3.392858216250005
+  }
+]

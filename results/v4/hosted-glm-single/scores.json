@@ -764,12 +764,12 @@
       "task_id": "case4-4041-00002",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -780,7 +780,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -791,7 +791,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -802,7 +802,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -814,10 +814,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -4181,51 +4229,74 @@
     "task_id": "case4-4041-00013",
     "tier": 3,
     "rollout": 0,
-    "cost_usd": 0.0004196479999999999,
+    "cost_usd": 0.0004639579999999999,
     "known_cost": true,
     "latency_seconds": 3.064754406994325,
     "score": {
       "task_id": "case4-4041-00013",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -4542,12 +4613,12 @@
       "task_id": "case4-4041-00014",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -4558,7 +4629,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -4569,7 +4640,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -4580,7 +4651,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -4592,10 +4663,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -5744,12 +5863,12 @@
       "task_id": "case4-4041-00017",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5760,7 +5879,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5771,7 +5890,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5782,7 +5901,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5794,10 +5913,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -5946,12 +6113,12 @@
       "task_id": "case4-4041-00018",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5962,7 +6129,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5973,7 +6140,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5984,7 +6151,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -5996,10 +6163,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -6660,12 +6875,12 @@
       "task_id": "case4-4041-00020",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -6676,7 +6891,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -6687,7 +6902,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -6698,7 +6913,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -6710,10 +6925,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -7612,12 +7875,12 @@
       "task_id": "case4-4041-00023",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -7629,7 +7892,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -7641,7 +7904,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -7653,7 +7916,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -7666,10 +7929,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -12500,12 +12811,12 @@
       "task_id": "case4-4041-00039",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -12516,7 +12827,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -12527,7 +12838,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -12538,7 +12849,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -12550,10 +12861,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -13449,51 +13808,74 @@
     "task_id": "case4-4041-00043",
     "tier": 3,
     "rollout": 0,
-    "cost_usd": 0.0005633000000000001,
+    "cost_usd": 0.0007299437500000001,
     "known_cost": true,
     "latency_seconds": 23.461658920001355,
     "score": {
       "task_id": "case4-4041-00043",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "avoids_unsupported_answer": true,
+            "identifies_blocker": true,
+            "requests_resolution": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -13846,51 +14228,74 @@
     "task_id": "case4-4041-00044",
     "tier": 3,
     "rollout": 2,
-    "cost_usd": 0.0003277999999999996,
+    "cost_usd": 0.0004053559999999996,
     "known_cost": true,
     "latency_seconds": 2.5419599460001336,
     "score": {
       "task_id": "case4-4041-00044",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "requests_resolution": true,
+            "identifies_blocker": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -18029,51 +18434,74 @@
     "task_id": "case4-4041-00058",
     "tier": 3,
     "rollout": 1,
-    "cost_usd": 0.0002451160000000001,
+    "cost_usd": 0.0003526200000000001,
     "known_cost": true,
     "latency_seconds": 2.525597667990951,
     "score": {
       "task_id": "case4-4041-00058",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -18402,51 +18830,74 @@
     "task_id": "case4-4041-00060",
     "tier": 3,
     "rollout": 0,
-    "cost_usd": 0.0008004375000000008,
+    "cost_usd": 0.0008541115000000008,
     "known_cost": true,
     "latency_seconds": 2.2587679340067552,
     "score": {
       "task_id": "case4-4041-00060",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -18767,12 +19218,12 @@
       "task_id": "case4-4041-00061",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -18784,7 +19235,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -18796,7 +19247,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -18808,7 +19259,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -18821,10 +19272,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -21215,12 +21714,12 @@
       "task_id": "case4-4041-00070",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21231,7 +21730,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21242,7 +21741,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21253,7 +21752,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21265,10 +21764,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -21417,12 +21964,12 @@
       "task_id": "case4-4041-00070",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21433,7 +21980,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21444,7 +21991,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21455,7 +22002,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -21467,10 +22014,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -23923,51 +24518,74 @@
     "task_id": "case4-4041-00078",
     "tier": 3,
     "rollout": 2,
-    "cost_usd": 0.00021900400000000007,
+    "cost_usd": 0.00029416800000000003,
     "known_cost": true,
     "latency_seconds": 2.3166270180081483,
     "score": {
       "task_id": "case4-4041-00078",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "requests_resolution": true,
+            "identifies_blocker": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -26159,51 +26777,74 @@
     "task_id": "case4-4041-00087",
     "tier": 3,
     "rollout": 1,
-    "cost_usd": 0.0002777400000000003,
+    "cost_usd": 0.0003188300000000003,
     "known_cost": true,
     "latency_seconds": 2.541146691000904,
     "score": {
       "task_id": "case4-4041-00087",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -26220,51 +26861,74 @@
     "task_id": "case4-4041-00087",
     "tier": 3,
     "rollout": 2,
-    "cost_usd": 0.00035844399999999943,
+    "cost_usd": 0.0004869399999999994,
     "known_cost": true,
     "latency_seconds": 3.54477281900472,
     "score": {
       "task_id": "case4-4041-00087",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R7"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R1",
+            "R7"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -27595,51 +28259,74 @@
     "task_id": "case4-4041-00092",
     "tier": 3,
     "rollout": 1,
-    "cost_usd": 0.0003992975000000013,
+    "cost_usd": 0.0004506315000000013,
     "known_cost": true,
     "latency_seconds": 3.1648764019919327,
     "score": {
       "task_id": "case4-4041-00092",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -27656,51 +28343,74 @@
     "task_id": "case4-4041-00092",
     "tier": 3,
     "rollout": 2,
-    "cost_usd": 0.0005729849999999998,
+    "cost_usd": 0.0006750099999999998,
     "known_cost": true,
     "latency_seconds": 5.79933236099896,
     "score": {
       "task_id": "case4-4041-00092",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "avoids_unsupported_answer": true,
+            "identifies_blocker": true,
+            "requests_resolution": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -27717,51 +28427,74 @@
     "task_id": "case4-4041-00093",
     "tier": 3,
     "rollout": 0,
-    "cost_usd": 0.0005422839999999988,
+    "cost_usd": 0.0006005599999999988,
     "known_cost": true,
     "latency_seconds": 4.716894206998404,
     "score": {
       "task_id": "case4-4041-00093",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -29185,12 +29918,12 @@
       "task_id": "case4-4041-00098",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -29201,7 +29934,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -29212,7 +29945,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -29223,7 +29956,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -29235,10 +29968,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {
@@ -30770,12 +31551,12 @@
       "task_id": "case4-4041-00103",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -30787,7 +31568,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -30799,7 +31580,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -30811,7 +31592,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -30824,10 +31605,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "token_usage": {

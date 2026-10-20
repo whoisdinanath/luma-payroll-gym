@@ -8515,10 +8515,10 @@
       "rubric_version": "8",
       "score": -0.5,
       "passed": false,
-      "status": "invalid_format",
+      "status": "wrong_clarification",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
@@ -8547,10 +8547,17 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": false,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "truncated": false,
     "seconds": 1.2396109902510943

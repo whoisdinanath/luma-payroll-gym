@@ -12,12 +12,12 @@
       "task_id": "transfer-human-01",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -29,7 +29,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -41,7 +41,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -53,7 +53,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -66,10 +66,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "retries": 0,

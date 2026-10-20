@@ -61,8 +61,8 @@
   "test": {
     "raw-calculator": {
       "refused": 235,
-      "malformed or other decision": 86,
-      "calculated without the tool": 63
+      "malformed or other decision": 85,
+      "calculated without the tool": 64
     },
     "sft-calculator": {
       "exact": 174,

@@ -66,6 +66,35 @@ class PayrollTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             asyncio.run(grade_answer(trap, json.dumps({**trap.ground_truth, "explanation": "Please clarify."})))
 
+    def test_optional_json_fence_preserves_scoring_and_validation(self):
+        tasks = generate_tasks(3, 7)
+        for task in tasks:
+            body = json.dumps(task.ground_truth)
+            expected = score_answer(task, body)
+            for language, newline in (("json", "\n"), ("", "\n"), ("JSON", "\r\n")):
+                wrapped = f" \n```{language}{newline}{body}{newline}```\n "
+                with self.subTest(tier=task.difficulty, language=language):
+                    self.assertEqual(parse_answer(wrapped), task.ground_truth)
+                    self.assertEqual(score_answer(task, wrapped), expected)
+        body = json.dumps(tasks[1].ground_truth)
+        invalid = [
+            f"Here is the answer:\n```json\n{body}\n```",
+            f"```json\n{body}\n```\nDone.",
+            f"```json\n{body}\n```\n```json\n{body}\n```",
+            f"```json\n{body}\n{body}\n```",
+            f"```python\n{body}\n```",
+            f"```json\n{body}",
+            '```json\n{"decision":"clarify","decision":"calculate"}\n```',
+            '```json\n{"decision":"clarify","reason_code":NaN,"clauses":[]}\n```',
+            f'```json\n{body[:-1]}, "extra": "unexpected"}}\n```',
+            "```json\n" + " " * 16000 + body + "\n```",
+        ]
+        for text in invalid:
+            with self.subTest(text=text[:80]):
+                with self.assertRaises(ValueError):
+                    parse_answer(text)
+                self.assertEqual(score_answer(tasks[1], text)["status"], "invalid_format")
+
     def test_generator_controls_and_split_leakage(self):
         tasks = generate_tasks(100, 7)
         self.assertEqual(audit_tasks(tasks)["semantic_duplicate_instances"], 0)

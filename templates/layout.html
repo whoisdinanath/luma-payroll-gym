@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if noindex %}<meta name="robots" content="noindex, nofollow, noarchive">{% endif %}
   <title>{% block title %}Luma Payroll Gym{% endblock %}</title>
   <style>
     :root {
@@ -346,6 +347,34 @@
       vertical-align: 0;
       background: linear-gradient(90deg, #e11d48 0%, #f97316 33%, #eab308 66%, #10b981 100%);
     }
+    .card-head.heatmap-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px 16px;
+    }
+    .heatmap-heading, .heatmap-controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      min-width: 0;
+    }
+    .heatmap-heading .legend { white-space: nowrap; }
+    .heatmap-controls { gap: 8px; }
+    .heatmap-status {
+      grid-column: 1 / -1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+      line-height: 20px;
+      height: 20px;
+    }
+    @media (max-width: 1100px) {
+      .card-head.heatmap-head { grid-template-columns: minmax(0, 1fr); }
+    }
 
     .shift-item {
       padding: 10px 0;
@@ -532,7 +561,6 @@
     </nav>
     <div class="nav-right">
       <a href="/rules">Rules</a>
-      <a href="/report">Report</a>
     </div>
   </div>
 </header>

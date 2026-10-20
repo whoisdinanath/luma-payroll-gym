@@ -1276,6 +1276,7 @@ server = [
     { name = "httpx" },
     { name = "jinja2" },
     { name = "markdown-it-py" },
+    { name = "mdit-py-plugins" },
     { name = "openai" },
     { name = "uvicorn" },
 ]
@@ -1289,6 +1290,7 @@ requires-dist = [
     { name = "jinja2", marker = "extra == 'local'", specifier = ">=3.1,<4" },
     { name = "jinja2", marker = "extra == 'server'", specifier = ">=3.1,<4" },
     { name = "markdown-it-py", marker = "extra == 'server'", specifier = ">=3,<5" },
+    { name = "mdit-py-plugins", marker = "extra == 'server'", specifier = ">=0.4,<1" },
     { name = "openai", marker = "extra == 'server'", specifier = ">=1.108" },
     { name = "peft", marker = "extra == 'local'", specifier = "==0.21.0" },
     { name = "torch", marker = "extra == 'local'", specifier = "==2.14.0", index = "https://download.pytorch.org/whl/cu130" },

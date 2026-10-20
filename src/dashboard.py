@@ -5,7 +5,7 @@ import re
 import statistics
 from pathlib import Path
 
-from luma_gym.scoring import RUBRIC_VERSION
+from luma_gym.scoring import RUBRIC_VERSION, parse_answer
 from luma_gym.skills import bootstrap, measure_evaluation, paired
 
 
@@ -70,9 +70,6 @@ REVIEWED = [
      "examples": [("v4-hosted-gemini-tools", "case4-4041-00035")]},
     {"title": "Right structure, wrong bracket arithmetic", "tag": "Arithmetic", "count": 69,
      "examples": [("v4-hosted-gemini-single", "case4-4041-00005"), ("v4-hosted-gemini-single", "case4-4041-00006")]},
-    {"title": "Right answer wrapped in Markdown or prose", "tag": "Format", "count": 78,
-     "examples": [("v4-hosted-glm-single", "case4-4041-00002"), ("v4-hosted-deepseek-tools", "case4-4041-00040"),
-                  ("v4-hosted-glm-tools", "case4-4041-00001")]},
     {"title": "One cent off exactly at the tax-free line", "tag": "Boundary", "count": 2,
      "examples": [("v4-hosted-luna-default-single", "case4-4041-00102")]},
     {"title": "Income tax off by a factor of ten", "tag": "Arithmetic", "count": 1,
@@ -96,7 +93,7 @@ STAGES = [("raw-single", "Frozen, single-turn", "#a1a1aa"), ("raw-calculator", "
           ("rl-0.001-calculator", "SFT + RL, β 0.001", "#e11d48"), ("rl-1-calculator", "SFT + RL, β 1", "#65a30d"),
           ("rl-10-calculator", "SFT + RL, β 10", "#0891b2"), ("rl-100-calculator", "SFT + RL, β 100", "#4f46e5"),
           ("rl-0.04-balanced-calculator", "SFT + RL, β 0.04, balanced", "#d97706"),
-          ("rl-0.04-signal-calculator", "SFT + RL, β 0.04, more payslips", "#c026d3")]
+          ("rl-0.04-signal-calculator", "SFT + RL, payslip-focused", "#c026d3")]
 HALF_LABELS = {"first-half": "January to June", "second-half": "July to December"}
 STAGE_METRICS = [("exact_calculation", "Exact payslips", True), ("correct_clarification", "Correct clarifications", True),
                  ("false_clarification", "Refuses good payslips", False), ("false_calculation", "Calculates through traps", False),
@@ -770,6 +767,8 @@ def line_chart(series, title, kind, steps, window=10):
             "area": area,
             "end_x": x(last_step),
             "end_y": y(last_val),
+            "last_step": last_step,
+            "last_value": last_val,
             "dots": [{"x": x(step), "y": y(val)} for step, val in smooth_pts] if window == 1 else [],
         })
     fmt = (lambda value: pct(value, 1 if high <= 0.1 else 0)) if kind == "percent" else (lambda value: f"{value:g}")
@@ -806,7 +805,7 @@ def skill_checks():
             return None
         return f"{sum(row['score']['breakdown']['exact']['score'] == 1.0 for row in rows) / len(rows):.1%}"
 
-    models = (("raw", "Frozen"), ("sft", "SFT"), ("rl-0.04", "SFT + RL, β 0.04"), ("rl-0.04-signal", "SFT + RL, more payslips"))
+    models = (("raw", "Frozen"), ("sft", "SFT"), ("rl-0.04", "SFT + RL, β 0.04"), ("rl-0.04-signal", "SFT + RL, payslip-focused"))
     conditions = [
         ("Test set, six worked examples", "exact payslips", lambda run: share(f"test-{run}-calculator", 2)),
         ("Test set, no worked examples", "exact payslips", lambda run: share(f"test-{run}-calculator-noexamples", 2)),
@@ -814,6 +813,9 @@ def skill_checks():
         ("Hand-written requests", "traps right", lambda run: count(f"transfer-local-{run}-calculator", 3)),
         ("Same records, training instruction", "exact payslips", lambda run: count(f"transfer-fixed-line-{run}-calculator", 2)),
         ("Same records, training instruction", "traps right", lambda run: count(f"transfer-fixed-line-{run}-calculator", 3)),
+        ("Hand-written requests, no worked examples", "exact payslips", lambda run: count(f"transfer-local-{run}-calculator-noexamples", 2)),
+        ("Same records, training instruction, no worked examples", "exact payslips",
+         lambda run: count(f"transfer-fixed-line-{run}-calculator-noexamples", 2)),
         ("Hosted tool mode, no worked examples", "exact payslips", lambda run: count(f"eval-{run}-tools", 2)),
         ("Hosted tool mode, worked examples as tool calls", "exact payslips", lambda run: count(f"eval-{run}-tools-examples", 2)),
     ]
@@ -831,10 +833,15 @@ def learning_curve():
                           ("false_clarification", "Refuses good payslips"),
                           ("reward", "Mean reward")):
         series = [(color, label, [(point["step"], point[metric]) for point in found[run]]) for run, color, label in runs]
-        chart = line_chart(series, title, "percent", 60, window=1)
+        steps = max((point["step"] for points in found.values() for point in points), default=0)
+        chart = line_chart(series, title, "percent", steps, window=1)
         if chart:
             charts.append(chart)
-    return {"charts": charts, "runs": [{"label": label, "color": color} for _, color, label in runs]} if charts else None
+    return {"charts": charts, "runs": [
+        {"label": label, "color": color, "id": f"v4-{run}",
+         "steps": ", ".join(str(point["step"]) for point in found[run])}
+        for run, color, label in runs
+    ]} if charts else None
 
 
 def curve_value(row, key):
@@ -864,7 +871,7 @@ def load_training():
         rows = [steps[step] for step in sorted(steps)]
         current = config.get("protocol") == "4"
         more = config.get("calc_prompts", 2) != 2 or config.get("lr", 1e-5) != 1e-5
-        label = (f"β {config['beta']:g}" + (", more payslips" if more else ", balanced" if "calc_sampling" in config else "")
+        label = (f"β {config['beta']:g}" + (", payslip-focused" if more else ", balanced" if "calc_sampling" in config else "")
                  + (f", seed {config['seed']}" if config.get("seed", 7) != 7 else ""))
         runs.append({
             "id": ("v4-" if directory.parent == V4 else "") + directory.name,
@@ -898,7 +905,7 @@ def load_training():
 def curves(runs, specs=CURVE_SPECS):
     if not runs:
         return []
-    steps = max(run["planned"] for run in runs)
+    steps = max((row["step"] for run in runs for row in run["steps"]), default=0)
     charts = []
     for key, title, kind in specs:
         series = [
@@ -913,6 +920,30 @@ def curves(runs, specs=CURVE_SPECS):
         if chart:
             charts.append(chart)
     return charts
+
+
+def training_comparisons(runs):
+    by_id = {run["id"]: run for run in runs}
+    controlled = [by_id[f"v4-rl-{beta}"] for beta in ("0.001", "0.04", "10", "100")
+                  if f"v4-rl-{beta}" in by_id]
+    focused = [by_id[key] for key in ("v4-rl-0.04", "v4-rl-0.04-signal") if key in by_id]
+    earlier = [run for run in runs if not run["current"]]
+    groups = [
+        ("controlled", "Controlled KL sweep", controlled,
+         "Same 60 batches, seed, SFT start, learning rate 0.00001, 2 payslips and 2 traps per step; only beta changes. "
+         "Beta 0.001 and 0.04 learn similarly; 10 and 100 largely suppress learning."),
+        ("focused", "Payslip-focused follow-up", focused,
+         "Baseline: 2 payslips + 2 traps, learning rate 0.00001, 60 steps. Follow-up: 6 payslips balanced by half-year "
+         "+ 1 trap, learning rate 0.00005, 40 steps; both beta 0.04. This changes several settings, not beta alone. "
+         "The task mix, step size and duration are confounded; step counts are not equal compute budgets."),
+        ("earlier", "Earlier training without a calculator", earlier,
+         "Historical experiments with different scoring versions and setups, including stopped runs. "
+         "They expose reward gaming, not a controlled comparison against calculator-assisted training. "
+         "The longest runs have 100 logged steps."),
+    ]
+    return [{"id": key, "title": title, "runs": members, "note": note,
+             "charts": curves(members, FINAL_CURVE_SPECS if key != "earlier" else CURVE_SPECS)}
+            for key, title, members, note in groups if members]
 
 
 def evaluations(runs):
@@ -1099,7 +1130,7 @@ def episodes():
 def sweep(runs):
     rows = []
     for run in runs:
-        if not (run["current"] or run["rubric"] in ("5", "7")) or run["note"] or not run["steps"]:
+        if run["note"] or not run["steps"]:
             continue
         last = run["steps"][-10:]
         kl_mean = statistics.mean(row["kl"] for row in last)
@@ -1139,7 +1170,13 @@ def gym_facts(tasks):
     gpu += sum(row.get("seconds", 0) for path in [*RESULTS.glob("minicpm-*/generations.jsonl"), *V4.glob("*/generations.jsonl")]
                for row in read_lines(path))
     gpu += sum(row.get("seconds", 0) for row in read_lines(V4 / "sft/steps.jsonl"))
-    sets = manifest.get("sets", {})
+    sets = dict(manifest.get("sets", {}))
+    confirmation = read_json(ROOT / "reports/fresh-confirmation.json")
+    if confirmation:
+        sets["confirmation"] = {
+            "tasks": confirmation["tasks"],
+            "prompt_leaks": len(confirmation["audit"]["prompt_leak_candidates"]),
+        }
     return {
         "counts": counts,
         "sets": {name: item["tasks"] for name, item in sets.items()},
@@ -1157,7 +1194,7 @@ def gym_facts(tasks):
         "transfer_concordant": pairs.count("concordant"),
         "transfer_ties": pairs.count("tie"),
         "transfer_discordant": pairs.count("discordant"),
-        "gpu_hours": gpu / 3600,
+        "gpu_hours": read_json(ROOT / "reports/compute-summary.json", {}).get("gpu_hours", gpu / 3600),
         "spent": read_json(RESULTS / "spending.json", {}).get("spent_usd", 0),
     }
 
@@ -1183,6 +1220,8 @@ def load_home():
         entries.append({**baseline, "kind": "baseline"})
     score_chart = build_score_chart(entries)
     runs, final = load_training()
+    comparisons = training_comparisons(runs)
+    controlled = next((group["runs"] for group in comparisons if group["id"] == "controlled"), [])
     eval_groups = evaluations(runs)
     stages = protocol_four()
     by_key = {stage["key"]: stage for stage in stages["stages"]}
@@ -1212,13 +1251,13 @@ def load_home():
         "reviewed": reviewed_cards(tasks),
         "runs": runs,
         "final": final,
-        "curves": curves(final, FINAL_CURVE_SPECS),
+        "training_comparisons": comparisons,
+        "fresh_confirmation": read_json(ROOT / "reports/fresh-confirmation.json"),
         "learning_curve": learning_curve(),
         "skill_checks": skill_checks(),
-        "all_curves": curves(runs),
         "evaluations": eval_groups,
         "episodes": episodes(),
-        "sweep": sweep(runs),
+        "sweep": sweep(controlled),
         "gym": gym_facts(tasks),
         "sandbox": read_json(ROOT / "reports/sandbox-judge-readiness.json", []),
         "answers": sum(model[key]["answers"] for model in models for key in ("single", "tools", "transfer") if key in model),
@@ -1353,7 +1392,7 @@ def load_transcript(run, task_id):
         answer = None
         if messages and messages[-1].get("role") == "assistant":
             try:
-                answer = json.loads(messages[-1].get("content"))
+                answer = parse_answer(messages[-1].get("content"))
             except (TypeError, ValueError):
                 answer = None
         score = row.get("score")
@@ -1456,10 +1495,6 @@ def render_markdown(paths):
         html = re.sub(r"<h([123])>(.*?)</h\1>", anchor, html)
         sections.append(html.replace("<table>", '<div class="table-wrap"><table>').replace("</table>", "</table></div>"))
     return {"content": "\n".join(sections), "contents": contents, "rubric": RUBRIC_VERSION}
-
-
-def load_report():
-    return render_markdown([ROOT / "reports/writeup.md"])
 
 
 def load_rules():

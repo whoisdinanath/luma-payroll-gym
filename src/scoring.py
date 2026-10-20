@@ -38,9 +38,19 @@ def reject_constant(value):
     raise ValueError("Invalid JSON constant")
 
 
-def parse_answer(text):
+def unwrap_answer(text):
     if not isinstance(text, str) or len(text) > 16000:
         raise ValueError("Invalid answer text")
+    text = text.strip()
+    fenced = re.fullmatch(r"```(?:json)?[ \t]*\r?\n(?P<body>.*?)\r?\n```", text,
+                          flags=re.DOTALL | re.IGNORECASE)
+    if fenced:
+        text = fenced["body"]
+    return text
+
+
+def parse_answer(text):
+    text = unwrap_answer(text)
     answer = json.loads(text, object_pairs_hook=unique_keys, parse_constant=reject_constant)
     if not isinstance(answer, dict):
         raise ValueError("Expected an object")

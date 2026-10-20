@@ -2,11 +2,11 @@
   "completed_rollouts": 324,
   "scored_rollouts": 324,
   "infrastructure_failures": 0,
-  "recorded_cost_usd": 0.22657609975,
+  "recorded_cost_usd": 0.22717423575,
   "unknown_cost_rollouts": 0,
-  "mean_reward": 0.952829225308642,
-  "sd_reward": 0.2597292652063077,
-  "pass_rate": 0.9444444444444444,
+  "mean_reward": 0.9944958919753086,
+  "sd_reward": 0.08347080051096824,
+  "pass_rate": 0.9722222222222222,
   "tiers": {
     "1": {
       "mean": 0.9986111111111111,
@@ -17,9 +17,10 @@
       "sd": 0.0
     },
     "3": {
-      "mean": 0.8942129791666666,
-      "sd": 0.3822667845026828
+      "mean": 0.9879629791666666,
+      "sd": 0.12507098630154045
     }
   },
-  "mean_latency_seconds": 7.46374743511137
+  "mean_latency_seconds": 7.46374743511137,
+  "rubric_version": "8"
 }

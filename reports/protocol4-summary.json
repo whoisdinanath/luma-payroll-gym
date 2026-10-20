@@ -29,20 +29,20 @@
             0.09375,
             0.22395833333333334
           ],
-          "false_calculation": 0.390625,
+          "false_calculation": 0.3958333333333333,
           "false_calculation_task_interval": [
             0.3125,
-            0.46875
+            0.4739583333333333
           ],
           "false_clarification": 0.4895833333333333,
           "false_clarification_task_interval": [
             0.4270833333333333,
             0.5572916666666666
           ],
-          "invalid": 0.0546875,
+          "invalid": 0.052083333333333336,
           "invalid_task_interval": [
             0.03125,
-            0.078125
+            0.07552083333333333
           ],
           "tool_use_on_payslips": 0,
           "tool_use_on_payslips_task_interval": [
@@ -114,10 +114,10 @@
             0.6302083333333334,
             0.7604166666666666
           ],
-          "invalid": 0.18489583333333334,
+          "invalid": 0.18229166666666666,
           "invalid_task_interval": [
-            0.14322916666666666,
-            0.22395833333333334
+            0.140625,
+            0.22135416666666666
           ],
           "tool_use_on_payslips": 0.005208333333333333,
           "tool_use_on_payslips_task_interval": [
@@ -862,10 +862,10 @@
           },
           "false_calculation": {
             "tasks": 48,
-            "difference": -0.25,
+            "difference": -0.2552083333333333,
             "interval_95": [
-              -0.3229166666666667,
-              -0.18229166666666666
+              -0.328125,
+              -0.1875
             ]
           },
           "false_clarification": {
@@ -960,10 +960,10 @@
           },
           "invalid": {
             "tasks": 96,
-            "difference": -0.18489583333333334,
+            "difference": -0.18229166666666666,
             "interval_95": [
-              -0.22395833333333334,
-              -0.14322916666666666
+              -0.22135416666666666,
+              -0.140625
             ]
           },
           "tool_use_on_payslips": {
@@ -1026,9 +1026,9 @@
           },
           "false_calculation": {
             "tasks": 48,
-            "difference": -0.390625,
+            "difference": -0.3958333333333333,
             "interval_95": [
-              -0.46875,
+              -0.4739583333333333,
               -0.3125
             ]
           },
@@ -1042,9 +1042,9 @@
           },
           "invalid": {
             "tasks": 96,
-            "difference": -0.0546875,
+            "difference": -0.052083333333333336,
             "interval_95": [
-              -0.078125,
+              -0.07552083333333333,
               -0.03125
             ]
           },
@@ -1108,9 +1108,9 @@
           },
           "false_calculation": {
             "tasks": 48,
-            "difference": -0.390625,
+            "difference": -0.3958333333333333,
             "interval_95": [
-              -0.46875,
+              -0.4739583333333333,
               -0.3125
             ]
           },
@@ -1124,9 +1124,9 @@
           },
           "invalid": {
             "tasks": 96,
-            "difference": -0.0546875,
+            "difference": -0.052083333333333336,
             "interval_95": [
-              -0.078125,
+              -0.07552083333333333,
               -0.03125
             ]
           },
@@ -2018,10 +2018,10 @@
             0.3776041666666667,
             0.4791666666666667
           ],
-          "invalid": 0.048177083333333336,
+          "invalid": 0.046875,
           "invalid_task_interval": [
-            0.033854166666666664,
-            0.06380208333333333
+            0.032552083333333336,
+            0.0625
           ],
           "tool_use_on_payslips": 0,
           "tool_use_on_payslips_task_interval": [
@@ -2093,10 +2093,10 @@
             0.5625,
             0.6588541666666666
           ],
-          "invalid": 0.1875,
+          "invalid": 0.18619791666666666,
           "invalid_task_interval": [
-            0.15885416666666666,
-            0.21744791666666666
+            0.15625,
+            0.21614583333333334
           ],
           "tool_use_on_payslips": 0.0026041666666666665,
           "tool_use_on_payslips_task_interval": [
@@ -2603,10 +2603,10 @@
             0.9348958333333334,
             0.9895833333333334
           ],
-          "correct_clarification": 0.9791666666666666,
+          "correct_clarification": 0.984375,
           "correct_clarification_task_interval": [
-            0.9635416666666666,
-            0.9921875
+            0.96875,
+            0.9973958333333334
           ],
           "false_calculation": 0.005208333333333333,
           "false_calculation_task_interval": [
@@ -2618,10 +2618,10 @@
             0,
             0
           ],
-          "invalid": 0.0026041666666666665,
+          "invalid": 0,
           "invalid_task_interval": [
             0,
-            0.006510416666666667
+            0
           ],
           "tool_use_on_payslips": 1,
           "tool_use_on_payslips_task_interval": [
@@ -2643,7 +2643,7 @@
             0,
             0.044444444444444446
           ],
-          "reward": 0.9588541705729167,
+          "reward": 0.9627604205729167,
           "exact_by_stratum": {
             "boundary_cap": 0.9166666666666666,
             "boundary_free": 0.9375,
@@ -2660,7 +2660,7 @@
           },
           "clarification_by_reason": {
             "CONFLICTING_GROSS_PAY": 0.9895833333333334,
-            "MISSING_GROSS_PAY": 0.9270833333333334,
+            "MISSING_GROSS_PAY": 0.9479166666666666,
             "MISSING_PAYROLL_MONTH": 1,
             "NO_APPLICABLE_REFERENCE": 1
           },
@@ -2939,10 +2939,10 @@
           },
           "invalid": {
             "tasks": 192,
-            "difference": -0.1875,
+            "difference": -0.18619791666666666,
             "interval_95": [
-              -0.21744791666666666,
-              -0.15885416666666666
+              -0.21614583333333334,
+              -0.15625
             ]
           },
           "tool_use_on_payslips": {
@@ -3021,10 +3021,10 @@
           },
           "invalid": {
             "tasks": 192,
-            "difference": -0.046875,
+            "difference": -0.045572916666666664,
             "interval_95": [
-              -0.06380208333333333,
-              -0.032552083333333336
+              -0.061197916666666664,
+              -0.03125
             ]
           },
           "tool_use_on_payslips": {
@@ -3103,10 +3103,10 @@
           },
           "invalid": {
             "tasks": 192,
-            "difference": -0.048177083333333336,
+            "difference": -0.046875,
             "interval_95": [
-              -0.06380208333333333,
-              -0.033854166666666664
+              -0.0625,
+              -0.032552083333333336
             ]
           },
           "tool_use_on_payslips": {
@@ -3325,10 +3325,10 @@
           },
           "correct_clarification": {
             "tasks": 96,
-            "difference": -0.020833333333333332,
+            "difference": -0.015625,
             "interval_95": [
-              -0.036458333333333336,
-              -0.0078125
+              -0.03125,
+              -0.0026041666666666665
             ]
           },
           "false_calculation": {
@@ -3349,10 +3349,10 @@
           },
           "invalid": {
             "tasks": 192,
-            "difference": 0.0026041666666666665,
+            "difference": 0,
             "interval_95": [
               0,
-              0.006510416666666667
+              0
             ]
           },
           "tool_use_on_payslips": {
@@ -3389,10 +3389,10 @@
           },
           "reward": {
             "tasks": 192,
-            "difference": 0.36527777734375,
+            "difference": 0.36918402734375,
             "interval_95": [
-              0.28899739713541667,
-              0.44802516927083336
+              0.29442274348958336,
+              0.4496310755208333
             ]
           }
         },
@@ -3407,10 +3407,10 @@
           },
           "correct_clarification": {
             "tasks": 96,
-            "difference": -0.013020833333333334,
+            "difference": -0.0078125,
             "interval_95": [
-              -0.03125,
-              0.0
+              -0.0234375,
+              0.005208333333333333
             ]
           },
           "false_calculation": {
@@ -3431,10 +3431,10 @@
           },
           "invalid": {
             "tasks": 192,
-            "difference": 0.0013020833333333333,
+            "difference": -0.0013020833333333333,
             "interval_95": [
-              -0.0026041666666666665,
-              0.005208333333333333
+              -0.00390625,
+              0
             ]
           },
           "tool_use_on_payslips": {
@@ -3471,10 +3471,10 @@
           },
           "reward": {
             "tasks": 192,
-            "difference": 0.19435763541666667,
+            "difference": 0.19826388541666667,
             "interval_95": [
-              0.13543836588541666,
-              0.2533637122395833
+              0.1389756953125,
+              0.25820312369791665
             ]
           }
         },
@@ -4361,7 +4361,7 @@
         "2": 0,
         "3": 0
       },
-      "malformed": 0.9969135802469136,
+      "malformed": 0.9938271604938271,
       "tool_calls_per_answer": 3.3395061728395063,
       "answers_using_tool": {
         "calculate": 0.22839506172839505,
@@ -4393,7 +4393,7 @@
         "2": 0,
         "3": 0
       },
-      "malformed": 1,
+      "malformed": 0.9969135802469136,
       "tool_calls_per_answer": 6.5246913580246915,
       "answers_using_tool": {
         "calculate": 0.4104938271604938,
@@ -4423,7 +4423,7 @@
         "2": 0,
         "3": 0
       },
-      "malformed": 1,
+      "malformed": 0.9969135802469136,
       "tool_calls_per_answer": 6.4907407407407405,
       "answers_using_tool": {
         "calculate": 0.404320987654321,

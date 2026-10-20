@@ -402,12 +402,12 @@
       "task_id": "transfer-human-02",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -418,7 +418,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -429,7 +429,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -440,7 +440,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -452,10 +452,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "retries": 0,
@@ -984,12 +1032,12 @@
       "task_id": "transfer-human-03",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -1000,7 +1048,7 @@
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -1011,7 +1059,7 @@
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -1022,7 +1070,7 @@
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R1",
             "R2",
@@ -1034,10 +1082,58 @@
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "currency": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "gross_pay": {
+          "correct": true,
+          "clauses": [
+            "R1",
+            "R6"
+          ]
+        },
+        "employee_contribution": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R3"
+          ]
+        },
+        "allowed_deduction": {
+          "correct": true,
+          "clauses": [
+            "R4"
+          ]
+        },
+        "taxable_pay": {
+          "correct": true,
+          "clauses": [
+            "R3",
+            "R4"
+          ]
+        },
+        "income_tax": {
+          "correct": true,
+          "clauses": [
+            "R2",
+            "R5"
+          ]
+        },
+        "net_pay": {
+          "correct": true,
+          "clauses": [
+            "R6"
+          ]
+        }
+      }
     },
     "error": null,
     "retries": 0,
@@ -3039,51 +3135,74 @@
     "task_id": "transfer-human-10",
     "tier": 3,
     "rollout": 1,
-    "cost_usd": 0.00038356799999999993,
+    "cost_usd": 0.0005318879999999999,
     "known_cost": true,
     "latency_seconds": 7.647493820011732,
     "score": {
       "task_id": "transfer-human-10",
       "ruleset_version": "3",
       "rubric_version": "8",
-      "score": -0.5,
-      "passed": false,
-      "status": "invalid_format",
+      "score": 1.0,
+      "passed": true,
+      "status": "scored",
       "breakdown": {
         "decision": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "exact": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "field_accuracy": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
         },
         "citations": {
-          "score": 0.0,
+          "score": 1.0,
           "clauses": [
             "R7",
             "R9"
           ]
+        },
+        "explanation": {
+          "criteria": {
+            "identifies_blocker": true,
+            "requests_resolution": true,
+            "avoids_unsupported_answer": true
+          },
+          "score": 1.0,
+          "clauses": [
+            "R7",
+            "R9"
+          ],
+          "prompt_version": "1",
+          "model": "z-ai/glm-5.3-flash",
+          "reasoning_effort": "high",
+          "attempts": 1
         }
       },
       "diagnostics": {
-        "valid_format": false,
-        "correct_decision": false
+        "valid_format": true,
+        "correct_decision": true
       },
-      "fields": {}
+      "fields": {
+        "reason_code": {
+          "correct": true,
+          "clauses": [
+            "R7"
+          ]
+        }
+      }
     },
     "error": null,
     "retries": 0,

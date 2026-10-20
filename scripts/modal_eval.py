@@ -1,4 +1,5 @@
 import json
+import time
 from pathlib import Path
 
 import modal
@@ -56,6 +57,7 @@ SIGNAL = ROOT / "results/v4/rl-0.04-signal/checkpoints/step-40"
 if SIGNAL.exists():
     image = image.add_local_dir(SIGNAL, f"{WORK}/results/v4/rl-0.04-signal/checkpoints/step-40")
 app = modal.App("luma-payroll-evals", image=image)
+progress = modal.Volume.from_name("luma-payroll-confirmation", create_if_missing=True)
 
 
 @app.function(gpu="L4", timeout=3 * 3600)
@@ -70,6 +72,46 @@ def evaluate(name, arguments):
     result = subprocess.run(command, cwd=WORK, env=environment, capture_output=True, text=True)
     files = {path.name: path.read_text() for path in output.glob("*")} if output.exists() else {}
     return name, result.returncode, (result.stdout + result.stderr)[-2000:], files
+
+
+@app.function(gpu="L4", cpu=(1, 2), memory=(4096, 8192), timeout=3000, retries=0,
+              volumes={"/progress": progress})
+def confirm(name, arguments):
+    import os
+    import subprocess
+
+    started = time.monotonic()
+    output = Path("/progress") / name
+    output.mkdir(parents=True, exist_ok=True)
+    command = ["python", "-u", "-m", "luma_gym.local", "--demos", "data/v4/demos.json",
+               "--max-new-tokens", "384", "--limit", "1000", *arguments, "--output", str(output)]
+    environment = {**os.environ, "PYTHONPATH": "/root", "HF_HUB_OFFLINE": "1", "OMP_NUM_THREADS": "2"}
+    with (output / "generation.log").open("a") as log:
+        process = subprocess.Popen(command, cwd=WORK, env=environment, stdout=log, stderr=subprocess.STDOUT)
+        while process.poll() is None and time.monotonic() - started < 2800:
+            try:
+                process.wait(timeout=30)
+            except subprocess.TimeoutExpired:
+                progress.commit()
+        timed_out = process.poll() is None
+        if timed_out:
+            process.terminate()
+            try:
+                process.wait(timeout=15)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait()
+    metadata = {
+        "seconds": time.monotonic() - started, "gpu": "L4", "exit_code": process.returncode,
+        "timed_out": timed_out, "timeout_seconds": 3000, "automatic_retries": 0,
+        "compute_reservation_usd": 4 / 3,
+        "cost_note": "Reservation, not an invoice-confirmed charge; CPU capped at 2 cores and memory at 8 GiB.",
+    }
+    (output / "modal.json").write_text(json.dumps(metadata, indent=2) + "\n")
+    progress.commit()
+    files = {path.name: path.read_text() for path in output.iterdir() if path.is_file()}
+    code = 124 if timed_out else process.returncode
+    return name, code, files["generation.log"][-2000:], files
 
 
 def model(run):
@@ -98,19 +140,47 @@ def jobs():
     planned.append(("transfer-fixed-line-rl-0.04-signal-calculator", calculator + ["--tasks", "data/transfer-fixed-line.json"] + signal))
     planned.append(("eval-rl-0.04-signal-tools-examples", ["--mode", "tools", "--tool-demos", "--rollouts", "3", "--max-turns", "8",
                                                             "--tasks", "data/v4/eval.json"] + signal))
+    planned.append(("test-rl-0.04-signal-calculator-noexamples", calculator + ["--zero-shot", "--tasks", "data/v4/test.json"] + signal))
+    planned.append(("transfer-local-rl-0.04-signal-calculator-noexamples",
+                    calculator + ["--zero-shot", "--tasks", "data/transfer-human.json"] + signal))
+    planned.append(("transfer-fixed-line-rl-0.04-signal-calculator-noexamples",
+                    calculator + ["--zero-shot", "--tasks", "data/transfer-fixed-line.json"] + signal))
+    planned.append(("eval-rl-0.04-signal-tools", ["--mode", "tools", "--rollouts", "3", "--max-turns", "8",
+                                                  "--tasks", "data/v4/eval.json"] + signal))
     return planned
 
 
 @app.local_entrypoint()
-def main(only: str = ""):
-    planned = [job for job in jobs() if not only or job[0] in only.split(",")]
+def main(only: str = "", fresh: bool = False):
+    if fresh:
+        if only:
+            raise ValueError("Fresh confirmation runs all three fixed conditions; do not select by results")
+        if not (ROOT / "data/v4/confirmation.json").exists():
+            raise ValueError("Prepare the fixed fresh tasks with scripts/confirm_training.py first")
+        planned = []
+        for run in ("sft", "rl-0.04", "rl-0.04-signal"):
+            arguments = (["--base", "results/v4/sft/merged", "--adapter",
+                          "results/v4/rl-0.04-signal/checkpoints/step-40"] if run.endswith("-signal") else model(run))
+            name = f"confirmation-{run}-calculator"
+            if (ROOT / "results/v4" / name / "modal.json").exists():
+                raise ValueError(f"{name} already ran; inspect saved progress before spending again")
+            planned.append((name, ["--mode", "calculator", "--rollouts", "4", "--seed", "17",
+                                   "--tasks", "data/v4/confirmation.json"] + arguments))
+        runner = confirm
+    else:
+        planned = [job for job in jobs() if not only or job[0] in only.split(",")]
+        runner = evaluate
     print(f"{len(planned)} evaluations")
-    for name, code, log, files in evaluate.starmap(planned, order_outputs=False):
+    failed = []
+    for name, code, log, files in runner.starmap(planned, order_outputs=False):
         target = ROOT / "results/v4" / name
-        if files.get("generations.jsonl"):
+        if files.get("generations.jsonl") or fresh:
             target.mkdir(parents=True, exist_ok=True)
             for file_name, text in files.items():
                 (target / file_name).write_text(text)
         print(f"{name}: exit {code}, {len((files.get('generations.jsonl') or '').splitlines())} generations", flush=True)
         if code:
             print(log, flush=True)
+            failed.append(name)
+    if failed:
+        raise RuntimeError("Incomplete evaluations: " + ", ".join(failed))

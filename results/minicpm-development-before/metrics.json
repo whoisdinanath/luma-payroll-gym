@@ -8,9 +8,9 @@
   "local_inference_api_cost_usd": 0,
   "total_generation_seconds": 668.0292693557276,
   "statuses": {
+    "wrong_decision": 278,
     "wrong_clarification": 9,
-    "invalid_format": 53,
-    "wrong_decision": 274,
+    "invalid_format": 49,
     "scored": 64
   },
   "rubric_version": "8"

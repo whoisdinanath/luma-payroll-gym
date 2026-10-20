@@ -23,10 +23,10 @@ from luma_gym.submissions import submission_hash
 from luma_gym.dashboard import (
     heat,
     load_home,
-    load_report,
     load_rules,
     load_run_page,
     load_transcript,
+    render_markdown,
     pct,
     signed,
     soft_heat,
@@ -206,14 +206,16 @@ def home(request: Request):
     return templates.TemplateResponse(request=request, name="home.html", context=load_home())
 
 
-@app.get("/report", response_class=HTMLResponse)
-def report(request: Request):
-    return templates.TemplateResponse(request=request, name="document.html", context={"title": "Report", **load_report()})
-
-
 @app.get("/rules", response_class=HTMLResponse)
 def rules(request: Request):
     return templates.TemplateResponse(request=request, name="document.html", context={"title": "Rules", **load_rules()})
+
+
+@app.get("/sandbox-guide", response_class=HTMLResponse)
+def sandbox_guide(request: Request):
+    context = render_markdown([TEMPLATE_DIR.parent / "reports/sandbox-api.md"])
+    return templates.TemplateResponse(request=request, name="document.html",
+                                      context={"title": "Sandbox API guide", **context})
 
 
 @app.get("/run/{run_id}", response_class=HTMLResponse)

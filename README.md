@@ -4,7 +4,7 @@ A verifiable gym for one slice of payroll work under a fictional rule set: look 
 
 - Dashboard: https://luma-payroll-sandbox.whoisdinanath.workers.dev
 - Sandbox API: the same URL (`/tasks`, `/submit`, `/runs/<run_id>`)
-- Report (evaluation, RL training, failure analysis, transfer test, edge cases, trade-offs): https://luma-payroll-sandbox.whoisdinanath.workers.dev/report
+- Sandbox guide (tiers, request/answer formats, runnable client, rewards, and limits): https://luma-payroll-sandbox.whoisdinanath.workers.dev/sandbox-guide
 - Trained adapters and training logs: https://huggingface.co/whoisdinanath/MiniCPM5-1B-Luma-Payroll-GRPO
 
 ## Stack
@@ -44,7 +44,7 @@ The reference implementation is the verifier: from any seed, the generator produ
 | Outcome | Score |
 | --- | --- |
 | Accepted: right decision, every substantive field exact | 0.70 exact + 0.25 field accuracy + 0.05 clause match: 0.95 or 1.0 |
-| Rejected answer with the right decision | -0.5 + 0.2 × share of computed values right (the value, for a retrieval): -0.5 to -0.3 |
+| Rejected payslip with the right decision | -0.5 + 0.2 × share of computed values right: -0.5 to -0.3 |
 | Any other rejected answer: wrong value or reason, calculating through a trap, refusing a payslip the rules determine, malformed | -0.5 |
 
 Correct clarifications score 0.9 × the deterministic score + 0.1 × a judge score for the explanation. A rejected answer can never score above -0.3, so partial credit ranks wrong answers without rewarding them. Refusing a payslip the rules determine costs the same as getting every computed field wrong. The judge's 0.10 weight keeps its opinion from outweighing the deterministic score. Rubrics 4 to 7 each fixed something RL exploited in the version before; rubric 8 prices a refusal like a wrong answer once the calculator made exact payslips reachable. `rules/scoring.md` gives what each score means under the rules, why each trap is a trap, and the rubric history; `rules/judge.md` is the judge prompt.
@@ -61,15 +61,15 @@ Single-turn mode puts the record and reference schedule in the prompt. Tool mode
 
 ## How to run
 
-Install once, then run everything from the repository folder with the environment active:
+For the dashboard, sandbox, hosted evaluation, and tests (no GPU needed):
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync --extra server --extra environment
+uv run python -m unittest discover -s tests -q
+uv run uvicorn luma_gym.server:app --port 8000
 ```
 
-`uv sync --all-extras` does the same from `uv.lock`. Training and local evaluation need a CUDA GPU; MiniCPM5-1B (about 2 GB) downloads from Hugging Face on first use.
+Open http://localhost:8000. For training and local inference, use `uv sync --all-extras` and a CUDA GPU. MiniCPM5-1B downloads from Hugging Face on first use. `requirements.txt` is the pinned all-extras pip alternative; `pip install -r requirements.txt` includes the larger training stack. Use `uv run` before the commands below if the project environment is not activated.
 
 Tasks:
 
@@ -109,7 +109,17 @@ python -m luma_gym.local --tasks data/v4/test.json --demos data/v4/demos.json --
 python scripts/score_local.py results/v4/test-rl-0.04-calculator --tasks data/v4/test.json
 ```
 
-The final run adds `--calc-prompts 6 --trap-prompts 1 --balance-halves --lr 5e-5 --steps 40`. On `luma_gym.local`, `--zero-shot` drops the worked examples and `--mode tools --tool-demos` shows them as tool calls.
+The payslip-focused run adds `--calc-prompts 6 --trap-prompts 1 --balance-halves --lr 5e-5 --steps 40`. On `luma_gym.local`, `--zero-shot` drops the worked examples and `--mode tools --tool-demos` shows them as tool calls.
+
+The fresh confirmation is reproducible with the existing Modal setup:
+
+```bash
+python -m scripts.confirm_training
+modal run scripts/modal_eval.py --fresh
+python -m scripts.confirm_training --summarize
+```
+
+The Modal command is paid and refuses to relaunch saved runs automatically. It compares three fixed checkpoints on seed 51021, with a 3,000-second limit per L4 invocation, capped CPU/memory, no automatic retries, and progress saved to a Modal volume. Summarizing is CPU-only and uses the shared programmatic verifier, without charging an explanation judge. Trained weights are hosted separately at the Hugging Face link above; the repository contains configurations, evaluation outputs, and training traces.
 
 ## Sandbox quickstart
 
@@ -123,7 +133,25 @@ It fetches three payslip tasks and submits an exact answer, one with net pay off
 - `POST /submit` with `{"run_id": ..., "answers": [{"id": ..., "answer": {...}}]}` returns each task's score, its components, and the clauses behind each mark.
 - `GET /runs/<run_id>` returns the saved result.
 
-Abuse and cost: a run holds at most 10 tasks, each caller gets 12 requests per minute, and run IDs expire after 24 hours. A repeated submission returns the saved score, a changed one is rejected, and concurrent submissions are claimed atomically in D1. No caller API keys are accepted or stored. Only correct clarifications reach the paid judge, which has its own \$0.50 ceiling; once it is spent, a submission that needs the judge gets HTTP 503 instead of a score without it. The first request after idle time can be slow while the Worker cold starts.
+For a real model demonstration, run `uv run python scripts/demo_model.py --output results/my-demo`, then `uv run python scripts/demo_score.py --input results/my-demo`. The first command fetches a fresh task and saves the actual model response; the second submits that unchanged answer and saves the live reward. The model call uses your OpenRouter key; the public sandbox itself requires no client key. See the [sandbox guide](reports/sandbox-api.md) for tiers, answer schemas, limits, and a standalone client.
+
+## Training objective
+
+The goal is to make correct answers more likely without changing the model too far in one update.
+
+1. **SFT teaches the starting procedure:** learn from solved examples of reading payroll records and using the calculator.
+2. **GRPO learns from attempts:** generate several answers to the same task, score them, and compare their rewards. Better-than-average attempts are encouraged; worse ones are discouraged. If every reward is tied, that group provides no reward preference.
+3. **PPO clipping limits each update:** reduce the incentive to make very large changes to an answer's token probabilities in one update.
+4. **The KL penalty limits drift:** compare the changing model with its frozen starting reference. Beta controls how strongly that difference is penalized.
+
+We use LoRA adapters and 4-bit base weights to fit training on a 6 GB GPU. GRPO does not need a separate value model, which also saves memory. The reward comes from rubric 8; the calculator only evaluates the arithmetic the model writes. It does not choose the rates or decide whether a payslip is justified. The objective is implemented in `src/train.py`; the full report is supplied separately as a submission PDF.
+
+## Next steps
+
+- Train on varied workplace wording, not just one fixed instruction.
+- Include cases with several issues, so the model must check missing inputs before salary conflicts.
+- Reduce dependence on worked examples and train with the same document tools used at evaluation.
+- Repeat the fresh-case check across training seeds before treating one strong run as a reliable result.
 
 ## AI usage
 

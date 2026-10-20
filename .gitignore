@@ -11,7 +11,8 @@ CLAUDE.md
 *.md
 !/README.md
 !/rules/*.md
-!/reports/writeup.md
+/reports/writeup.md
+!/reports/sandbox-api.md
 
 # Secrets (keep the setup template)
 .env
@@ -44,6 +45,43 @@ htmlcov/
 /results/**/*.pid
 
 # Run logs, job scripts, and runs that were discarded or only smoke tests
+/results/comparison-*/
+/results/*pilot*/
+/results/*probe*/
+/results/minicpm-baseline/
+/results/minicpm-format-baseline/
+/results/minicpm-balanced-development/
+/results/luna-compatibility/
+/results/judged-tool-pilot/
+/results/judge-reliability-low-effort/
+/results/demo*/
+/results/sandbox-demo/
+/results/my-demo*/
+/results/recording-demo*/
+/results/v4/pilot-*/
+/results/v4/probe-*/
+/results/**/scores-rubric-*.json
+/results/**/scores-before-*.json
+/results/**/analysis-scores.json
+/results/**/progress-before-*.jsonl
+/results/**/progress.jsonl
+/results/**/judge-transcript.jsonl
+/results/**/judge-recovery.jsonl
+/results/**/judge-fence-fix.jsonl
+/reports/comparison-summary.json
+/reports/matched-comparison.json
+/reports/failure-index.json
+/reports/research-*.json
+/reports/calculator-tradeoff-analysis.json
+/scripts/collect_research_sources.py
+/scripts/analyze_calculator_tradeoff.py
+/scripts/update_training_figures.py
+/scripts/human_review.py
+/scripts/run_comparison.py
+/scripts/run_rl.py
+/scripts/report_results.py
+/scripts/regrade_saved.py
+/scripts/rescore_all.py
 /results/**/*.log
 /results/**/*.sh
 /results/**/*.py
@@ -52,6 +90,10 @@ htmlcov/
 /results/optimizer-check/
 
 # Local caches and runtime state
+/recordings/
+*.mkv
+*.mp4
+*.webm
 /checkpoints/
 /model_cache/
 /wandb/

@@ -60,6 +60,8 @@ class Default(WorkerEntrypoint):
     async def handle(self, request):
         url = urlparse(request.url)
         query = parse_qs(url.query)
+        if url.path.rstrip("/").removesuffix(".html") in ("/recording-notes", "/recording-explained", "/report"):
+            return respond({"error": "Not found"}, 404)
         if url.path == "/health":
             return respond({"status": "ok", "ruleset_version": RULESET_VERSION, "rubric_version": RUBRIC_VERSION})
         caller = request.headers.get("CF-Connecting-IP") or "unknown"
