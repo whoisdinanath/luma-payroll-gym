@@ -4,7 +4,7 @@ A verifiable gym for one slice of payroll work under a fictional rule set: look 
 
 - Dashboard: https://luma-payroll-sandbox.whoisdinanath.workers.dev
 - Sandbox API: the same URL (`/tasks`, `/submit`, `/runs/<run_id>`)
-- Report (evaluation, RL training, failure analysis, transfer test, edge cases, trade-offs, AI usage): https://luma-payroll-sandbox.whoisdinanath.workers.dev/report
+- Report (evaluation, RL training, failure analysis, transfer test, edge cases, trade-offs): https://luma-payroll-sandbox.whoisdinanath.workers.dev/report
 - Trained adapters and training logs: https://huggingface.co/whoisdinanath/MiniCPM5-1B-Luma-Payroll-GRPO
 
 ## Stack
@@ -99,7 +99,7 @@ uv run --extra local python -m luma_gym.local --tasks data/v4/test.json --demos 
 uv run --extra environment python scripts/score_local.py results/v4/test-rl-0.04-calculator --tasks data/v4/test.json
 ```
 
-`luma_gym.local` options `--zero-shot` (no worked examples) and `--mode tools --tool-demos` (examples shown as tool calls) reproduce the checks in section 6 of the report; `scripts/modal_eval.py` runs the same evaluations on Modal GPUs.
+`luma_gym.local` options `--zero-shot` (no worked examples) and `--mode tools --tool-demos` (examples shown as tool calls) reproduce the checks in the report's RL section; `scripts/modal_eval.py` runs the same evaluations on Modal GPUs.
 
 ## Sandbox quickstart
 
