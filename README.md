@@ -61,53 +61,63 @@ Single-turn mode puts the record and reference schedule in the prompt. Tool mode
 
 ## How to run
 
-```bash
-uv sync --extra environment --extra server
-uv run luma-gym validate data/v4/test.json
-uv run luma-gym generate --seed 4041 --calculations 48 --traps 48 --retrievals 12 --output tasks.json
-```
-
-The last command reproduces `data/v4/eval.json` exactly. Difficulty options: `--strata`, `--reasons`, `--conflicts`, `--contracts`.
-
-Evaluate a model (needs `OPENROUTER_API_KEY` in `~/.env`, or `--env-file`; see `.env.example`):
+Install once, then run everything from the repository folder with the environment active:
 
 ```bash
-uv run --extra environment python -m luma_gym.eval --model google/gemini-3.1-flash-lite-preview \
-  --tasks data/v4/eval.json --mode single --rollouts 3 --max-cost 2.00 --output results/my-run --execute
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Without `--execute` it prints the plan. Finished rollouts are skipped on resume; every paid request reserves its worst-case cost in `results/spending.json`, and the run stops cleanly at the cap.
+`uv sync --all-extras` does the same from `uv.lock`. Training and local evaluation need a CUDA GPU; MiniCPM5-1B (about 2 GB) downloads from Hugging Face on first use.
+
+Tasks:
+
+```bash
+luma-gym validate data/v4/test.json
+luma-gym generate --seed 4041 --calculations 48 --traps 48 --retrievals 12 --output tasks.json
+```
+
+The second command reproduces `data/v4/eval.json` exactly. Difficulty options: `--strata`, `--reasons`, `--conflicts`, `--contracts`.
+
+Evaluate a hosted model (needs `OPENROUTER_API_KEY` in `~/.env`, or `--env-file`; see `.env.example`):
+
+```bash
+python -m luma_gym.eval --model google/gemini-3.1-flash-lite-preview --tasks data/v4/eval.json \
+  --mode single --rollouts 3 --max-cost 2.00 --output results/my-run --execute
+```
+
+Without `--execute` it prints the plan. Finished rollouts are skipped on resume; every paid request reserves its worst-case cost in `results/spending.json`, and the run stops cleanly at `--max-cost`.
 
 Dashboard and tests:
 
 ```bash
-uv run --extra environment --extra server uvicorn luma_gym.server:app --port 8000
-uv run --extra environment --extra server python -m unittest discover tests
+uvicorn luma_gym.server:app --port 8000
+python -m unittest discover tests
 ```
 
-Training needs a CUDA GPU. Model weights are not in the repository; configs record the base model revision and each adapter's hash.
+SFT, RL, and evaluation of the local model:
 
 ```bash
-uv sync --extra local
-uv run --extra local python -m luma_gym.sft --output results/v4/sft
-uv run --extra local python -m luma_gym.sft --output results/v4/sft --merge
-uv run --extra local python -m luma_gym.train --tasks data/v4/train.json --demos data/v4/demos.json --mode calculator \
+python -m luma_gym.sft --output results/v4/sft
+python -m luma_gym.sft --output results/v4/sft --merge
+python -m luma_gym.train --tasks data/v4/train.json --demos data/v4/demos.json --mode calculator \
   --base results/v4/sft/merged --max-new-tokens 384 --beta 0.04 --steps 60 --output results/v4/rl-0.04
-uv run --extra local python -m luma_gym.local --tasks data/v4/test.json --demos data/v4/demos.json --mode calculator \
-  --base results/v4/sft/merged --adapter results/v4/rl-0.04/checkpoints/step-60 --rollouts 4 --max-new-tokens 384 \
-  --limit 1000 --output results/v4/test-rl-0.04-calculator
-uv run --extra environment python scripts/score_local.py results/v4/test-rl-0.04-calculator --tasks data/v4/test.json
+python -m luma_gym.local --tasks data/v4/test.json --demos data/v4/demos.json --mode calculator \
+  --base results/v4/sft/merged --adapter results/v4/rl-0.04/checkpoints/step-60 --rollouts 4 \
+  --max-new-tokens 384 --limit 1000 --output results/v4/test-rl-0.04-calculator
+python scripts/score_local.py results/v4/test-rl-0.04-calculator --tasks data/v4/test.json
 ```
 
-`luma_gym.local` options `--zero-shot` (no worked examples) and `--mode tools --tool-demos` (examples shown as tool calls) reproduce the checks in the report's RL section; `scripts/modal_eval.py` runs the same evaluations on Modal GPUs.
+The final run adds `--calc-prompts 6 --trap-prompts 1 --balance-halves --lr 5e-5 --steps 40`. On `luma_gym.local`, `--zero-shot` drops the worked examples and `--mode tools --tool-demos` shows them as tool calls.
 
 ## Sandbox quickstart
 
 ```bash
-uv run python scripts/quickstart.py
+python scripts/quickstart.py
 ```
 
-It fetches three tasks, submits deliberately malformed answers, and prints their scores (-0.5 each). No key is needed. To test your own agent:
+It fetches three payslip tasks and submits an exact answer, one with net pay off by a cent, and a refusal, then prints each score with its components and clauses (1.00, -0.35, -0.50). No key is needed. To test your own agent:
 
 - `GET /tasks?n=10&tier=2` returns a run ID, the rule-set and rubric versions, the seed, the tier mix, and the tasks without answers.
 - `POST /submit` with `{"run_id": ..., "answers": [{"id": ..., "answer": {...}}]}` returns each task's score, its components, and the clauses behind each mark.

@@ -90,7 +90,7 @@ def build_messages(task, rules, format_example=False, balanced_examples=False, d
 def load_tokenizer():
     from transformers import AutoTokenizer
 
-    tokenizer = AutoTokenizer.from_pretrained(MODEL, revision=REVISION, local_files_only=True)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL, revision=REVISION)
     tokenizer.eos_token = "<|im_end|>"
     return tokenizer
 
@@ -102,7 +102,7 @@ def load_model(tokenizer, base=None):
     source = {"pretrained_model_name_or_path": str(base)} if base else {"pretrained_model_name_or_path": MODEL,
                                                                            "revision": REVISION}
     model = AutoModelForCausalLM.from_pretrained(
-        **source, local_files_only=True, device_map={"": 0},
+        **source, device_map={"": 0},
         dtype=torch.bfloat16, attn_implementation="sdpa",
         quantization_config=BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
                                               bnb_4bit_use_double_quant=True,

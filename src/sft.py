@@ -121,7 +121,7 @@ def merge(args):
     from peft import PeftModel
     from transformers import AutoModelForCausalLM
 
-    model = AutoModelForCausalLM.from_pretrained(MODEL, revision=REVISION, local_files_only=True, dtype=torch.bfloat16)
+    model = AutoModelForCausalLM.from_pretrained(MODEL, revision=REVISION, dtype=torch.bfloat16)
     model = PeftModel.from_pretrained(model, args.output / "adapter").merge_and_unload()
     target = args.output / "merged"
     model.save_pretrained(target)

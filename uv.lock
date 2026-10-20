@@ -1266,6 +1266,7 @@ environment = [
 local = [
     { name = "accelerate" },
     { name = "bitsandbytes" },
+    { name = "jinja2" },
     { name = "peft" },
     { name = "torch" },
     { name = "transformers" },
@@ -1285,6 +1286,7 @@ requires-dist = [
     { name = "bitsandbytes", marker = "extra == 'local'", specifier = ">=0.49,<1" },
     { name = "fastapi", marker = "extra == 'server'", specifier = ">=0.115,<1" },
     { name = "httpx", marker = "extra == 'server'", specifier = ">=0.28" },
+    { name = "jinja2", marker = "extra == 'local'", specifier = ">=3.1,<4" },
     { name = "jinja2", marker = "extra == 'server'", specifier = ">=3.1,<4" },
     { name = "markdown-it-py", marker = "extra == 'server'", specifier = ">=3,<5" },
     { name = "openai", marker = "extra == 'server'", specifier = ">=1.108" },

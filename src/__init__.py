@@ -1,3 +1,7 @@
+import os
+
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+
 RULESET_VERSION = "3"
 SCHEMA_VERSION = "1.0"
 
